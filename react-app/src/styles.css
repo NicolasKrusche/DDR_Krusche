@@ -464,10 +464,6 @@ ul, ol {
    5. Language Switcher
    ========================================================================== */
 
-.lang-btn-mobile {
-  display: none;
-}
-
 .lang-btn {
   display: inline-flex;
   align-items: center;
@@ -495,6 +491,10 @@ ul, ol {
   border-color: #2C3E6B;
   color: #2C3E6B;
   background-color: rgba(44, 62, 107, 0.06);
+}
+
+.lang-btn-mobile {
+  display: none;
 }
 
 /* ==========================================================================

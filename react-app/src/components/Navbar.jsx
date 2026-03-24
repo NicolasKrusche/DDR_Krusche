@@ -144,7 +144,7 @@ export default function Navbar() {
           </li>
           <li>
             <button className="lang-btn" onClick={toggleLanguage} type="button">
-              {language === 'de' ? '\u{1F1F7}\u{1F1FA} \u0420\u0443\u0441\u0441\u043A\u0438\u0439' : '\u{1F1E9}\u{1F1EA} Deutsch'}
+              {language === 'de' ? '\u{1F1F7}\u{1F1FA} \u0420\u0443\u0441\u0441\u043A\u0438\u0439' : '\u{1F1E6}\u{1F1F9} Deutsch'}
             </button>
           </li>
           <li>
@@ -156,7 +156,7 @@ export default function Navbar() {
 
         {/* Language button (mobile only, shown next to hamburger) */}
         <button className="lang-btn lang-btn-mobile" onClick={toggleLanguage} type="button">
-          {language === 'de' ? '\u{1F1F7}\u{1F1FA} \u0420\u0443\u0441\u0441\u043A\u0438\u0439' : '\u{1F1E9}\u{1F1EA} Deutsch'}
+          {language === 'de' ? '\u{1F1F7}\u{1F1FA} \u0420\u0443\u0441\u0441\u043A\u0438\u0439' : '\u{1F1E6}\u{1F1F9} Deutsch'}
         </button>
 
         {/* Hamburger button */}
