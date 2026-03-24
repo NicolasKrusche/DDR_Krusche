@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"N:/site_new/\"*.html)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where python:*)",
+      "Bash(where node:*)",
+      "Bash(where npx.cmd)",
+      "Bash(where npm.cmd)",
+      "Bash(where php:*)",
+      "Bash(npm list:*)",
+      "Bash(npm install:*)",
+      "Bash(where serve.cmd)",
+      "Bash(where serve:*)",
+      "Bash(npm create:*)",
+      "Bash(where npm:*)"
+    ]
+  }
+}
