@@ -51,7 +51,7 @@ export default function Navbar() {
       <div className="nav-inner">
         <Link to="/" className="nav-logo" onClick={closeMenu}>
           <img
-            src="https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/4dffd673-d52b-44c3-a5d5-272e729d7a16/degyn.png?w=300&q=80"
+            src="/images/logo_dr.png"
             alt="DDr. Anastasiya Krusche"
             className="nav-logo-img"
           />

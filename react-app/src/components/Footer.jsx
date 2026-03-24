@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Column 1 — Brand */}
           <div className="footer-brand">
             <img
-              src="https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/4dffd673-d52b-44c3-a5d5-272e729d7a16/degyn.png?w=300&q=80"
+              src="/images/logo_dr.png"
               alt="DDr. Anastasiya Krusche"
               className="footer-logo-img"
             />
