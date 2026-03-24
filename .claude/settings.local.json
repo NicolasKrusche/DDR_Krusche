@@ -13,7 +13,12 @@
       "Bash(where serve.cmd)",
       "Bash(where serve:*)",
       "Bash(npm create:*)",
-      "Bash(where npm:*)"
+      "Bash(where npm:*)",
+      "Bash(curl -L -o \"wasa_2.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/4c60b404-fca0-4c05-88da-28cb59680ccb/wasa_2.jpg?w=1400&q=80\")",
+      "Bash(curl -L -o \"praxis.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/4620ddb6-81c1-444d-b7c8-4f9d0f617ccf/praxis.jpg?w=1400&q=80\")",
+      "Bash(curl -L -o \"thumbnail_IMG_9253.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/72b94896-5c35-4f5c-9dab-ff377dd5439a/thumbnail_IMG_9253.jpg?w=700&q=80\")",
+      "Bash(curl -L -o \"unsplash-GEzNsJarkGU.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/1647258478613-YI93D0QM5C5SA00B8KEU/unsplash-image-GEzNsJarkGU.jpg?w=1400&q=80\")",
+      "Bash(curl -L -o \"unsplash-NIZeg731LxM.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/1647258123668-K4RLK6M1M73IWT4VWMUX/unsplash-image-NIZeg731LxM.jpg?w=1400&q=80\")"
     ]
   }
 }

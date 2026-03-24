@@ -36,7 +36,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-image">
           <img
-            src="https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/4c60b404-fca0-4c05-88da-28cb59680ccb/wasa_2.jpg?w=1200&q=80"
+            src="/images/wasa_2.jpg"
             alt="DDr. Anastasiya Krusche — Gynäkologin in Österreich"
             loading="eager"
           />
@@ -93,7 +93,7 @@ export default function Home() {
             <div className="leistung-card">
               <img
                 className="leistung-card-img"
-                src="https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/1647258478613-YI93D0QM5C5SA00B8KEU/unsplash-image-GEzNsJarkGU.jpg?w=600&q=80"
+                src="/images/unsplash-GEzNsJarkGU.jpg"
                 alt={t('leistungenCard1')}
                 loading="lazy"
               />
@@ -105,7 +105,7 @@ export default function Home() {
             <div className="leistung-card">
               <img
                 className="leistung-card-img"
-                src="https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/1647257139364-MNNDTI0MCWDBO0B5G4T5/unsplash-image-cIfLUEZYLVg.jpg?w=600&q=80"
+                src="/images/unsplash-cIfLUEZYLVg.jpg"
                 alt={t('leistungenCard2')}
                 loading="lazy"
               />
@@ -117,7 +117,7 @@ export default function Home() {
             <div className="leistung-card">
               <img
                 className="leistung-card-img"
-                src="https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/1647258123668-K4RLK6M1M73IWT4VWMUX/unsplash-image-NIZeg731LxM.jpg?w=600&q=80"
+                src="/images/unsplash-NIZeg731LxM.jpg"
                 alt={t('leistungenCard3')}
                 loading="lazy"
               />
@@ -129,7 +129,7 @@ export default function Home() {
             <div className="leistung-card">
               <img
                 className="leistung-card-img"
-                src="https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/1648730460946-2E3H4M837VJ6TVU67C11/unsplash-image-XknuBmnjbKg.jpg?w=600&q=80"
+                src="/images/unsplash-XknuBmnjbKg.jpg"
                 alt={t('leistungenCard4')}
                 loading="lazy"
               />
@@ -151,7 +151,7 @@ export default function Home() {
           <div className="ord-grid">
             <div className="ord-image">
               <img
-                src="https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/72b94896-5c35-4f5c-9dab-ff377dd5439a/thumbnail_IMG_9253.jpg?w=700&q=80"
+                src="/images/thumbnail_IMG_9253.jpg"
                 alt="Ordination Mödling"
                 loading="lazy"
               />
@@ -196,7 +196,7 @@ export default function Home() {
           <div className="ord-grid reversed">
             <div className="ord-image">
               <img
-                src="https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/4620ddb6-81c1-444d-b7c8-4f9d0f617ccf/praxis.jpg?w=700&q=80"
+                src="/images/praxis.jpg"
                 alt="Ordination Hochstraß"
                 loading="lazy"
               />
