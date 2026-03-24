@@ -154,6 +154,11 @@ export default function Navbar() {
           </li>
         </ul>
 
+        {/* Language button (mobile only, shown next to hamburger) */}
+        <button className="lang-btn lang-btn-mobile" onClick={toggleLanguage} type="button">
+          {language === 'de' ? '\u{1F1F7}\u{1F1FA} \u0420\u0443\u0441\u0441\u043A\u0438\u0439' : '\u{1F1E9}\u{1F1EA} Deutsch'}
+        </button>
+
         {/* Hamburger button */}
         <button
           className={`nav-hamburger${menuOpen ? ' active' : ''}`}
@@ -223,10 +228,6 @@ export default function Navbar() {
         <Link to="/kontakt" className={isActive('/kontakt') ? 'active' : ''} onClick={closeMenu}>
           {t('navContact')}
         </Link>
-
-        <button className="lang-btn" onClick={() => { toggleLanguage(); closeMenu(); }} type="button">
-          {language === 'de' ? '\u{1F1F7}\u{1F1FA} \u0420\u0443\u0441\u0441\u043A\u0438\u0439' : '\u{1F1E9}\u{1F1EA} Deutsch'}
-        </button>
 
         <Link to="/termin" className="btn btn-primary" onClick={closeMenu}>
           {t('navAppointment')}
