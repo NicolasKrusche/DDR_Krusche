@@ -18,7 +18,15 @@
       "Bash(curl -L -o \"praxis.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/4620ddb6-81c1-444d-b7c8-4f9d0f617ccf/praxis.jpg?w=1400&q=80\")",
       "Bash(curl -L -o \"thumbnail_IMG_9253.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/72b94896-5c35-4f5c-9dab-ff377dd5439a/thumbnail_IMG_9253.jpg?w=700&q=80\")",
       "Bash(curl -L -o \"unsplash-GEzNsJarkGU.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/1647258478613-YI93D0QM5C5SA00B8KEU/unsplash-image-GEzNsJarkGU.jpg?w=1400&q=80\")",
-      "Bash(curl -L -o \"unsplash-NIZeg731LxM.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/1647258123668-K4RLK6M1M73IWT4VWMUX/unsplash-image-NIZeg731LxM.jpg?w=1400&q=80\")"
+      "Bash(curl -L -o \"unsplash-NIZeg731LxM.jpg\" \"https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/1647258123668-K4RLK6M1M73IWT4VWMUX/unsplash-image-NIZeg731LxM.jpg?w=1400&q=80\")",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-verhuetung.jpg\" \"https://images.unsplash.com/photo-1576070609890-56bf58d828be?w=800&q=80\")",
+      "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-impfungen.jpg\" \"https://images.unsplash.com/photo-1611690827904-0ebe4fe34bd8?w=800&q=80\")",
+      "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-wechseljahre.jpg\" \"https://images.unsplash.com/photo-1542677014-15e371939f4e?w=800&q=80\")",
+      "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-ultraschall.jpg\" \"https://images.unsplash.com/photo-1663229049147-30f47be043ea?w=800&q=80\")",
+      "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-wechseljahre.jpg\" \"https://images.unsplash.com/photo-1629540266304-fff9c67b7660?w=800&q=80\")",
+      "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-ultraschall.jpg\" \"https://images.unsplash.com/photo-1706065264583-55f1a8549769?w=800&q=80\")"
     ]
   }
 }

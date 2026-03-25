@@ -853,7 +853,7 @@ ul, ol {
   color: #1A1A2E;
 }
 
-.leistung-card-body a {
+.leistung-card-body span {
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
@@ -862,7 +862,7 @@ ul, ol {
   transition: color 0.2s ease;
 }
 
-.leistung-card-body a:hover {
+.leistung-card:hover .leistung-card-body span {
   color: #2C3E6B;
 }
 

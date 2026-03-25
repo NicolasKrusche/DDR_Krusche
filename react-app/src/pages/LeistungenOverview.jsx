@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
-const portraitImg = 'https://images.squarespace-cdn.com/content/v1/622f12984789ba305efb55ec/4c60b404-fca0-4c05-88da-28cb59680ccb/wasa_2.jpg?w=600&q=80';
-
 const services = [
   {
     key: 'overviewSvc1',
     route: '/verhuetung',
-    image: portraitImg,
+    image: '/images/unsplash-verhuetung.jpg',
     alt: 'Verhütungsberatung',
   },
   {
@@ -37,19 +35,19 @@ const services = [
   {
     key: 'overviewSvc6',
     route: '/impfungen',
-    image: portraitImg,
+    image: '/images/unsplash-impfungen.jpg',
     alt: 'Impfungen',
   },
   {
     key: 'overviewSvc7',
     route: '/wechseljahre',
-    image: portraitImg,
+    image: '/images/unsplash-wechseljahre.jpg',
     alt: 'Wechseljahre',
   },
   {
     key: 'overviewSvc8',
     route: '/ultraschalldiagnostik',
-    image: portraitImg,
+    image: '/images/unsplash-ultraschall.jpg',
     alt: 'Ultraschalldiagnostik',
   },
 ];
@@ -63,7 +61,7 @@ export default function LeistungenOverview() {
         <div className="container">
           <div className="leistungen-grid leistungen-grid-4">
             {services.map(({ key, route, image, alt }) => (
-              <div className="leistung-card" key={route}>
+              <Link className="leistung-card" key={route} to={route}>
                 <img
                   className="leistung-card-img"
                   src={image}
@@ -72,9 +70,9 @@ export default function LeistungenOverview() {
                 />
                 <div className="leistung-card-body">
                   <h3>{t(key)}</h3>
-                  <Link to={route}>{t('leistungenLink')}</Link>
+                  <span>{t('leistungenLink')}</span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
