@@ -26,7 +26,10 @@
       "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-wechseljahre.jpg\" \"https://images.unsplash.com/photo-1542677014-15e371939f4e?w=800&q=80\")",
       "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-ultraschall.jpg\" \"https://images.unsplash.com/photo-1663229049147-30f47be043ea?w=800&q=80\")",
       "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-wechseljahre.jpg\" \"https://images.unsplash.com/photo-1629540266304-fff9c67b7660?w=800&q=80\")",
-      "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-ultraschall.jpg\" \"https://images.unsplash.com/photo-1706065264583-55f1a8549769?w=800&q=80\")"
+      "Bash(curl -L -o \"n:/site_new/react-app/public/images/unsplash-ultraschall.jpg\" \"https://images.unsplash.com/photo-1706065264583-55f1a8549769?w=800&q=80\")",
+      "Bash(find n:site_newreact-apppublicimages -type f -exec ls -lh {})",
+      "Bash(2)",
+      "Read(//n/site_new/**)"
     ]
   }
 }

@@ -54,6 +54,9 @@ export default function Navbar() {
             src="/images/logo_dr.png"
             alt="DDr. Anastasiya Krusche"
             className="nav-logo-img"
+            width="80"
+            height="80"
+            fetchpriority="high"
           />
           <span>DDr. Krusche</span>
         </Link>
