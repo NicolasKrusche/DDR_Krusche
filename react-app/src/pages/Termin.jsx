@@ -35,15 +35,16 @@ export default function Termin() {
           <div className="termin-block">
             <h2>{t('ordHochstrassTitle')}</h2>
             <span className="termin-badge">{t('ordHochstrassBadge')}</span>
-            <a
-              href="https://shorturl.4myhealth.org/rd/f5ce9440-4283-11ef-aafa-1fc932a4afe4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-              style={{ display: 'block', marginTop: '16px' }}
-            >
-              {t('terminHochstrassBtn')}
-            </a>
+            <div style={{ marginTop: '16px' }}>
+              <a
+                href="https://shorturl.4myhealth.org/rd/f5ce9440-4283-11ef-aafa-1fc932a4afe4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
+                {t('terminHochstrassBtn')}
+              </a>
+            </div>
           </div>
 
         </div>

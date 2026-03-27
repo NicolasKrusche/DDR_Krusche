@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <div className="hero-content">
           <p className="hero-overline">{t('heroOverline')}</p>
-          <h1>{t('heroTitle')}</h1>
+          <h1>{t('heroTitle1')}<br />{t('heroTitle2')}</h1>
           <p>{t('heroText')}</p>
           <div className="hero-actions">
             <Link to="/termin" className="btn btn-primary">{t('heroBtn1')}</Link>
@@ -70,7 +70,7 @@ export default function Home() {
           <div className="info-box">
             <h3>{t('infoTitle')}</h3>
             <p>{t('infoText1')}</p>
-            <p><strong>{t('infoText2')}</strong></p>
+            <p><strong style={{ color: 'red' }}>{t('infoText2')}</strong></p>
             <p>
               {t('infoText3').split('office@dr-krusche.at')[0]}
               <a href="mailto:office@dr-krusche.at">office@dr-krusche.at</a>
@@ -174,9 +174,6 @@ export default function Home() {
                 {t('ordMoedlingPhone')}{' '}
                 <a href="tel:+432236392137">+43 2236 392137</a>
               </p>
-              <div className="ord-info-box">
-                {t('ordMoedlingEcard')}
-              </div>
               <a
                 href="https://shop.timesloth.io/de/a/dr-krusche"
                 target="_blank"
@@ -214,6 +211,13 @@ export default function Home() {
                   <span>{t('dayMi')}</span>
                   <span>08:00 – 12:00</span>
                 </div>
+              </div>
+              <p>
+                {t('ordHochstrassPhone')}{' '}
+                <a href="tel:+43277343603">+43 2773 43603</a>
+              </p>
+              <div className="ord-info-box">
+                {t('ordHochstrassEcard')}
               </div>
               <a
                 href="https://shorturl.4myhealth.org/rd/f5ce9440-4283-11ef-aafa-1fc932a4afe4"

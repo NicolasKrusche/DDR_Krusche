@@ -22,6 +22,8 @@ const translations = {
     // Home Hero
     heroOverline: 'Ihre Gynäkologin in Österreich',
     heroTitle: 'Willkommen in der Ordination von DDr. Anastasiya Krusche',
+    heroTitle1: 'Willkommen in der Ordination von',
+    heroTitle2: 'DDr. Anastasiya Krusche',
     heroText: 'Ob Vorsorgeuntersuchung, Schwangerschaftsbegleitung oder Verhütung — ich bin gerne für Sie da und freue mich auf Ihren Besuch.',
     heroBtn1: 'Termin vereinbaren',
     heroBtn2: 'Leistungen entdecken',
@@ -55,13 +57,14 @@ const translations = {
     ordMoedlingAddr: '2340 Mödling, Enzersdorfer Straße 70/1',
     ordHoursTitle: 'Ordinationszeiten',
     ordMoedlingPhone: 'nach telefonischer Vereinbarung unter:',
-    ordMoedlingEcard: 'Seit dem 1. Januar 2026 müssen Wahlärztinnen und Wahlärzte in Österreich die e-card-Infrastruktur nutzen und die e-card der Patientinnen und Patienten einlesen, um deren Identität und die Gültigkeit zu prüfen. Patientinnen (versichert mit ÖGK oder anderen Kassen) müssen die e-card bei Ihrem Wahlarzt vorlegen.',
     ordBtnBook: 'Online Termin buchen',
 
     // Ordination Hochstraß
     ordHochstrassTitle: 'Ordination Hochstraß',
+    ordHochstrassEcard: 'Seit dem 1. Januar 2026 müssen Wahlärztinnen und Wahlärzte in Österreich die e-card-Infrastruktur nutzen und die e-card der Patientinnen und Patienten einlesen, um deren Identität und die Gültigkeit zu prüfen. Patientinnen (versichert mit ÖGK oder anderen Kassen) müssen die e-card bei Ihrem Wahlarzt vorlegen.',
     ordHochstrassBadge: 'Wahlärztin',
     ordHochstrassAddr: '3033 Hochstraß 593',
+    ordHochstrassPhone: 'nach telefonischer Vereinbarung unter:',
 
     // Days
     dayMo: 'Montag',
@@ -101,7 +104,7 @@ const translations = {
     // Ordination page
     ordinationTitle: 'Unsere Ordinationen',
     ordinationOnlineBtn: 'Online Terminvereinbarung',
-    ordMoedlingBadgeFull: 'Alle Krankenkassen (GKK, SVA, KFA, BVA, VAEB) und Privat',
+    ordMoedlingBadgeFull: 'Alle Krankenkassen (ÖGK, SVA, KFA, BVA, VAEB) und Privat',
 
     // Termin page
     terminTitle: 'Terminvereinbarung',
@@ -169,6 +172,9 @@ const translations = {
       'Eine Analyse Ihres Stammbaums wird durchgeführt — hier ist mehr Information zu den Krankheiten in Ihrer Familie immer besser. Besonders das Erkrankungsalter ist hier für uns interessant.',
       'Es wird ausgewertet, ob weitere Untersuchungen — z.B. konkrete genetische Analyse, von einzelnen Genen — sinnvoll sind.',
     ],
+    widH3: 'WID®-easy Test – Epigenetische Früherkennung des Uteruskarzinoms',
+    widSubtitle: 'Was ist der Test?',
+    widText: 'Der WID®-easy (wissenschaftlich: WID®-qEC) ist ein epigenetischer DNA-Methylierungstest zur Erkennung aller Karzinome, die vom Uterus ausgehen – insbesondere das Endometriumkarzinom, aber auch das endozervikale Karzinom. Er ist indiziert bei peri- und postmenopausalen Frauen mit abnormalen vaginalen Blutungen.',
 
     // Jugendgynäkologie
     jugendTitle: 'Jugendgynäkologie',
@@ -188,7 +194,7 @@ const translations = {
     impfungenTitle: 'Impfungen',
     impfungenH2: 'HPV',
     impfungenText1: 'Humane Papillomaviren stellen eine große Virusgruppe dar, die zu abnormem Zellwachstum beim Menschen führen kann und Krebsvorstufen, Krebs sowie Genitalwarzen verursachen können. Es sind mehr als 120 HPV Typen bekannt, von denen etwa 14 krebsverursachende Wirkungen haben. Humane Papillomaviren werden durch direkten Schleimhautkontakt übertragen, etwa bei sexuellen Kontakten oder in seltenen Fällen auch während der Geburt von der Mutter auf das Kind. Eine Ansteckungsgefahr besteht, solange eine chronische Infektion vorliegt. Kondome bieten keinen sicheren Schutz vor einer Ansteckung mit HPV.',
-    impfungenText2: 'Um das Risiko an z.B. Gebärmutterhalskrebs um bis zu 90% vorzubeugen, bieten viele Gynäkologen — darunter auch ich — eine HPV-Impfung an. Der Impfschutz hält lange, und ist vom vollendeten 9. bis zum vollendeten 21. Lebensjahr kostenfrei. Bis zum 25. Lebensjahr ist die Impfung in NÖ außerdem verbilligt.',
+    impfungenText2: 'Um das Risiko an z.B. Gebärmutterhalskrebs um bis zu 90% vorzubeugen, bieten viele Gynäkologen — darunter auch ich — eine HPV-Impfung an. Der Impfschutz hält lange, und ist vom vollendeten 9. bis zum vollendeten 21. Lebensjahr kostenfrei.',
     impfungenHint: 'Derzeit biete ich leider keine anderen Impfungen an.',
 
     // Wechseljahre
@@ -244,6 +250,8 @@ const translations = {
     // Home Hero
     heroOverline: 'Ваш русскоговорящий гинеколог в Австрии',
     heroTitle: 'Добро пожаловать в практику доктора Анастасии Круше',
+    heroTitle1: 'Добро пожаловать в практику доктора',
+    heroTitle2: 'Анастасии Круше',
     heroText: 'Профилактический осмотр, сопровождение беременности или контрацепция — я буду рада видеть Вас в моей ординации.',
     heroBtn1: 'Записаться на прием онлайн',
     heroBtn2: 'Услуги',
@@ -273,17 +281,18 @@ const translations = {
 
     // Ordination Mödling
     ordMoedlingTitle: 'Ординация Mödling',
-    ordMoedlingBadge: 'Кассовая ординация (все страховки (ÖGK, SVA, KFA Wien, BVA, BVAEB) или частно)',
+    ordMoedlingBadge: 'Кассовая ординация все страховки (ÖGK, SVA, KFA Wien, BVA, BVAEB) или частно',
     ordMoedlingAddr: '2340 Mödling, Enzersdorfer Straße 70/1',
     ordHoursTitle: 'Часы работы',
     ordMoedlingPhone: 'Предварительная запись по телефону',
-    ordMoedlingEcard: 'С 1 января 2026 года врачи частной практики в Австрии обязаны использовать инфраструктуру e-card и считывать e-card пациентов, чтобы проверить их личность и действительность карты. Пациенты (застрахованные в ÖGK или других страховых кассах) должны предъявлять e-card своему врачу частной практики.',
     ordBtnBook: 'Онлайн запись на приём',
 
     // Ordination Hochstraß
     ordHochstrassTitle: 'Ординация Hochstraß',
-    ordHochstrassBadge: 'Частная ординация',
+    ordHochstrassEcard: 'С 1 января 2026 года врачи частной практики в Австрии обязаны использовать инфраструктуру e-card и считывать e-card пациентов, чтобы проверить их личность и действительность карты. Пациенты (застрахованные в ÖGK или других страховых кассах) должны предъявлять e-card своему врачу частной практики.',
+    ordHochstrassBadge: 'ЧАСТНАЯ ОРДИНАЦИЯ',
     ordHochstrassAddr: '3033 Hochstraß 593',
+    ordHochstrassPhone: 'Предварительная запись по телефону',
 
     // Days
     dayMo: 'Понедельник',
@@ -327,7 +336,7 @@ const translations = {
 
     // Termin page
     terminTitle: 'Записаться на прием онлайн',
-    terminMoedlingBadge: 'ВСЕ СТРАХОВКИ',
+    terminMoedlingBadge: 'ВСЕ СТРАХОВКИ И ЧАСТНО',
     terminCancelHint: 'Если Вы хотите отменить сделанный приём онлайн, нажмите в e-mail подтверждения „Buchung stornieren".',
     terminMKPHint: 'На прием по Mutter-Kind-Pass пожалуйста записывайтесь только по телефону!',
     terminMoedlingBtn: 'Онлайн запись на приём — Ординация Mödling',
@@ -390,6 +399,9 @@ const translations = {
       'Проводится анализ Вашего семейного древа: больше информации о болезнях в Вашей семье необходимо получить. Особенно интересен для нас здесь возраст начала заболевания.',
       'Оценивается целесообразность дальнейших обследований, например, конкретного генетического анализа, отдельных генов.',
     ],
+    widH3: 'Тест WID®-easy – Эпигенетическая ранняя диагностика рака матки',
+    widSubtitle: 'Что это за тест?',
+    widText: 'WID®-easy — это эпигенетический тест на метилирование ДНК для ранней диагностики рака тела матки (эндометриальной карциномы) у женщин в пери- и постменопаузе с аномальными вагинальными кровотечениями.',
 
     // Jugendgynäkologie
     jugendTitle: 'Подростковая гинекология',
@@ -409,7 +421,7 @@ const translations = {
     impfungenTitle: 'Вакцинация',
     impfungenH2: 'ВПЧ',
     impfungenText1: 'Вирусы папилломы человека — это большая группа вирусов, которые могут вызывать аномальный рост клеток у человека и могут стать причиной предраковых состояний, рака и генитальных бородавок. Известно более 120 типов ВПЧ, из которых около 14 вызывают рак. Вирусы папилломы человека передаются через прямой контакт со слизистыми оболочками, например, во время полового контакта или, в редких случаях, от матери к ребенку во время родов. При наличии хронической инфекции существует риск заражения. Презервативы не обеспечивают надежной защиты от заражения ВПЧ.',
-    impfungenText2: 'Чтобы предотвратить риск возникновения, например, рака шейки матки, многие гинекологи — в том числе и мы — предлагают вакцинацию против ВПЧ. Вакцинация защищает на долгий срок и проводится бесплатно с 9 лет и до 21 года. До 25 лет вакцинация также стоит дешевле.',
+    impfungenText2: 'Чтобы предотвратить риск возникновения, например, рака шейки матки, многие гинекологи — в том числе и мы — предлагают вакцинацию против ВПЧ. Вакцинация защищает на долгий срок и проводится бесплатно с 9 лет и до 21 года.',
     impfungenHint: 'К сожалению, в настоящее время я не предлагаю никаких других прививок.',
 
     // Wechseljahre

@@ -27,6 +27,10 @@ export default function GenetischeBeratung() {
                 : <li>{list}</li>}
             </ul>
 
+            <h3 style={{ marginTop: '32px', marginBottom: '12px' }}>{t('widH3')}</h3>
+            <p><strong>{t('widSubtitle')}</strong></p>
+            <p>{t('widText')}</p>
+
             <div className="content-cta">
               <h3>{t('aboutCta')}</h3>
               <Link to="/kontakt" className="btn btn-white">{t('contactBtn')}</Link>
