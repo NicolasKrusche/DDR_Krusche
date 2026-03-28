@@ -6,14 +6,16 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
+        manualChunks: (id) => {
+          if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+            return 'vendor';
+          }
         },
       },
     },
     chunkSizeWarningLimit: 500,
     cssMinify: true,
-    minify: 'esbuild',
+    minify: 'oxc',
     target: 'es2015',
   },
 })

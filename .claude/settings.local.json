@@ -30,7 +30,8 @@
       "Bash(find n:site_newreact-apppublicimages -type f -exec ls -lh {})",
       "Bash(2)",
       "Read(//n/site_new/**)",
-      "Bash(npm audit:*)"
+      "Bash(npm audit:*)",
+      "Bash(npm run:*)"
     ]
   }
 }
