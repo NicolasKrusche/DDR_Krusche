@@ -54,8 +54,7 @@ export default function Footer() {
         <div className="footer-bottom">
           &copy; 2025 DDr. Anastasiya Krusche &middot;{' '}
           <Link to="/impressum">Impressum</Link> &middot;{' '}
-          <Link to="/datenschutz">Datenschutz</Link> &middot;{' '}
-          {t('footerAllKassen')}
+          <Link to="/datenschutz">Datenschutz</Link>
         </div>
       </div>
     </footer>

@@ -77,7 +77,6 @@ export default function Home() {
               {t('infoText3').split('office@dr-krusche.at')[1]}
             </p>
             <p>{t('infoText4')}</p>
-            <p>{t('infoText5')}</p>
           </div>
         </div>
       </section>
