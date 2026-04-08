@@ -29,7 +29,7 @@ const translations = {
     heroBtn2: 'Leistungen entdecken',
 
     // Vacation Banner
-    vacationBanner: 'Wir sind von 28.03.26 bis 06.04.26 auf Urlaub. Sie können gerne einen Termin online vereinbaren.',
+    vacationBanner: 'Wir sind von 01.08.2026 bis 14.08.2026 auf Urlaub. Sie können gerne einen Termin online vereinbaren.',
     vacationPopupTitle: 'Hinweis',
     vacationPopupBtn: 'Verstanden',
 
@@ -257,7 +257,7 @@ const translations = {
     heroBtn2: 'Услуги',
 
     // Vacation Banner
-    vacationBanner: 'Мы в отпуске с 28.03.26 по 06.04.26. Вы можете записаться на прием онлайн.',
+    vacationBanner: 'Мы в отпуске с 01.08.2026 по 14.08.2026. Вы можете записаться на прием онлайн.',
     vacationPopupTitle: 'Важно',
     vacationPopupBtn: 'Понятно',
 

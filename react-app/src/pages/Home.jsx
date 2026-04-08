@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 export default function Home() {
   const { t } = useLanguage();
-  const [showVacationPopup, setShowVacationPopup] = useState(true);
+  const [showVacationPopup, setShowVacationPopup] = useState(false);
 
   return (
     <>
