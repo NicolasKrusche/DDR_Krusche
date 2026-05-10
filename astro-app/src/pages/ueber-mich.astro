@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Über mich — DDr. Anastasiya Krusche | Gynäkologin in Mödling & Hochstraß"
+  description="DDr. Anastasiya Krusche — Fachärztin für Gynäkologie und Geburtshilfe, Ärztin für Allgemeinmedizin. Erfahren Sie mehr über meine Qualifikationen, Diplome und Sprachen."
+>
+  <Navbar slot="navbar" />
+
+  <section class="bio-section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="bio-grid">
+        <div class="bio-image">
+          <img src="/images/wasa_2.jpg" alt="DDr. Anastasiya Krusche — Portraitfoto" loading="lazy" width="500" height="650" />
+        </div>
+        <div class="bio-content">
+          <p class="section-label" data-lang-de="Fachärztin für Gynäkologie und Geburtshilfe" data-lang-ru="Fachärztin für Gynäkologie und Geburtshilfe">Fachärztin für Gynäkologie und Geburtshilfe</p>
+          <h1 id="about-heading" data-lang-de="Über Mich" data-lang-ru="Обо мне">Über Mich</h1>
+          <p data-lang-de="Ich bin Fachärztin für Frauenheilkunde und Geburtshilfe und Ärztin für Allgemeinmedizin." data-lang-ru="Я специалист в области гинекологии и акушерства, врач общей практики.">Ich bin Fachärztin für Frauenheilkunde und Geburtshilfe und Ärztin für Allgemeinmedizin.</p>
+          <p data-lang-de="Auf der Krim geboren und aufgewachsen, habe ich nach sechs Jahren Medizinstudium die Facharztausbildung für Gynäkologie und Geburtshilfe ebenso dort absolviert. In Wien habe ich dann eine wissenschaftliche Arbeit im Bereich Onkologie gemacht, sowie Nostrifikation und ein Facharztdiplom für Gynäkologie und Geburtshilfe erworben. Weiters habe ich auch eine Ausbildung zum Arzt für Allgemeinmedizin abgeschlossen." data-lang-ru="Родилась и выросла в Крыму. После шести лет обучения в медицинском институте я прошла специализацию по гинекологии и акушерству. В Вене я защитила научную диссертацию в области онкологии и получила нострификацию и диплом специалиста по гинекологии и акушерству. Я также прошла обучение по специальности «врач общей практики».">Auf der Krim geboren und aufgewachsen, habe ich nach sechs Jahren Medizinstudium die Facharztausbildung für Gynäkologie und Geburtshilfe ebenso dort absolviert. In Wien habe ich dann eine wissenschaftliche Arbeit im Bereich Onkologie gemacht, sowie Nostrifikation und ein Facharztdiplom für Gynäkologie und Geburtshilfe erworben. Weiters habe ich auch eine Ausbildung zum Arzt für Allgemeinmedizin abgeschlossen.</p>
+          <p data-lang-de="Ich bin verheiratet und selbst Mutter von zwei Kindern: Weshalb ich mich für die Arbeit in der Ordination statt einem Krankenhaus entschieden habe. So kann ich Familie und Beruf besser vereinbaren." data-lang-ru="Как мать двоих детей я решила работать в ординации, а не в больнице. Так я лучше могу совмещать семью и карьеру.">Ich bin verheiratet und selbst Mutter von zwei Kindern: Weshalb ich mich für die Arbeit in der Ordination statt einem Krankenhaus entschieden habe. So kann ich Familie und Beruf besser vereinbaren.</p>
+
+          <div class="bio-diplomas">
+            <p class="bio-diplomas-title" data-lang-de="Erworbene Diplome der österreichischen Ärztekammer (ÖAK):" data-lang-ru="Дипломы, полученные от Австрийской медицинской ассоциации (ÖAK):">Erworbene Diplome der österreichischen Ärztekammer (ÖAK):</p>
+            <div class="bio-badges">
+              <span class="bio-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span data-lang-de="ÖAK aktuelles Fortbildungsdiplom" data-lang-ru="ÖAK действующий диплом о повышении квалификации">ÖAK aktuelles Fortbildungsdiplom</span>
+              </span>
+            </div>
+            <p class="bio-diplomas-title" style="margin-top: 16px;" data-lang-de="Weitere Fortbildungen:" data-lang-ru="Дополнительные сертификаты:">Weitere Fortbildungen:</p>
+            <div class="bio-badges">
+              <span class="bio-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                PIKÖ Kinder- und Jugendgynäkologie
+              </span>
+              <span class="bio-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                IOTA Zertifizierungskurs
+              </span>
+            </div>
+          </div>
+
+          <div class="bio-languages">
+            <p class="bio-diplomas-title" data-lang-de="Sprachen:" data-lang-ru="Языки:">Sprachen:</p>
+            <p class="bio-langs-text" data-lang-de="Russisch (Muttersprache), Deutsch, Englisch" data-lang-ru="Русский (родной язык), Немецкий, Английский">Russisch (Muttersprache), Deutsch, Englisch</p>
+          </div>
+
+          <div class="bio-cta">
+            <p data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</p>
+            <a href="/termin" class="btn btn-primary" data-lang-de="Termin vereinbaren" data-lang-ru="Записаться">Termin vereinbaren</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Ultraschalldiagnostik — DDr. Anastasiya Krusche | Gynäkologin"
+  description="Vaginale Ultraschalldiagnostik bei DDr. Krusche: Schmerzfreie Untersuchung von Eierstöcken, Gebärmutter und Harnblase ohne Strahlenbelastung."
+>
+  <Navbar slot="navbar" />
+
+  <PageHero image="/images/unsplash-ultraschall.jpg" alt="Ultraschalldiagnostik" title="Ultraschalldiagnostik" />
+
+  <section class="content-section" aria-labelledby="ultraschall-heading">
+    <div class="container">
+      <div class="content-narrow">
+        <h1 class="sr-only" id="ultraschall-heading">Ultraschalldiagnostik</h1>
+        <p data-lang-de="Ein vaginaler Ultraschall (auch vaginale Sonographie genannt) ist eine schmerzfreie Untersuchungsmethode in der gynäkologischen Praxis. Hier wird mit einem stabförmigen Schallkopf das „kleine Becken" — d.h. die Harnblase, Eierstöcke, Eileiter und Gebärmutter — visualisiert. Dadurch, dass die Untersuchung mit Schall passiert, liegt keine Strahlungsbelastung vor." data-lang-ru="Вагинальное УЗИ (также называемое вагинальной сонографией) — это безболезненный метод обследования в гинекологической практике. Здесь используется стержнеобразный датчик для визуализации «малого таза», т.е. мочевого пузыря, яичников, фаллопиевых труб и матки. Поскольку обследование проводится с помощью ультразвука, облучение отсутствует.">Ein vaginaler Ultraschall (auch vaginale Sonographie genannt) ist eine schmerzfreie Untersuchungsmethode in der gynäkologischen Praxis. Hier wird mit einem stabförmigen Schallkopf das „kleine Becken" — d.h. die Harnblase, Eierstöcke, Eileiter und Gebärmutter — visualisiert. Dadurch, dass die Untersuchung mit Schall passiert, liegt keine Strahlungsbelastung vor.</p>
+
+        <div class="content-cta">
+          <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
+          <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакт">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

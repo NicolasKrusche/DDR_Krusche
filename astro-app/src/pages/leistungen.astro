@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const services = [
+  { title: 'Verhütungsberatung', titleRu: 'Консультации по контрацепции', route: '/verhuetung', image: '/images/unsplash-verhuetung.jpg', alt: 'Verhütungsberatung' },
+  { title: 'Vorsorgeuntersuchung', titleRu: 'Профилактический осмотр', route: '/vorsorgeuntersuchung', image: '/images/unsplash-GEzNsJarkGU.jpg', alt: 'Vorsorgeuntersuchung' },
+  { title: 'Familienplanung', titleRu: 'Планирование семьи', route: '/familienplanung', image: '/images/unsplash-NIZeg731LxM.jpg', alt: 'Familienplanung' },
+  { title: 'Genetische Beratung', titleRu: 'Генетическое консультирование', route: '/genetische-beratung', image: '/images/unsplash-XknuBmnjbKg.jpg', alt: 'Genetische Beratung' },
+  { title: 'Jugendgynäkologie', titleRu: 'Подростковая гинекология', route: '/jugendgynaekologie', image: '/images/unsplash-cIfLUEZYLVg.jpg', alt: 'Jugendgynäkologie' },
+  { title: 'Impfungen', titleRu: 'Вакцинация', route: '/impfungen', image: '/images/unsplash-impfungen.jpg', alt: 'Impfungen' },
+  { title: 'Wechseljahre', titleRu: 'Менопауза', route: '/wechseljahre', image: '/images/unsplash-wechseljahre.jpg', alt: 'Wechseljahre' },
+  { title: 'Ultraschalldiagnostik', titleRu: 'УЗИ диагностика', route: '/ultraschalldiagnostik', image: '/images/unsplash-ultraschall.jpg', alt: 'Ultraschalldiagnostik' },
+];
+---
+
+<Layout
+  title="Unsere Leistungen — DDr. Anastasiya Krusche | Gynäkologin"
+  description="Alle gynäkologischen Leistungen von DDr. Krusche: Verhütungsberatung, Vorsorgeuntersuchung, Familienplanung, Genetische Beratung, Jugendgynäkologie, Impfungen, Wechseljahre, Ultraschall."
+>
+  <Navbar slot="navbar" />
+
+  <section class="leistungen-section" aria-labelledby="leistungen-heading">
+    <div class="container">
+      <div class="leistungen-header">
+        <h1 id="leistungen-heading" data-lang-de="Unsere Leistungen" data-lang-ru="Наши услуги">Unsere Leistungen</h1>
+        <p data-lang-de="Gynäkologische Betreuung auf höchstem Niveau" data-lang-ru="Гинекологическая помощь на высшем уровне">Gynäkologische Betreuung auf höchstem Niveau</p>
+      </div>
+      <div class="leistungen-grid">
+        {services.map(svc => (
+          <a class="leistung-card" href={svc.route}>
+            <img class="leistung-card-img" src={svc.image} alt={svc.alt} loading="lazy" width="300" height="180" />
+            <div class="leistung-card-body">
+              <h2 style="font-size:18px;margin-bottom:8px;" data-lang-de={svc.title} data-lang-ru={svc.titleRu}>{svc.title}</h2>
+              <span data-lang-de="Mehr erfahren" data-lang-ru="Подробнее">Mehr erfahren</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

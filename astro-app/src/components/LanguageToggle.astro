@@ -1,0 +1,59 @@
+---
+// Language toggle - minimal client-side script for DE/RU switching
+// German content is always in the static HTML (SEO-friendly).
+// Russian content is stored in data-lang-ru attributes and swapped via JS.
+---
+
+<script is:inline>
+(function() {
+  var lang = 'de';
+  try { lang = localStorage.getItem('lang') || 'de'; } catch(e) {}
+
+  function applyLanguage(l) {
+    lang = l;
+    try { localStorage.setItem('lang', l); } catch(e) {}
+    var key = 'data-lang-' + l;
+    var els = document.querySelectorAll('[data-lang-de][data-lang-ru]');
+    for (var i = 0; i < els.length; i++) {
+      var val = els[i].getAttribute(key);
+      if (val !== null) {
+        if (els[i].tagName === 'INPUT' || els[i].tagName === 'TEXTAREA') {
+          els[i].placeholder = val;
+        } else {
+          els[i].textContent = val;
+        }
+      }
+    }
+    // Update toggle buttons
+    var label = l === 'de' ? '\u{1F1F7}\u{1F1FA} \u0420\u0443\u0441\u0441\u043A\u0438\u0439' : '\u{1F1E6}\u{1F1F9} Deutsch';
+    var btns = document.querySelectorAll('#lang-toggle-desktop, #lang-toggle-mobile');
+    for (var j = 0; j < btns.length; j++) { btns[j].textContent = label; }
+    document.documentElement.lang = l;
+  }
+
+  function toggle() {
+    applyLanguage(lang === 'de' ? 'ru' : 'de');
+  }
+
+  // Apply on load if Russian was selected
+  if (lang === 'ru') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { applyLanguage('ru'); });
+    } else {
+      applyLanguage('ru');
+    }
+  }
+
+  // Bind toggle buttons
+  function bindToggles() {
+    var btns = document.querySelectorAll('#lang-toggle-desktop, #lang-toggle-mobile');
+    for (var k = 0; k < btns.length; k++) { btns[k].addEventListener('click', toggle); }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindToggles);
+  } else {
+    bindToggles();
+  }
+})();
+</script>

@@ -1,0 +1,18 @@
+---
+export interface Props {
+  image: string;
+  alt?: string;
+  title: string;
+  subtitle?: string;
+}
+const { image, alt = '', title, subtitle } = Astro.props;
+---
+
+<section class="page-hero">
+  <img class="page-hero-image" src={image} alt={alt} loading="eager" />
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <h1>{title}</h1>
+    {subtitle && <p class="page-hero-subtitle">{subtitle}</p>}
+  </div>
+</section>

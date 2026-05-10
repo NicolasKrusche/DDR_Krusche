@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Wechseljahre & Menopause — DDr. Anastasiya Krusche | Gynäkologin"
+  description="Beratung und Behandlung bei Wechseljahren. Hormonersatztherapie und pflanzliche Mittel bei Wechseljahrsbeschwerden. DDr. Krusche in Mödling und Hochstraß."
+>
+  <Navbar slot="navbar" />
+
+  <PageHero image="/images/unsplash-wechseljahre.jpg" alt="Wechseljahre" title="Wechseljahre" />
+
+  <section class="content-section" aria-labelledby="wechsel-heading">
+    <div class="container">
+      <div class="content-narrow">
+        <h1 class="sr-only" id="wechsel-heading">Wechseljahre</h1>
+        <p data-lang-de="Die Themagruppe Menopause gilt oft als schwierig. Selbstverständlich kommen also Fragen auf: wann beginnen die Wechseljahre, und wann hören sie auf? Welche Probleme können sie verursachen?" data-lang-ru="Тема менопаузы является не такой простой как кажется на первый взгляд. Естественно, возникают вопросы: когда начинается менопауза? Какие проблемы она может вызвать?">Die Themagruppe Menopause gilt oft als schwierig. Selbstverständlich kommen also Fragen auf: wann beginnen die Wechseljahre, und wann hören sie auf? Welche Probleme können sie verursachen?</p>
+        <p data-lang-de="Beratung zu diesen und weiteren Fragen, sowie Behandlung der Symptome der Wechseljahre, finden Sie in meiner Praxis. In einigen Fällen ist die Hormonersatztherapie die Therapie der Wahl bei Wechseljahrsbeschwerden; außerdem gibt es dazu eine breite Auswahl an pflanzlichen Mitteln zur Behandlung." data-lang-ru="Консультации по этим и другим вопросам, а также лечение симптомов менопаузы можно получить в моей ординации. Заместительная гормональная терапия является в некоторых случаях терапией выбора при климактерических симптомах. Существует так же большой выбор растительных препаратов для лечения климактерических симптомов.">Beratung zu diesen und weiteren Fragen, sowie Behandlung der Symptome der Wechseljahre, finden Sie in meiner Praxis. In einigen Fällen ist die Hormonersatztherapie die Therapie der Wahl bei Wechseljahrsbeschwerden; außerdem gibt es dazu eine breite Auswahl an pflanzlichen Mitteln zur Behandlung.</p>
+
+        <div class="content-cta">
+          <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
+          <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакт">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

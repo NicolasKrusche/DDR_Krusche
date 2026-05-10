@@ -1,0 +1,90 @@
+---
+const currentPath = Astro.url.pathname;
+const isActive = (path: string) => currentPath === path || currentPath === path + '/';
+const servicePages = ['/verhuetung', '/vorsorgeuntersuchung', '/familienplanung', '/genetische-beratung', '/jugendgynaekologie', '/impfungen', '/wechseljahre', '/ultraschalldiagnostik'];
+const isServicesActive = currentPath === '/leistungen' || currentPath === '/leistungen/' || servicePages.some(p => currentPath === p || currentPath === p + '/');
+---
+
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/images/logo_dr.png" alt="DDr. Anastasiya Krusche" class="nav-logo-img" width="80" height="80" />
+      <span>DDr. Krusche</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/" class={isActive('/') ? 'active' : ''} data-lang-de="Startseite" data-lang-ru="Главная">Startseite</a></li>
+      <li><a href="/ueber-mich" class={isActive('/ueber-mich') ? 'active' : ''} data-lang-de="Über mich" data-lang-ru="Обо мне">Über mich</a></li>
+      <li class="nav-dropdown">
+        <button class={`nav-dropdown-toggle${isServicesActive ? ' active' : ''}`} type="button" data-lang-de="Leistungen" data-lang-ru="Услуги">Leistungen</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/leistungen" class={isActive('/leistungen') ? 'active' : ''} data-lang-de="Alle Leistungen" data-lang-ru="Все услуги">Alle Leistungen</a></li>
+          <li><a href="/verhuetung" class={isActive('/verhuetung') ? 'active' : ''} data-lang-de="Verhütung" data-lang-ru="Контрацепция">Verhütung</a></li>
+          <li><a href="/vorsorgeuntersuchung" class={isActive('/vorsorgeuntersuchung') ? 'active' : ''} data-lang-de="Vorsorgeuntersuchung" data-lang-ru="Профилактический осмотр">Vorsorgeuntersuchung</a></li>
+          <li><a href="/familienplanung" class={isActive('/familienplanung') ? 'active' : ''} data-lang-de="Familienplanung" data-lang-ru="Планирование семьи">Familienplanung</a></li>
+          <li><a href="/genetische-beratung" class={isActive('/genetische-beratung') ? 'active' : ''} data-lang-de="Genetische Beratung" data-lang-ru="Генетическое консультирование">Genetische Beratung</a></li>
+          <li><a href="/jugendgynaekologie" class={isActive('/jugendgynaekologie') ? 'active' : ''} data-lang-de="Jugendgynäkologie" data-lang-ru="Подростковая гинекология">Jugendgynäkologie</a></li>
+          <li><a href="/impfungen" class={isActive('/impfungen') ? 'active' : ''} data-lang-de="Impfungen" data-lang-ru="Вакцинация">Impfungen</a></li>
+          <li><a href="/wechseljahre" class={isActive('/wechseljahre') ? 'active' : ''} data-lang-de="Wechseljahre" data-lang-ru="Менопауза">Wechseljahre</a></li>
+          <li><a href="/ultraschalldiagnostik" class={isActive('/ultraschalldiagnostik') ? 'active' : ''} data-lang-de="Ultraschalldiagnostik" data-lang-ru="УЗИ диагностика">Ultraschalldiagnostik</a></li>
+        </ul>
+      </li>
+      <li><a href="/ordination" class={isActive('/ordination') ? 'active' : ''} data-lang-de="Ordination" data-lang-ru="Ординация">Ordination</a></li>
+      <li><a href="/kontakt" class={isActive('/kontakt') ? 'active' : ''} data-lang-de="Kontakt" data-lang-ru="Контакты">Kontakt</a></li>
+      <li><button class="lang-btn" type="button" id="lang-toggle-desktop">Русский</button></li>
+      <li><a href="/termin" class="btn btn-primary" data-lang-de="Termin vereinbaren" data-lang-ru="Записаться">Termin vereinbaren</a></li>
+    </ul>
+
+    <button class="lang-btn lang-btn-mobile" type="button" id="lang-toggle-mobile">Русский</button>
+
+    <button class="nav-hamburger" type="button" aria-label="Menü öffnen" id="hamburger-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/" class={isActive('/') ? 'active' : ''} data-lang-de="Startseite" data-lang-ru="Главная">Startseite</a>
+    <a href="/ueber-mich" class={isActive('/ueber-mich') ? 'active' : ''} data-lang-de="Über mich" data-lang-ru="Обо мне">Über mich</a>
+    <div class="nav-dropdown">
+      <button class={`nav-dropdown-toggle${isServicesActive ? ' active' : ''}`} type="button" id="mobile-services-toggle" data-lang-de="Leistungen" data-lang-ru="Услуги">Leistungen</button>
+      <div class="nav-dropdown-menu" id="mobile-services-menu" style="display:none;">
+        <a href="/leistungen" data-lang-de="Alle Leistungen" data-lang-ru="Все услуги">Alle Leistungen</a>
+        <a href="/verhuetung" data-lang-de="Verhütung" data-lang-ru="Контрацепция">Verhütung</a>
+        <a href="/vorsorgeuntersuchung" data-lang-de="Vorsorgeuntersuchung" data-lang-ru="Профилактический осмотр">Vorsorgeuntersuchung</a>
+        <a href="/familienplanung" data-lang-de="Familienplanung" data-lang-ru="Планирование семьи">Familienplanung</a>
+        <a href="/genetische-beratung" data-lang-de="Genetische Beratung" data-lang-ru="Генетическое консультирование">Genetische Beratung</a>
+        <a href="/jugendgynaekologie" data-lang-de="Jugendgynäkologie" data-lang-ru="Подростковая гинекология">Jugendgynäkologie</a>
+        <a href="/impfungen" data-lang-de="Impfungen" data-lang-ru="Вакцинация">Impfungen</a>
+        <a href="/wechseljahre" data-lang-de="Wechseljahre" data-lang-ru="Менопауза">Wechseljahre</a>
+        <a href="/ultraschalldiagnostik" data-lang-de="Ultraschalldiagnostik" data-lang-ru="УЗИ диагностика">Ultraschalldiagnostik</a>
+      </div>
+    </div>
+    <a href="/ordination" class={isActive('/ordination') ? 'active' : ''} data-lang-de="Ordination" data-lang-ru="Ординация">Ordination</a>
+    <a href="/kontakt" class={isActive('/kontakt') ? 'active' : ''} data-lang-de="Kontakt" data-lang-ru="Контакты">Kontakt</a>
+    <a href="/termin" class="btn btn-primary" data-lang-de="Termin vereinbaren" data-lang-ru="Записаться">Termin vereinbaren</a>
+  </div>
+</nav>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger?.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu?.classList.toggle('active');
+  });
+
+  // Mobile services dropdown
+  const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+  const mobileServicesMenu = document.getElementById('mobile-services-menu');
+  mobileServicesToggle?.addEventListener('click', () => {
+    if (mobileServicesMenu) {
+      mobileServicesMenu.style.display = mobileServicesMenu.style.display === 'none' ? '' : 'none';
+    }
+  });
+
+  // Scroll shadow
+  window.addEventListener('scroll', () => {
+    document.querySelector('.nav')?.classList.toggle('scrolled', window.scrollY > 10);
+  });
+</script>

@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Verhütungsberatung — DDr. Anastasiya Krusche | Gynäkologin"
+  description="Verhütungsberatung bei DDr. Krusche: Pille, Spirale, Implanon, 3-Monats-Spritze und mehr. Individuelle Beratung zu hormonellen und nicht-hormonellen Methoden."
+>
+  <Navbar slot="navbar" />
+
+  <PageHero image="/images/unsplash-verhuetung.jpg" alt="Verhütungsberatung" title="Verhütungsberatung" subtitle="Spirale, Pille & Co." />
+
+  <section class="content-section" aria-labelledby="verhuetung-heading">
+    <div class="container">
+      <div class="content-narrow">
+        <h1 class="sr-only" id="verhuetung-heading">Verhütungsberatung</h1>
+        <p data-lang-de="Wir leben zu einer Zeit, in der es dutzende Methoden gibt, ungewollte Schwangerschaften vorzubeugen. Das ist einerseits ein Segen, andererseits kann es oft schwerfallen, die richtige Art der Verhütung auszuwählen. Von hormonellen Unterschieden, über finanzielle Fragen, bis hin zur Persönlichkeit der jeweiligen Frau kann vieles eine Auswirkung auf die „richtige" Methode haben." data-lang-ru="Мы живем в такое время, когда существуют десятки методов предотвращения нежелательной беременности. С одной стороны, это благо, но с другой стороны, часто бывает трудно выбрать &quot;правильный&quot; тип контрацепции. От гормональных различий, финансовых вопросов, до личности самой женщины — многие вещи могут повлиять на выбор &quot;правильного&quot; метода.">Wir leben zu einer Zeit, in der es dutzende Methoden gibt, ungewollte Schwangerschaften vorzubeugen. Das ist einerseits ein Segen, andererseits kann es oft schwerfallen, die richtige Art der Verhütung auszuwählen. Von hormonellen Unterschieden, über finanzielle Fragen, bis hin zur Persönlichkeit der jeweiligen Frau kann vieles eine Auswirkung auf die „richtige" Methode haben.</p>
+
+        <h2 style="margin: 32px 0 16px;" data-lang-de="Einige der häufigsten Mittel zur Verhütung" data-lang-ru="Некоторые из наиболее распространенных средств контрацепции">Einige der häufigsten Mittel zur Verhütung</h2>
+        <ul>
+          <li data-lang-de="Hormonelle Verhütungsmittel (Pillen, Pflaster usw.)" data-lang-ru="гормональные контрацептивы (таблетированные, пластыри и др.)">Hormonelle Verhütungsmittel (Pillen, Pflaster usw.)</li>
+          <li data-lang-de="Spiralen (non-hormonell und hormonell)" data-lang-ru="внутриматочные спирали (негормональные и гормональные), также под анестезией при желании">Spiralen (non-hormonell und hormonell)</li>
+          <li data-lang-de="3-Monats-Spritze" data-lang-ru="3-месячная инъекция">3-Monats-Spritze</li>
+          <li data-lang-de="Tubenligatur" data-lang-ru="Перевязка труб">Tubenligatur</li>
+          <li data-lang-de="Implanon" data-lang-ru="Импланон">Implanon</li>
+          <li data-lang-de="Notfallverhütung" data-lang-ru="экстренная контрацепция">Notfallverhütung</li>
+        </ul>
+
+        <p data-lang-de="So wie es eine Vielzahl unterschiedlicher Verhütungsmethoden gibt, gibt es natürlich auch eine Vielzahl an Fragen, die Sie sich stellen können. Wie sicher ist welche Methode wirklich? Ist es gefährlich, keine Regel durch z.B. Hormonspiralen zu haben? Wie steht es mit Schmerzen?" data-lang-ru="Так же как существует множество различных методов контрацепции, есть, конечно, и множество вопросов, которые Вы можете себе задать. Насколько эффективен тот или иной метод? Опасно ли не иметь месячных, например, с помощью гормональных внутриматочных контрацептивов? Как насчет боли?">So wie es eine Vielzahl unterschiedlicher Verhütungsmethoden gibt, gibt es natürlich auch eine Vielzahl an Fragen, die Sie sich stellen können. Wie sicher ist welche Methode wirklich? Ist es gefährlich, keine Regel durch z.B. Hormonspiralen zu haben? Wie steht es mit Schmerzen?</p>
+        <p data-lang-de="In all diesen Fragen und mehr kann ich Sie beraten, und Ihnen dabei beistehen, das richtige Mittel für Sie zu finden." data-lang-ru="Я могу проконсультировать Вас по всем этим и другим вопросам, и помочь Вам найти подходящее для Вас средство.">In all diesen Fragen und mehr kann ich Sie beraten, und Ihnen dabei beistehen, das richtige Mittel für Sie zu finden.</p>
+
+        <div class="content-cta">
+          <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
+          <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакт">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Gynäkologische Vorsorgeuntersuchung — DDr. Anastasiya Krusche"
+  description="Jährliche gynäkologische Vorsorgeuntersuchung bei DDr. Krusche: PAP-Abstrich, Vaginalultraschall, Brustuntersuchung und Sekretabstrich. Vorsorge auf höchstem Niveau."
+>
+  <Navbar slot="navbar" />
+
+  <PageHero image="/images/unsplash-GEzNsJarkGU.jpg" alt="Vorsorgeuntersuchung" title="Gynäkologische Vorsorgeuntersuchung" />
+
+  <section class="content-section" aria-labelledby="vorsorge-heading">
+    <div class="container">
+      <div class="content-narrow">
+        <h1 class="sr-only" id="vorsorge-heading">Gynäkologische Vorsorgeuntersuchung</h1>
+        <p data-lang-de="Die jährliche gynäkologische Vorsorgeuntersuchung ist ein essentieller Teil der weiblichen Gesundheit, und findet sich damit nicht umsonst auf den Kalendern von tausenden von Frauen! Lebensumstände und Sorgen sind natürlich von Frau zu Frau unterschiedlich; daher besprechen wir Ihre Anliegen und mögliche Beschwerden vor der „Routine"-Untersuchung. Diese enthält dann unter anderem:" data-lang-ru="Ежегодный гинекологический осмотр — это неотъемлемая часть женского здоровья, и поэтому он не зря стоит в календарях тысяч женщин. Конечно, жизненные обстоятельства и проблемы у разных женщин разные, поэтому мы обсуждаем Ваши опасения и возможные жалобы до &quot;обычных&quot; обследований, как например:">Die jährliche gynäkologische Vorsorgeuntersuchung ist ein essentieller Teil der weiblichen Gesundheit, und findet sich damit nicht umsonst auf den Kalendern von tausenden von Frauen! Lebensumstände und Sorgen sind natürlich von Frau zu Frau unterschiedlich; daher besprechen wir Ihre Anliegen und mögliche Beschwerden vor der „Routine"-Untersuchung. Diese enthält dann unter anderem:</p>
+        <ul>
+          <li data-lang-de="eine gynäkologische Untersuchung Ihrer Eierstöcke und Gebärmutter (inkl. Vaginalultraschall)" data-lang-ru="гинекологическое обследование яичников и матки (включая вагинальное ультразвуковое исследование)">eine gynäkologische Untersuchung Ihrer Eierstöcke und Gebärmutter (inkl. Vaginalultraschall)</li>
+          <li data-lang-de="die Durchführung eines zytologischen Abstriches (PAP-Abstrich)" data-lang-ru="анализ мазка на цитологию (PAP-мазок)">die Durchführung eines zytologischen Abstriches (PAP-Abstrich)</li>
+          <li data-lang-de="Untersuchung des Vaginalsekrets mittels Sekretabstrich" data-lang-ru="исследование влагалищного секрета">Untersuchung des Vaginalsekrets mittels Sekretabstrich</li>
+          <li data-lang-de="eine Tastuntersuchung der Brust — außerdem Empfehlungen für Brustuntersuchungen zu Hause" data-lang-ru="пальпаторное обследование молочных желёз, а так же рекомендации по обследованию молочных желёз в домашних условиях.">eine Tastuntersuchung der Brust — außerdem Empfehlungen für Brustuntersuchungen zu Hause</li>
+        </ul>
+        <div class="content-cta">
+          <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
+          <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакт">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

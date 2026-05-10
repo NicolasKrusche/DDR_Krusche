@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="HPV-Impfung — DDr. Anastasiya Krusche | Gynäkologin"
+  description="HPV-Impfung bei DDr. Krusche: Schutz vor Gebärmutterhalskrebs und Genitalwarzen. Kostenfreie Impfung vom 9. bis 21. Lebensjahr. Beratung in Mödling und Hochstraß."
+>
+  <Navbar slot="navbar" />
+
+  <PageHero image="/images/unsplash-impfungen.jpg" alt="Impfungen" title="Impfungen" />
+
+  <section class="content-section" aria-labelledby="impfungen-heading">
+    <div class="container">
+      <div class="content-narrow">
+        <h1 class="sr-only" id="impfungen-heading">Impfungen</h1>
+
+        <h2 data-lang-de="HPV" data-lang-ru="ВПЧ">HPV</h2>
+        <p data-lang-de="Humane Papillomaviren stellen eine große Virusgruppe dar, die zu abnormem Zellwachstum beim Menschen führen kann und Krebsvorstufen, Krebs sowie Genitalwarzen verursachen können. Es sind mehr als 120 HPV Typen bekannt, von denen etwa 14 krebsverursachende Wirkungen haben. Humane Papillomaviren werden durch direkten Schleimhautkontakt übertragen, etwa bei sexuellen Kontakten oder in seltenen Fällen auch während der Geburt von der Mutter auf das Kind. Eine Ansteckungsgefahr besteht, solange eine chronische Infektion vorliegt. Kondome bieten keinen sicheren Schutz vor einer Ansteckung mit HPV." data-lang-ru="Вирусы папилломы человека — это большая группа вирусов, которые могут вызывать аномальный рост клеток у человека и могут стать причиной предраковых состояний, рака и генитальных бородавок. Известно более 120 типов ВПЧ, из которых около 14 вызывают рак. Вирусы папилломы человека передаются через прямой контакт со слизистыми оболочками, например, во время полового контакта или, в редких случаях, от матери к ребенку во время родов. При наличии хронической инфекции существует риск заражения. Презервативы не обеспечивают надежной защиты от заражения ВПЧ.">Humane Papillomaviren stellen eine große Virusgruppe dar, die zu abnormem Zellwachstum beim Menschen führen kann und Krebsvorstufen, Krebs sowie Genitalwarzen verursachen können. Es sind mehr als 120 HPV Typen bekannt, von denen etwa 14 krebsverursachende Wirkungen haben. Humane Papillomaviren werden durch direkten Schleimhautkontakt übertragen, etwa bei sexuellen Kontakten oder in seltenen Fällen auch während der Geburt von der Mutter auf das Kind. Eine Ansteckungsgefahr besteht, solange eine chronische Infektion vorliegt. Kondome bieten keinen sicheren Schutz vor einer Ansteckung mit HPV.</p>
+        <p data-lang-de="Um das Risiko an z.B. Gebärmutterhalskrebs um bis zu 90% vorzubeugen, bieten viele Gynäkologen — darunter auch ich — eine HPV-Impfung an. Der Impfschutz hält lange, und ist vom vollendeten 9. bis zum vollendeten 21. Lebensjahr kostenfrei." data-lang-ru="Чтобы предотвратить риск возникновения, например, рака шейки матки, многие гинекологи — в том числе и мы — предлагают вакцинацию против ВПЧ. Вакцинация защищает на долгий срок и проводится бесплатно с 9 лет и до 21 года.">Um das Risiko an z.B. Gebärmutterhalskrebs um bis zu 90% vorzubeugen, bieten viele Gynäkologen — darunter auch ich — eine HPV-Impfung an. Der Impfschutz hält lange, und ist vom vollendeten 9. bis zum vollendeten 21. Lebensjahr kostenfrei.</p>
+
+        <div class="content-info-box">
+          <p data-lang-de="Derzeit biete ich leider keine anderen Impfungen an." data-lang-ru="К сожалению, в настоящее время я не предлагаю никаких других прививок.">Derzeit biete ich leider keine anderen Impfungen an.</p>
+        </div>
+
+        <div class="content-cta">
+          <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
+          <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакт">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

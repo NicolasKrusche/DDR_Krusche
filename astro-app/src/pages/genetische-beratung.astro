@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Genetische Beratung — DDr. Anastasiya Krusche | Gynäkologin"
+  description="Genetische Beratung bei bösartigen gynäkologischen Erkrankungen. BRCA-Analyse, Stammbaumanalyse und WID-easy Test bei DDr. Krusche in Mödling und Hochstraß."
+>
+  <Navbar slot="navbar" />
+
+  <PageHero image="/images/unsplash-XknuBmnjbKg.jpg" alt="Genetische Beratung" title="Genetische Beratung" subtitle="bei bösartigen gynäkologischen Erkrankungen" />
+
+  <section class="content-section" aria-labelledby="genetische-heading">
+    <div class="container">
+      <div class="content-narrow">
+        <h1 class="sr-only" id="genetische-heading">Genetische Beratung</h1>
+
+        <h2 data-lang-de="Was ist „Genetische Beratung"?" data-lang-ru="Что такое «генетическое консультирование»?">Was ist „Genetische Beratung"?</h2>
+        <p data-lang-de="Bei einer Genetischen Beratung werden Sie informiert, welche Risiken für Krankheiten und Fehlbildungen Sie (und/oder nahe Verwandte) im Erbgut tragen. Dazu kann zum Beispiel Brustkrebs oder Eierstockkrebs zählen, da gewisse Gene besonders wichtig dafür sind, defekte Zellen zu reparieren. Sind diese Gene verändert, kann diese Reparatur ausfallen, und die abnormen Zellen können zu Krebs werden." data-lang-ru="Во время генетического консультирования Вас проинформируют о рисках заболеваний, которые Вы (и/или близкие родственники) несете в своем генетическом наборе. Это может быть, например, рак молочной железы или рак яичников, поскольку определенные гены особенно важны для восстановления дефектных клеток. Если эти гены изменены, восстановление может не дать результата и аномальные клетки могут стать раковыми.">Bei einer Genetischen Beratung werden Sie informiert, welche Risiken für Krankheiten und Fehlbildungen Sie (und/oder nahe Verwandte) im Erbgut tragen. Dazu kann zum Beispiel Brustkrebs oder Eierstockkrebs zählen, da gewisse Gene besonders wichtig dafür sind, defekte Zellen zu reparieren. Sind diese Gene verändert, kann diese Reparatur ausfallen, und die abnormen Zellen können zu Krebs werden.</p>
+        <p data-lang-de="Zu diesen Genen zählen BRCA-1 und BRCA-2, welche das Krebsrisiko lindern. BRCA steht für „BReast CAncer" („Brustkrebs")." data-lang-ru="Мутации в генах BRCA-1 и BRCA-2 могут влиять на риск развития рака. BRCA — это сокращение от „BReast CAncer" („рак молочной железы").">Zu diesen Genen zählen BRCA-1 und BRCA-2, welche das Krebsrisiko lindern. BRCA steht für „BReast CAncer" („Brustkrebs").</p>
+
+        <h2 style="margin-top: 32px;" data-lang-de="Wann sollte ich mich beraten lassen?" data-lang-ru="Когда мне следует обратиться за консультацией?">Wann sollte ich mich beraten lassen?</h2>
+        <p data-lang-de="Besonders wichtig ist so eine Beratung, wenn Sie in Ihrer nahen Familie bereits mehrmals Brustkrebs/Eierstockkrebs o.Ä. erlebt haben." data-lang-ru="Консультация особенно важна, если у Вас в семейном анамнезе есть рак молочных желёз/яичников или подобные заболевания.">Besonders wichtig ist so eine Beratung, wenn Sie in Ihrer nahen Familie bereits mehrmals Brustkrebs/Eierstockkrebs o.Ä. erlebt haben.</p>
+
+        <h2 style="margin-top: 32px;" data-lang-de="Was passiert konkret bei Genetischer Beratung?" data-lang-ru="Что именно происходит во время генетического консультирования?">Was passiert konkret bei Genetischer Beratung?</h2>
+        <p data-lang-de="Die Beratung ist grundsätzlich dreiteilig:" data-lang-ru="Консультация:">Die Beratung ist grundsätzlich dreiteilig:</p>
+        <ol>
+          <li data-lang-de="Die Grundlagen werden Ihnen zum Verständnis näher gebracht" data-lang-ru="Проводится анализ Вашего семейного древа: больше информации о болезнях в Вашей семье необходимо получить. Особенно интересен для нас здесь возраст начала заболевания.">Die Grundlagen werden Ihnen zum Verständnis näher gebracht</li>
+          <li data-lang-de="Eine Analyse Ihres Stammbaums wird durchgeführt — hier ist mehr Information zu den Krankheiten in Ihrer Familie immer besser. Besonders das Erkrankungsalter ist hier für uns interessant." data-lang-ru="Оценивается целесообразность дальнейших обследований, например, конкретного генетического анализа, отдельных генов.">Eine Analyse Ihres Stammbaums wird durchgeführt — hier ist mehr Information zu den Krankheiten in Ihrer Familie immer besser. Besonders das Erkrankungsalter ist hier für uns interessant.</li>
+          <li>Es wird ausgewertet, ob weitere Untersuchungen — z.B. konkrete genetische Analyse, von einzelnen Genen — sinnvoll sind.</li>
+        </ol>
+
+        <h2 style="margin-top: 32px;">WID&reg;-easy Test – Epigenetische Früherkennung des Uteruskarzinoms</h2>
+        <p><strong data-lang-de="Was ist der Test?" data-lang-ru="Что это за тест?">Was ist der Test?</strong></p>
+        <p data-lang-de="Der WID®-easy (wissenschaftlich: WID®-qEC) ist ein epigenetischer DNA-Methylierungstest zur Erkennung aller Karzinome, die vom Uterus ausgehen – insbesondere das Endometriumkarzinom, aber auch das endozervikale Karzinom. Er ist indiziert bei peri- und postmenopausalen Frauen mit abnormalen vaginalen Blutungen." data-lang-ru="WID®-easy — это эпигенетический тест на метилирование ДНК для ранней диагностики рака тела матки (эндометриальной карциномы) у женщин в пери- и постменопаузе с аномальными вагинальными кровотечениями.">Der WID&reg;-easy (wissenschaftlich: WID&reg;-qEC) ist ein epigenetischer DNA-Methylierungstest zur Erkennung aller Karzinome, die vom Uterus ausgehen – insbesondere das Endometriumkarzinom, aber auch das endozervikale Karzinom. Er ist indiziert bei peri- und postmenopausalen Frauen mit abnormalen vaginalen Blutungen.</p>
+
+        <div class="content-cta">
+          <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
+          <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакт">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

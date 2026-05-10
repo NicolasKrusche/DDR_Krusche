@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="DDr. Anastasiya Krusche — Gynäkologin in Mödling & Hochstraß"
+  description="DDr. Anastasiya Krusche — Fachärztin für Gynäkologie und Geburtshilfe in Mödling und Hochstraß. Vorsorgeuntersuchung, Schwangerschaftsbegleitung, Verhütung und mehr. Alle Kassen und Privat."
+>
+  <Navbar slot="navbar" />
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-image">
+      <img src="/images/wasa_2.jpg" alt="DDr. Anastasiya Krusche — Gynäkologin in Österreich" loading="eager" width="600" height="800" />
+    </div>
+    <div class="hero-content">
+      <p class="hero-overline" data-lang-de="Ihre Gynäkologin in Österreich" data-lang-ru="Ваш русскоговорящий гинеколог в Австрии">Ihre Gynäkologin in Österreich</p>
+      <h1>
+        <span data-lang-de="Willkommen in der Ordination von" data-lang-ru="Добро пожаловать в практику доктора">Willkommen in der Ordination von</span><br />
+        <span data-lang-de="DDr. Anastasiya Krusche" data-lang-ru="Анастасии Круше">DDr. Anastasiya Krusche</span>
+      </h1>
+      <p data-lang-de="Ob Vorsorgeuntersuchung, Schwangerschaftsbegleitung oder Verhütung — ich bin gerne für Sie da und freue mich auf Ihren Besuch." data-lang-ru="Профилактический осмотр, сопровождение беременности или контрацепция — я буду рада видеть Вас в моей ординации.">Ob Vorsorgeuntersuchung, Schwangerschaftsbegleitung oder Verhütung — ich bin gerne für Sie da und freue mich auf Ihren Besuch.</p>
+      <div class="hero-actions">
+        <a href="/termin" class="btn btn-primary" data-lang-de="Termin vereinbaren" data-lang-ru="Записаться на прием онлайн">Termin vereinbaren</a>
+        <a href="/leistungen" class="btn btn-outline" data-lang-de="Leistungen entdecken" data-lang-ru="Услуги">Leistungen entdecken</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vacation Banner -->
+  <div class="vacation-banner">
+    <div class="container">
+      <div class="vacation-banner-content">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <p data-lang-de="Wir sind von 01.08.2026 bis 14.08.2026 auf Urlaub. Sie können gerne einen Termin online vereinbaren." data-lang-ru="Мы в отпуске с 01.08.2026 по 14.08.2026. Вы можете записаться на прием онлайн.">Wir sind von 01.08.2026 bis 14.08.2026 auf Urlaub. Sie können gerne einen Termin online vereinbaren.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wichtige Hinweise -->
+  <section class="info-section" aria-labelledby="info-heading">
+    <div class="container">
+      <div class="info-box">
+        <h3 id="info-heading" data-lang-de="Wichtige Hinweise" data-lang-ru="Важная информация">Wichtige Hinweise</h3>
+        <p data-lang-de="Falls Sie den Termin nicht wahrnehmen können, sagen Sie diesen bitte 24 Stunden vorher ab (Onlineabmeldung jederzeit möglich), da wir Ihnen ansonsten 50 Euro (Ordination Mödling) und 160 Euro (Ordination Hochstraß) verrechnen müssen. Bitte erscheinen Sie beim Erstbesuch mindestens 10 Minuten vor dem vereinbarten Termin in der Ordination, da noch einige Formalitäten geklärt werden müssen." data-lang-ru="Если вы не можете прийти на прием, то отмените его пожалуйста за 24 часа (вы можете отменить запись онлайн в любое время), в противном случае нам придется выставить счёт Вам на 50 евро (ординация в Mödling) и 160 евро (ординация в Hochstraß). При первом посещении просим Вас прийти в ординацию как минимум за 10 минут до назначенного времени, т.к. еще необходимо будет уточнить некоторые формальности.">Falls Sie den Termin nicht wahrnehmen können, sagen Sie diesen bitte 24 Stunden vorher ab (Onlineabmeldung jederzeit möglich), da wir Ihnen ansonsten 50 Euro (Ordination Mödling) und 160 Euro (Ordination Hochstraß) verrechnen müssen. Bitte erscheinen Sie beim Erstbesuch mindestens 10 Minuten vor dem vereinbarten Termin in der Ordination, da noch einige Formalitäten geklärt werden müssen.</p>
+        <p><strong style="color: red;" data-lang-de="Termine für den Mutter-Kind-Pass und beim positiven Schwangerschaftstest bitte nur telefonisch vereinbaren." data-lang-ru="На прием по Mutter-Kind-Pass и при положительном тесте на беременность пожалуйста записывайтесь только по телефону.">Termine für den Mutter-Kind-Pass und beim positiven Schwangerschaftstest bitte nur telefonisch vereinbaren.</strong></p>
+        <p data-lang-de="Ausschließlich Terminabsagen können Sie uns auch bis zu 24 Stunden vorher über office@dr-krusche.at mitteilen. Bitte haben Sie Verständnis, dass wir aus organisatorischen Gründen keine Terminvergaben, Befundbesprechungen oder andere organisatorische Anliegen per Mail durchführen können!" data-lang-ru="Отмену запланированного приема Termin вы можете сделать по еМайл office@dr-krusche.at. Пожалуйста отнеситесь пониманием, что мы по организационным причинам не можем производить обсуждение результатов, выдачу новых терминов и других организационных моментов по еМайлу.">Ausschließlich Terminabsagen können Sie uns auch bis zu 24 Stunden vorher über <a href="mailto:office@dr-krusche.at">office@dr-krusche.at</a> mitteilen. Bitte haben Sie Verständnis, dass wir aus organisatorischen Gründen keine Terminvergaben, Befundbesprechungen oder andere organisatorische Anliegen per Mail durchführen können!</p>
+        <p data-lang-de="Eine Schwangerschaftsbetreuung ist bei uns möglich, wenn eine Nackenfaltenuntersuchung und das Organscreening durchgeführt werden." data-lang-ru="Постановка на учет по беременности и ее ведение возможно только при условии, если пациентка проходит также обследование на 1. и 2. пренатальные скрининги по беременности.">Eine Schwangerschaftsbetreuung ist bei uns möglich, wenn eine Nackenfaltenuntersuchung und das Organscreening durchgeführt werden.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leistungen -->
+  <section class="leistungen-section" id="leistungen" aria-labelledby="leistungen-heading">
+    <div class="container">
+      <div class="leistungen-header">
+        <h2 id="leistungen-heading" data-lang-de="Leistungen" data-lang-ru="Услуги">Leistungen</h2>
+        <p data-lang-de="Gynäkologische Betreuung auf höchstem Niveau" data-lang-ru="Гинекологическая помощь на высшем уровне">Gynäkologische Betreuung auf höchstem Niveau</p>
+      </div>
+      <div class="leistungen-grid">
+        <a class="leistung-card" href="/vorsorgeuntersuchung">
+          <img class="leistung-card-img" src="/images/unsplash-GEzNsJarkGU.jpg" alt="Gynäkologische Vorsorgeuntersuchung" loading="lazy" width="300" height="180" />
+          <div class="leistung-card-body">
+            <h3 data-lang-de="Gynäkologische Vorsorgeuntersuchung" data-lang-ru="Гинекологический профилактический осмотр">Gynäkologische Vorsorgeuntersuchung</h3>
+            <span data-lang-de="Mehr erfahren" data-lang-ru="Подробнее">Mehr erfahren</span>
+          </div>
+        </a>
+        <a class="leistung-card" href="/jugendgynaekologie">
+          <img class="leistung-card-img" src="/images/unsplash-cIfLUEZYLVg.jpg" alt="Jugendgynäkologie" loading="lazy" width="300" height="180" />
+          <div class="leistung-card-body">
+            <h3 data-lang-de="Jugendgynäkologie" data-lang-ru="Гинекология для молодежи">Jugendgynäkologie</h3>
+            <span data-lang-de="Mehr erfahren" data-lang-ru="Подробнее">Mehr erfahren</span>
+          </div>
+        </a>
+        <a class="leistung-card" href="/familienplanung">
+          <img class="leistung-card-img" src="/images/unsplash-NIZeg731LxM.jpg" alt="Schwangerschaftsbegleitung" loading="lazy" width="300" height="180" />
+          <div class="leistung-card-body">
+            <h3 data-lang-de="Schwangerschaftsbegleitung" data-lang-ru="Поддержка при беременности">Schwangerschaftsbegleitung</h3>
+            <span data-lang-de="Mehr erfahren" data-lang-ru="Подробнее">Mehr erfahren</span>
+          </div>
+        </a>
+        <a class="leistung-card" href="/genetische-beratung">
+          <img class="leistung-card-img" src="/images/unsplash-XknuBmnjbKg.jpg" alt="Genetische Abklärung" loading="lazy" width="300" height="180" />
+          <div class="leistung-card-body">
+            <h3 data-lang-de="Genetische Abklärung" data-lang-ru="Генетическое консультирование">Genetische Abklärung</h3>
+            <span data-lang-de="Mehr erfahren" data-lang-ru="Подробнее">Mehr erfahren</span>
+          </div>
+        </a>
+      </div>
+      <div class="leistungen-more">
+        <a href="/leistungen" class="btn btn-outline" data-lang-de="Alle Leistungen ansehen" data-lang-ru="Все услуги">Alle Leistungen ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ordination Mödling -->
+  <section class="ord-section" aria-labelledby="ord-moedling-heading">
+    <div class="container">
+      <div class="ord-grid">
+        <div class="ord-image">
+          <img src="/images/thumbnail_IMG_9253.jpg" alt="Ordination Mödling — Gynäkologische Praxis DDr. Krusche" loading="lazy" width="600" height="400" />
+        </div>
+        <div class="ord-text">
+          <h2 id="ord-moedling-heading" data-lang-de="Ordination Mödling" data-lang-ru="Ординация Mödling">Ordination Mödling</h2>
+          <span class="ord-badge" data-lang-de="Alle Krankenkassen (ÖGK, SVA, KFA Wien, BVA, BVAEB) und Privat" data-lang-ru="Кассовая ординация все страховки (ÖGK, SVA, KFA Wien, BVA, BVAEB) или частно">Alle Krankenkassen (ÖGK, SVA, KFA Wien, BVA, BVAEB) und Privat</span>
+          <p>2340 Mödling, Enzersdorfer Straße 70/1</p>
+          <div class="ord-hours">
+            <div class="ord-hours-row"><span data-lang-de="Mo, Di, Do" data-lang-ru="Пн, вт, чт">Mo, Di, Do</span><span>08:00 – 13:00</span></div>
+            <div class="ord-hours-row"><span data-lang-de="Mittwoch" data-lang-ru="Среда">Mittwoch</span><span>13:00 – 18:00</span></div>
+          </div>
+          <p><span data-lang-de="nach telefonischer Vereinbarung unter:" data-lang-ru="Предварительная запись по телефону">nach telefonischer Vereinbarung unter:</span> <a href="tel:+432236392137">+43 2236 392137</a></p>
+          <a href="https://shop.timesloth.io/de/a/dr-krusche" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-lang-de="Online Termin buchen" data-lang-ru="Онлайн запись на приём">Online Termin buchen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ordination Hochstraß -->
+  <section class="ord-section" style="background: #F2F2F0;" aria-labelledby="ord-hochstrass-heading">
+    <div class="container">
+      <div class="ord-grid reversed">
+        <div class="ord-image">
+          <img src="/images/praxis.jpg" alt="Ordination Hochstraß — Gynäkologische Praxis DDr. Krusche" loading="lazy" width="600" height="400" />
+        </div>
+        <div class="ord-text">
+          <h2 id="ord-hochstrass-heading" data-lang-de="Ordination Hochstraß" data-lang-ru="Ординация Hochstraß">Ordination Hochstraß</h2>
+          <span class="ord-badge" data-lang-de="Wahlärztin" data-lang-ru="ЧАСТНАЯ ОРДИНАЦИЯ">Wahlärztin</span>
+          <p>3033 Hochstraß 593</p>
+          <div class="ord-hours">
+            <div class="ord-hours-row"><span data-lang-de="Montag" data-lang-ru="Понедельник">Montag</span><span>15:00 – 19:00</span></div>
+            <div class="ord-hours-row"><span data-lang-de="Mittwoch" data-lang-ru="Среда">Mittwoch</span><span>08:00 – 12:00</span></div>
+          </div>
+          <p><span data-lang-de="nach telefonischer Vereinbarung unter:" data-lang-ru="Предварительная запись по телефону">nach telefonischer Vereinbarung unter:</span> <a href="tel:+43277343603">+43 2773 43603</a></p>
+          <div class="ord-info-box" data-lang-de="Seit dem 1. Januar 2026 müssen Wahlärztinnen und Wahlärzte in Österreich die e-card-Infrastruktur nutzen und die e-card der Patientinnen und Patienten einlesen, um deren Identität und die Gültigkeit zu prüfen. Patientinnen (versichert mit ÖGK oder anderen Kassen) müssen die e-card bei Ihrem Wahlarzt vorlegen." data-lang-ru="С 1 января 2026 года врачи частной практики в Австрии обязаны использовать инфраструктуру e-card и считывать e-card пациентов, чтобы проверить их личность и действительность карты. Пациенты (застрахованные в ÖGK или других страховых кассах) должны предъявлять e-card своему врачу частной практики.">Seit dem 1. Januar 2026 müssen Wahlärztinnen und Wahlärzte in Österreich die e-card-Infrastruktur nutzen und die e-card der Patientinnen und Patienten einlesen, um deren Identität und die Gültigkeit zu prüfen. Patientinnen (versichert mit ÖGK oder anderen Kassen) müssen die e-card bei Ihrem Wahlarzt vorlegen.</div>
+          <a href="https://booking.termindoc.at/e0a5913235694e6ea570f210d541621d" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-lang-de="Online Termin buchen" data-lang-ru="Онлайн запись на приём">Online Termin buchen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading" data-lang-de="Jetzt Termin vereinbaren" data-lang-ru="Записаться на приём">Jetzt Termin vereinbaren</h2>
+      <p data-lang-de="Sie können gerne einen Termin online vereinbaren." data-lang-ru="Вы можете записаться на прием онлайн.">Sie können gerne einen Termin online vereinbaren.</p>
+      <p class="cta-hint" data-lang-de="Falls Sie den bereits online vereinbarten Termin stornieren möchten, klicken Sie bitte in der Bestätigungsmail auf „Buchung stornieren"." data-lang-ru="Если Вы хотите отменить сделанный приём онлайн, нажмите в e-mail подтверждения „Buchung stornieren".">Falls Sie den bereits online vereinbarten Termin stornieren möchten, klicken Sie bitte in der Bestätigungsmail auf „Buchung stornieren".</p>
+      <div class="cta-actions">
+        <a href="/termin" class="btn btn-white" data-lang-de="Termin vereinbaren" data-lang-ru="Записаться на прием онлайн">Termin vereinbaren</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

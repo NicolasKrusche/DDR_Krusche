@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Unsere Ordinationen — DDr. Anastasiya Krusche | Mödling & Hochstraß"
+  description="Gynäkologische Ordinationen von DDr. Krusche in Mödling (alle Kassen) und Hochstraß (Wahlärztin). Öffnungszeiten, Adresse und Online-Terminvereinbarung."
+>
+  <Navbar slot="navbar" />
+
+  <section class="ord-section" aria-labelledby="ord-hochstrass-h">
+    <div class="container">
+      <h1 class="sr-only">Unsere Ordinationen</h1>
+      <div class="ord-grid">
+        <div class="ord-image">
+          <img src="/images/praxis.jpg" alt="Ordination Hochstraß" loading="lazy" width="600" height="400" />
+        </div>
+        <div class="ord-text">
+          <h2 id="ord-hochstrass-h" data-lang-de="Ordination Hochstraß" data-lang-ru="Ординация Hochstraß">Ordination Hochstraß</h2>
+          <span class="ord-badge" data-lang-de="Wahlärztin" data-lang-ru="ЧАСТНАЯ ОРДИНАЦИЯ">Wahlärztin</span>
+          <p>3033 Hochstraß 593</p>
+          <div class="ord-hours">
+            <div class="ord-hours-row"><span data-lang-de="Montag" data-lang-ru="Понедельник">Montag</span><span>15:00 – 19:00</span></div>
+            <div class="ord-hours-row"><span data-lang-de="Mittwoch" data-lang-ru="Среда">Mittwoch</span><span>08:00 – 12:00</span></div>
+          </div>
+          <p>Tel: <a href="tel:+4327734360">+43 2773 43603</a></p>
+          <a href="https://booking.termindoc.at/e0a5913235694e6ea570f210d541621d" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-lang-de="Online Terminvereinbarung" data-lang-ru="Онлайн запись на приём">Online Terminvereinbarung</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ord-section" style="background: #F2F2F0;" aria-labelledby="ord-moedling-h">
+    <div class="container">
+      <div class="ord-grid reversed">
+        <div class="ord-image">
+          <img src="/images/thumbnail_IMG_9253.jpg" alt="Ordination Mödling" loading="lazy" width="600" height="400" />
+        </div>
+        <div class="ord-text">
+          <h2 id="ord-moedling-h" data-lang-de="Ordination Mödling" data-lang-ru="Ординация Mödling">Ordination Mödling</h2>
+          <span class="ord-badge" data-lang-de="Alle Krankenkassen (ÖGK, SVA, KFA, BVA, VAEB) und Privat" data-lang-ru="Кассовая Ординация (все страховки или частно)">Alle Krankenkassen (ÖGK, SVA, KFA, BVA, VAEB) und Privat</span>
+          <p>2340 Mödling, Enzersdorfer Straße 70/1</p>
+          <div class="ord-hours">
+            <div class="ord-hours-row"><span data-lang-de="Mo, Di, Do" data-lang-ru="Пн, вт, чт">Mo, Di, Do</span><span>08:00 – 13:00</span></div>
+            <div class="ord-hours-row"><span data-lang-de="Mittwoch" data-lang-ru="Среда">Mittwoch</span><span>13:00 – 18:00</span></div>
+          </div>
+          <p>Tel: <a href="tel:+432236392137">+43 2236 392137</a></p>
+          <a href="https://shop.timesloth.io/de/a/dr-krusche" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-lang-de="Online Terminvereinbarung" data-lang-ru="Онлайн запись на приём">Online Terminvereinbarung</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

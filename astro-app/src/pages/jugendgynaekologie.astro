@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Jugendgynäkologie — DDr. Anastasiya Krusche | Gynäkologin"
+  description="Erster Besuch beim Frauenarzt: Stressfreie Jugendgynäkologie bei DDr. Krusche. Beratung zu Menstruation, Verhütung und gynäkologischer Gesundheit für junge Mädchen."
+>
+  <Navbar slot="navbar" />
+
+  <PageHero image="/images/unsplash-cIfLUEZYLVg.jpg" alt="Jugendgynäkologie" title="Jugendgynäkologie" />
+
+  <section class="content-section" aria-labelledby="jugend-heading">
+    <div class="container">
+      <div class="content-narrow">
+        <h1 class="sr-only" id="jugend-heading">Jugendgynäkologie</h1>
+        <p data-lang-de="Der erste Besuch beim Frauenarzt oder bei der Frauenärztin ist vielen jungen Mädchen unangenehm und wird im Vorfeld oft von Angst und Unsicherheit begleitet. Das ist nichts Ungewöhnliches. Deswegen versucht das gesamte Team den ersten Termin so angenehm und stressfrei wie möglich zu gestalten. Sie können gerne schon bei der Terminvereinbarung die Assistentin informieren, dass es der erste Besuch ist." data-lang-ru="Первый визит к гинекологу неприятен для многих девушек и часто сопровождается страхом и неуверенностью перед ним. Поэтому вся команда ординации старается сделать первый прием как можно более приятным и свободным от стресса. При записи на прием Вы можете сообщить ассистенту, что это Ваш первый визит.">Der erste Besuch beim Frauenarzt oder bei der Frauenärztin ist vielen jungen Mädchen unangenehm und wird im Vorfeld oft von Angst und Unsicherheit begleitet. Das ist nichts Ungewöhnliches. Deswegen versucht das gesamte Team den ersten Termin so angenehm und stressfrei wie möglich zu gestalten. Sie können gerne schon bei der Terminvereinbarung die Assistentin informieren, dass es der erste Besuch ist.</p>
+
+        <h2 style="margin-top: 32px;" data-lang-de="Wie läuft so ein erster Besuch ab?" data-lang-ru="Как проходит первое посещение?">Wie läuft so ein erster Besuch ab?</h2>
+        <p data-lang-de="Ich plane ausreichend Zeit für das Erstgespräch ein, wo Sie die Möglichkeit haben, alle Ihre Fragen zu stellen. Die gynäkologische Untersuchung nimmt tatsächlich nur einen kleinen Teil des Termins in Anspruch, und in den meisten Fällen ist beim ersten Besuch nur eine Ultraschall-Untersuchung nötig." data-lang-ru="Я планирую достаточно времени для первой консультации, на которой у Вас будет возможность задать все интересующие Вас вопросы. Гинекологический осмотр занимает лишь небольшую часть приема и в большинстве случаев во время первого визита требуется только ультразвуковое исследование.">Ich plane ausreichend Zeit für das Erstgespräch ein, wo Sie die Möglichkeit haben, alle Ihre Fragen zu stellen. Die gynäkologische Untersuchung nimmt tatsächlich nur einen kleinen Teil des Termins in Anspruch, und in den meisten Fällen ist beim ersten Besuch nur eine Ultraschall-Untersuchung nötig.</p>
+
+        <h2 style="margin-top: 32px;" data-lang-de="Wann sollte man sich einen Termin vereinbaren?" data-lang-ru="Когда Вам следует записаться на прием к доктору?">Wann sollte man sich einen Termin vereinbaren?</h2>
+        <p data-lang-de="Bei Beschwerden wie:" data-lang-ru="В случае таких жалоб, как:">Bei Beschwerden wie:</p>
+        <ul>
+          <li data-lang-de="die Regel bleibt im Alter von 15 Jahren aus" data-lang-ru="месячные отсутствуют в возрасте 15 лет">die Regel bleibt im Alter von 15 Jahren aus</li>
+          <li data-lang-de="Unangenehmer Ausfluss" data-lang-ru="неприятные выделения">Unangenehmer Ausfluss</li>
+          <li data-lang-de="Schmerzen während der Regel" data-lang-ru="боль во время месячных">Schmerzen während der Regel</li>
+        </ul>
+        <p data-lang-de="Aber auch wenn Verhütung ein Thema wird, oder Sie einfach das Gefühl haben es stimmt etwas nicht, können Sie gerne einen Termin ausmachen." data-lang-ru="Если Вас интересует вопрос контрацепции или у Вас просто есть ощущение, что что-то не так, Вы можете записаться на прием.">Aber auch wenn Verhütung ein Thema wird, oder Sie einfach das Gefühl haben es stimmt etwas nicht, können Sie gerne einen Termin ausmachen.</p>
+
+        <div class="content-cta">
+          <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
+          <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакт">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>
