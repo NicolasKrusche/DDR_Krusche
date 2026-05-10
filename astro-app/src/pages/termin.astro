@@ -19,6 +19,7 @@ import Footer from '../components/Footer.astro';
         <span class="termin-badge" data-lang-de="Alle Krankenkassen und Privat" data-lang-ru="ВСЕ СТРАХОВКИ И ЧАСТНО">Alle Krankenkassen und Privat</span>
         <div class="termin-info" data-lang-de="Falls Sie den bereits online vereinbarten Termin stornieren möchten, bitte klicken Sie in der Bestätigungsmail auf „Buchung stornieren"." data-lang-ru="Если Вы хотите отменить сделанный приём онлайн, нажмите в e-mail подтверждения „Buchung stornieren".">Falls Sie den bereits online vereinbarten Termin stornieren möchten, bitte klicken Sie in der Bestätigungsmail auf „Buchung stornieren".</div>
         <div class="termin-warning" data-lang-de="Termine für den Mutter-Kind-Pass bitte nur telefonisch vereinbaren!" data-lang-ru="На прием по Mutter-Kind-Pass пожалуйста записывайтесь только по телефону!">Termine für den Mutter-Kind-Pass bitte nur telefonisch vereinbaren!</div>
+        <div class="termin-warning-red" data-lang-de="Wenn Sie einen Privattermin wünschen, wählen Sie bitte PRIVAT." data-lang-ru="Если Вы хотите сделать платный прием выберите PRIVAT.">Wenn Sie einen Privattermin wünschen, wählen Sie bitte PRIVAT.</div>
         <a href="https://shop.timesloth.io/de/a/dr-krusche" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-lang-de="Jetzt online Termin buchen — Ordination Mödling" data-lang-ru="Онлайн запись на приём — Ординация Mödling">Jetzt online Termin buchen — Ordination Mödling</a>
       </div>
 
@@ -27,54 +28,10 @@ import Footer from '../components/Footer.astro';
       <div class="termin-block">
         <h2 data-lang-de="Ordination Hochstraß" data-lang-ru="Ординация Hochstraß">Ordination Hochstraß</h2>
         <span class="termin-badge" data-lang-de="Wahlärztin" data-lang-ru="ЧАСТНАЯ ОРДИНАЦИЯ">Wahlärztin</span>
+        <div class="termin-warning-red" data-lang-de="Achtung: Sie buchen einen Termin in einer Wahlarztordination." data-lang-ru="Внимание: Вы записываетесь в платную ординацию.">Achtung: Sie buchen einen Termin in einer Wahlarztordination.</div>
         <div style="margin-top: 16px;">
           <a href="https://booking.termindoc.at/e0a5913235694e6ea570f210d541621d" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-lang-de="Jetzt online Termin buchen — Ordination Hochstraß" data-lang-ru="Онлайн запись на приём — Ординация Hochstraß">Jetzt online Termin buchen — Ordination Hochstraß</a>
         </div>
-      </div>
-      <!-- Terminanfrage-Formular -->
-      <hr class="termin-divider" />
-      <div class="termin-block">
-        <h2>Terminanfrage per Formular</h2>
-        <p style="color: #4A4A6A; margin-bottom: 24px;">Alternativ können Sie hier eine Terminanfrage stellen. Wir kontaktieren Sie zur Bestätigung.</p>
-
-        {Astro.url.searchParams.get('success') === '1' && (
-          <div class="form-success" role="alert">
-            <strong>Vielen Dank!</strong> Ihre Terminanfrage wurde erfolgreich gesendet. Wir melden uns in Kürze.
-          </div>
-        )}
-        {Astro.url.searchParams.get('error') === 'validation' && (
-          <div class="form-server-error" role="alert">
-            Bitte füllen Sie alle Pflichtfelder korrekt aus.
-          </div>
-        )}
-
-        <form method="POST" action="/api/appointment" id="appointment-form">
-          <div class="form-group">
-            <label for="appt-name">Name *</label>
-            <input type="text" id="appt-name" name="name" required minlength="2" autocomplete="name" />
-          </div>
-          <div class="form-group">
-            <label for="appt-email">E-Mail *</label>
-            <input type="email" id="appt-email" name="email" required autocomplete="email" />
-          </div>
-          <div class="form-group">
-            <label for="appt-phone">Telefon *</label>
-            <input type="tel" id="appt-phone" name="phone" required minlength="5" autocomplete="tel" />
-          </div>
-          <div class="form-group">
-            <label for="appt-location">Ordination *</label>
-            <select id="appt-location" name="location" required>
-              <option value="">Bitte wählen</option>
-              <option value="moedling">Ordination Mödling</option>
-              <option value="hochstrass">Ordination Hochstraß</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="appt-notes">Anmerkungen</label>
-            <textarea id="appt-notes" name="notes" rows="4" placeholder="z.B. gewünschter Zeitraum, Grund des Besuchs"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: auto;">Terminanfrage senden</button>
-        </form>
       </div>
     </div>
   </section>
