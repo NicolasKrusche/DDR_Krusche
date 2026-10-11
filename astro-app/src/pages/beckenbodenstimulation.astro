@@ -1,0 +1,218 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+
+const siteUrl = 'https://www.dr-krusche.at';
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? siteUrl).href;
+const heroImage = '/images/unsplash-GEzNsJarkGU.jpg';
+
+const title = 'Beckenbodenstimulation (HIFEM) | DDr. Anastasiya Krusche';
+const titleRu = 'Стимуляция мышц тазового дна (HIFEM) | DDr. Anastasiya Krusche';
+const description = 'Elektromagnetische Beckenbodenstimulation (HIFEM): Informationen zu Anwendung, Ablauf und Gegenanzeigen. Persönliche Beratung in Mödling und Hochstraß.';
+const descriptionRu = 'Электромагнитная стимуляция тазового дна (HIFEM): информация о применении, ходе процедуры и противопоказаниях. Личная консультация в Mödling и Hochstraß.';
+
+const useCases = [
+  {
+    de: 'nach Schwangerschaft und Geburt, nach abgeschlossener Rückbildungsphase und ärztlicher Freigabe',
+    ru: 'после беременности и родов, после завершения восстановительного периода и с разрешения врача',
+  },
+  {
+    de: 'in und nach den Wechseljahren',
+    ru: 'в период менопаузы и после неё',
+  },
+  {
+    de: 'ergänzend bei Beschwerden des Sexuallebens, die mit einem geschwächten Beckenboden zusammenhängen können (wissenschaftlich noch nicht abschließend belegt)',
+    ru: 'дополнительно при жалобах в сексуальной сфере, которые могут быть связаны с ослабленным тазовым дном (научно пока не подтверждено окончательно)',
+  },
+];
+
+const contraindications = [
+  { de: 'Schwangerschaft', ru: 'Беременность' },
+  { de: 'Epilepsie', ru: 'Эпилепсия' },
+  {
+    de: 'Herzschrittmacher oder andere elektronische Implantate (z. B. Defibrillator)',
+    ru: 'Кардиостимулятор или другие электронные имплантаты (например, дефибриллятор)',
+  },
+  {
+    de: 'Einige metallhaltige Spiralen (z. B. Kupferspirale) sowie andere Metallimplantate im Beckenbereich',
+    ru: 'Некоторые спирали, содержащие металл (например, медная спираль), и другие металлические имплантаты в области таза',
+  },
+  {
+    de: 'Akute Entzündungen, Blutungen oder Tumorerkrankungen im Beckenbereich',
+    ru: 'Острые воспаления, кровотечения или опухолевые заболевания в области таза',
+  },
+];
+
+const faq = [
+  {
+    qDe: 'Kann ich nach der Geburt behandelt werden?',
+    qRu: 'Можно ли пройти процедуру после родов?',
+    aDe: 'Frühestens nach Abschluss der Rückbildungsphase und nach ärztlicher Freigabe. Während einer Schwangerschaft ist die Behandlung nicht möglich. Wenn Sie stillen, besprechen wir das vorab.',
+    aRu: 'Не раньше завершения восстановительного периода и только с разрешения врача. Во время беременности процедура невозможна. Если вы кормите грудью, мы обсудим это заранее.',
+  },
+  {
+    qDe: 'Ersetzt die Behandlung das Beckenbodentraining?',
+    qRu: 'Заменяет ли процедура тренировки тазового дна?',
+    aDe: 'Nein, sie kann es ergänzen. Bei Beschwerden ist zuerst eine ärztliche Abklärung sinnvoll.',
+    aRu: 'Нет, она может их дополнять. При жалобах сначала разумно пройти врачебное обследование.',
+  },
+  {
+    qDe: 'Wie viele Sitzungen sind nötig?',
+    qRu: 'Сколько нужно сеансов?',
+    aDe: 'Meist etwa 6 Sitzungen, 1–2 pro Woche. Der genaue Plan richtet sich nach Ihrer Situation.',
+    aRu: 'Чаще всего около 6, по 1–2 в неделю. Точный план зависит от вашей ситуации.',
+  },
+  {
+    qDe: 'Wie wirksam ist die Behandlung?',
+    qRu: 'Насколько эффективна процедура?',
+    aDe: 'Das ist individuell verschieden. Ein Ergebnis kann nicht versprochen werden. Realistische Erwartungen besprechen wir vorab im Gespräch.',
+    aRu: 'Это индивидуально. Обещать результат нельзя. Реалистичные ожидания мы обсуждаем заранее на приёме.',
+  },
+  {
+    qDe: 'Muss ich mich vorbereiten?',
+    qRu: 'Нужна ли подготовка?',
+    aDe: 'Nein. Bitte teilen Sie uns vorab mit, ob Sie ein Implantat, eine Spirale oder eine Schwangerschaft haben könnten.',
+    aRu: 'Нет. Пожалуйста, заранее сообщите нам, есть ли у вас имплантат, спираль или возможная беременность.',
+  },
+];
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalWebPage',
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: 'Elektromagnetische Beckenbodenstimulation (HIFEM)',
+    description,
+    inLanguage: 'de-AT',
+    isPartOf: { '@id': siteUrl },
+    about: {
+      '@type': 'MedicalProcedure',
+      name: 'Elektromagnetische Beckenbodenstimulation (HIFEM)',
+      procedureType: 'https://schema.org/NoninvasiveProcedure',
+      bodyLocation: 'Beckenboden',
+      howPerformed:
+        'Stimulation der Beckenbodenmuskulatur mit fokussierter elektromagnetischer Energie (BTL Emsella). Die Patientin sitzt bekleidet auf einem speziellen Behandlungsstuhl. Eine Sitzung dauert etwa 28 Minuten.',
+      preparation: 'Keine besondere Vorbereitung erforderlich.',
+    },
+    provider: { '@id': siteUrl },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.qDe,
+      acceptedAnswer: { '@type': 'Answer', text: item.aDe },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: `${siteUrl}/` },
+      { '@type': 'ListItem', position: 2, name: 'Leistungen', item: `${siteUrl}/leistungen/` },
+      { '@type': 'ListItem', position: 3, name: 'Beckenbodenstimulation (HIFEM)', item: pageUrl },
+    ],
+  },
+];
+---
+
+<Layout
+  title={title}
+  titleRu={titleRu}
+  description={description}
+  descriptionRu={descriptionRu}
+  ogImage={heroImage}
+  structuredData={structuredData}
+>
+  <Navbar slot="navbar" />
+
+  <PageHero
+    image={heroImage}
+    alt="Beckenbodenstimulation (HIFEM) in der Ordination von DDr. Krusche"
+    title="Elektromagnetische Beckenbodenstimulation (HIFEM)"
+    titleRu="Электромагнитная стимуляция мышц тазового дна (HIFEM)"
+  />
+
+  <section class="content-section" aria-labelledby="was-ist-das">
+    <div class="container">
+      <div class="content-narrow">
+        <h2 id="was-ist-das" data-lang-de="Was ist das?" data-lang-ru="Что это такое?">Was ist das?</h2>
+        <p data-lang-de="Bei dieser Methode wird die Beckenbodenmuskulatur mithilfe fokussierter elektromagnetischer Energie (HIFEM) stimuliert. Dabei werden zahlreiche Muskelkontraktionen ausgelöst, die sich durch willentliches Training allein kaum erreichen lassen. Wir setzen dafür das Gerät BTL Emsella ein. Die Behandlung ist nicht-invasiv: Sie sitzen bekleidet auf einem speziellen Behandlungsstuhl." data-lang-ru="В этом методе мышцы тазового дна стимулируются с помощью сфокусированной электромагнитной энергии (HIFEM). Она вызывает множество мышечных сокращений, которых трудно добиться одними только произвольными упражнениями. Для этого мы используем аппарат BTL Emsella. Процедура неинвазивная: вы сидите в одежде на специальном кресле.">Bei dieser Methode wird die Beckenbodenmuskulatur mithilfe fokussierter elektromagnetischer Energie (HIFEM) stimuliert. Dabei werden zahlreiche Muskelkontraktionen ausgelöst, die sich durch willentliches Training allein kaum erreichen lassen. Wir setzen dafür das Gerät BTL Emsella ein. Die Behandlung ist nicht-invasiv: Sie sitzen bekleidet auf einem speziellen Behandlungsstuhl.</p>
+
+        <h2 id="wann-infrage" data-lang-de="Wann kann die Behandlung infrage kommen?" data-lang-ru="Когда процедура может быть рассмотрена?">Wann kann die Behandlung infrage kommen?</h2>
+        <p data-lang-de="Die Methode wird vor allem bei ungewolltem Urinverlust eingesetzt (Belastungs-, Drang- und gemischte Inkontinenz). Darüber hinaus kann sie bei einem geschwächten Beckenboden erwogen werden, zum Beispiel:" data-lang-ru="Метод применяют прежде всего при непроизвольной потере мочи (стрессовое, ургентное и смешанное недержание). Кроме того, его можно рассмотреть при ослабленном тазовом дне, например:">Die Methode wird vor allem bei ungewolltem Urinverlust eingesetzt (Belastungs-, Drang- und gemischte Inkontinenz). Darüber hinaus kann sie bei einem geschwächten Beckenboden erwogen werden, zum Beispiel:</p>
+        <ul>
+          {useCases.map((item) => (
+            <li data-lang-de={item.de} data-lang-ru={item.ru}>{item.de}</li>
+          ))}
+        </ul>
+        <p data-lang-de="Ob die Methode für Sie sinnvoll ist, klären wir im ärztlichen Gespräch, auch, ob zuerst andere Ursachen Ihrer Beschwerden abgeklärt werden sollten." data-lang-ru="Подходит ли вам этот метод, мы выясняем на приёме у врача. Там же решаем, не нужно ли сначала исключить другие причины ваших жалоб.">Ob die Methode für Sie sinnvoll ist, klären wir im ärztlichen Gespräch, auch, ob zuerst andere Ursachen Ihrer Beschwerden abgeklärt werden sollten.</p>
+
+        <h2 id="ablauf" data-lang-de="Ablauf" data-lang-ru="Как проходит процедура">Ablauf</h2>
+        <p data-lang-de="Eine Sitzung dauert etwa 28 Minuten. Üblich sind 1–2 Sitzungen pro Woche, insgesamt meist etwa 6. Je nach Verlauf können weitere Sitzungen sinnvoll sein. Eine besondere Vorbereitung ist nicht nötig, danach können Sie in der Regel Ihren Alltag fortsetzen. Mögliche Nebenwirkungen und Risiken besprechen wir vorab im Aufklärungsgespräch. Wie stark die Wirkung ausfällt, ist individuell verschieden und kann nicht garantiert werden." data-lang-ru="Один сеанс длится около 28 минут. Обычно проводят 1–2 сеанса в неделю, всего чаще всего около 6. В зависимости от течения могут быть полезны дополнительные сеансы. Специальная подготовка не требуется, после процедуры вы, как правило, можете вернуться к обычным делам. Возможные побочные эффекты и риски мы обсуждаем заранее на информационной беседе. Насколько выражен эффект, зависит от человека, и гарантировать его нельзя.">Eine Sitzung dauert etwa 28 Minuten. Üblich sind 1–2 Sitzungen pro Woche, insgesamt meist etwa 6. Je nach Verlauf können weitere Sitzungen sinnvoll sein. Eine besondere Vorbereitung ist nicht nötig, danach können Sie in der Regel Ihren Alltag fortsetzen. Mögliche Nebenwirkungen und Risiken besprechen wir vorab im Aufklärungsgespräch. Wie stark die Wirkung ausfällt, ist individuell verschieden und kann nicht garantiert werden.</p>
+
+        <h2 id="gegenanzeigen" data-lang-de="Wann ist die Behandlung nicht möglich?" data-lang-ru="Когда процедура невозможна?">Wann ist die Behandlung nicht möglich?</h2>
+        <ul>
+          {contraindications.map((item) => (
+            <li data-lang-de={item.de} data-lang-ru={item.ru}>{item.de}</li>
+          ))}
+        </ul>
+        <p data-lang-de="Diese Liste ist nicht vollständig. Die endgültige Entscheidung treffen wir gemeinsam mit Ihnen im persönlichen Gespräch." data-lang-ru="Этот список не исчерпывающий. Окончательное решение мы принимаем вместе с вами на личной консультации.">Diese Liste ist nicht vollständig. Die endgültige Entscheidung treffen wir gemeinsam mit Ihnen im persönlichen Gespräch.</p>
+
+        <h2 id="faq" data-lang-de="Häufige Fragen" data-lang-ru="Частые вопросы">Häufige Fragen</h2>
+        <div class="faq">
+          {faq.map((item) => (
+            <>
+              <h3 data-lang-de={item.qDe} data-lang-ru={item.qRu}>{item.qDe}</h3>
+              <p data-lang-de={item.aDe} data-lang-ru={item.aRu}>{item.aDe}</p>
+            </>
+          ))}
+        </div>
+
+        <h2 id="termin" data-lang-de="Termin" data-lang-ru="Запись на приём">Termin</h2>
+        <div class="content-cta termin-cta">
+          <p data-lang-de="Wir beraten Sie gerne persönlich in unserer Ordination." data-lang-ru="Мы будем рады проконсультировать вас лично в нашем кабинете.">Wir beraten Sie gerne persönlich in unserer Ordination.</p>
+          <div class="termin-cta-actions">
+            <a href="/termin" class="btn btn-white" data-lang-de="Termin vereinbaren" data-lang-ru="Записаться">Termin vereinbaren</a>
+            <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакты">Kontakt aufnehmen</a>
+          </div>
+        </div>
+
+        <p class="disclaimer" data-lang-de="Diese Seite dient der allgemeinen Information und ersetzt keine ärztliche Beratung." data-lang-ru="Эта страница носит общий информационный характер и не заменяет консультацию врача.">Diese Seite dient der allgemeinen Information und ersetzt keine ärztliche Beratung.</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>
+
+<style>
+  .content-narrow h2:not(:first-child) {
+    margin-top: 48px;
+  }
+  .faq h3 {
+    font-size: 22px;
+    margin: 28px 0 8px;
+  }
+  .faq h3:first-child {
+    margin-top: 0;
+  }
+  .termin-cta {
+    margin-top: 0;
+  }
+  .termin-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .disclaimer {
+    margin-top: 32px;
+    font-size: 14px;
+    font-style: italic;
+  }
+</style>

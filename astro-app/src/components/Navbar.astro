@@ -1,7 +1,7 @@
 ---
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => currentPath === path || currentPath === path + '/';
-const servicePages = ['/verhuetung', '/vorsorgeuntersuchung', '/familienplanung', '/genetische-beratung', '/jugendgynaekologie', '/impfungen', '/wechseljahre', '/ultraschalldiagnostik'];
+const servicePages = ['/verhuetung', '/vorsorgeuntersuchung', '/familienplanung', '/genetische-beratung', '/jugendgynaekologie', '/impfungen', '/wechseljahre', '/ultraschalldiagnostik', '/beckenbodenstimulation'];
 const isServicesActive = currentPath === '/leistungen' || currentPath === '/leistungen/' || servicePages.some(p => currentPath === p || currentPath === p + '/');
 ---
 
@@ -27,6 +27,7 @@ const isServicesActive = currentPath === '/leistungen' || currentPath === '/leis
           <li><a href="/impfungen" class={isActive('/impfungen') ? 'active' : ''} data-lang-de="Impfungen" data-lang-ru="Вакцинация">Impfungen</a></li>
           <li><a href="/wechseljahre" class={isActive('/wechseljahre') ? 'active' : ''} data-lang-de="Wechseljahre" data-lang-ru="Менопауза">Wechseljahre</a></li>
           <li><a href="/ultraschalldiagnostik" class={isActive('/ultraschalldiagnostik') ? 'active' : ''} data-lang-de="Ultraschalldiagnostik" data-lang-ru="УЗИ диагностика">Ultraschalldiagnostik</a></li>
+          <li><a href="/beckenbodenstimulation" class={isActive('/beckenbodenstimulation') ? 'active' : ''} data-lang-de="Beckenbodenstimulation" data-lang-ru="Стимуляция тазового дна">Beckenbodenstimulation</a></li>
         </ul>
       </li>
       <li><a href="/ordination" class={isActive('/ordination') ? 'active' : ''} data-lang-de="Ordination" data-lang-ru="Ординация">Ordination</a></li>
@@ -57,6 +58,7 @@ const isServicesActive = currentPath === '/leistungen' || currentPath === '/leis
         <a href="/impfungen" data-lang-de="Impfungen" data-lang-ru="Вакцинация">Impfungen</a>
         <a href="/wechseljahre" data-lang-de="Wechseljahre" data-lang-ru="Менопауза">Wechseljahre</a>
         <a href="/ultraschalldiagnostik" data-lang-de="Ultraschalldiagnostik" data-lang-ru="УЗИ диагностика">Ultraschalldiagnostik</a>
+        <a href="/beckenbodenstimulation" data-lang-de="Beckenbodenstimulation" data-lang-ru="Стимуляция тазового дна">Beckenbodenstimulation</a>
       </div>
     </div>
     <a href="/ordination" class={isActive('/ordination') ? 'active' : ''} data-lang-de="Ordination" data-lang-ru="Ординация">Ordination</a>

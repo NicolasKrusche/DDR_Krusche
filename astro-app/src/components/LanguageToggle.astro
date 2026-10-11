@@ -19,6 +19,8 @@
       if (val !== null) {
         if (els[i].tagName === 'INPUT' || els[i].tagName === 'TEXTAREA') {
           els[i].placeholder = val;
+        } else if (els[i].tagName === 'META') {
+          els[i].setAttribute('content', val);
         } else {
           els[i].textContent = val;
         }

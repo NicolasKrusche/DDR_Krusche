@@ -2,17 +2,23 @@
 export interface Props {
   title: string;
   description: string;
+  titleRu?: string;
+  descriptionRu?: string;
   canonical?: string;
   ogImage?: string;
   noindex?: boolean;
+  structuredData?: Record<string, unknown>[];
 }
 
 const {
   title,
   description,
+  titleRu,
+  descriptionRu,
   canonical = Astro.url.href,
   ogImage = '/images/logo_dr.png',
   noindex = false,
+  structuredData = [],
 } = Astro.props;
 
 const siteName = 'DDr. Anastasiya Krusche — Gynäkologin';
@@ -86,8 +92,12 @@ import LanguageToggle from '../components/LanguageToggle.astro';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    {titleRu
+      ? <title data-lang-de={title} data-lang-ru={titleRu}>{title}</title>
+      : <title>{title}</title>}
+    {descriptionRu
+      ? <meta name="description" content={description} data-lang-de={description} data-lang-ru={descriptionRu} />
+      : <meta name="description" content={description} />}
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
@@ -113,6 +123,9 @@ import LanguageToggle from '../components/LanguageToggle.astro';
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {structuredData.map((data) => (
+      <script type="application/ld+json" set:html={JSON.stringify(data)} />
+    ))}
 
     <!-- Global Styles -->
     <style is:global>

@@ -3,16 +3,17 @@ export interface Props {
   image: string;
   alt?: string;
   title: string;
+  titleRu?: string;
   subtitle?: string;
 }
-const { image, alt = '', title, subtitle } = Astro.props;
+const { image, alt = '', title, titleRu, subtitle } = Astro.props;
 ---
 
 <section class="page-hero">
   <img class="page-hero-image" src={image} alt={alt} loading="eager" />
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
-    <h1>{title}</h1>
+    <h1 data-lang-de={titleRu ? title : undefined} data-lang-ru={titleRu}>{title}</h1>
     {subtitle && <p class="page-hero-subtitle">{subtitle}</p>}
   </div>
 </section>

@@ -2,6 +2,12 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "dr-krusche-astro",
+      "runtimeExecutable": "cmd.exe",
+      "runtimeArgs": ["/c", "cd /d N:\\site_new\\astro-app && npx astro dev --port 4321"],
+      "port": 4321
+    },
+    {
       "name": "dr-krusche-react",
       "runtimeExecutable": "cmd.exe",
       "runtimeArgs": ["/c", "cd /d N:\\site_new\\react-app && npx vite --port 3000"],
