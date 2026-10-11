@@ -3,30 +3,210 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
+
+const title = 'Menopause-Sprechstunde & Wechseljahre | DDr. Anastasiya Krusche';
+const titleRu = 'Менопаузальная консультация и терапия | DDr. Anastasiya Krusche';
+const description = 'Menopause-Sprechstunde in Mödling und Hochstraß: Beratung und Therapie in den Wechseljahren, Hormontherapie und ergänzende Maßnahmen bei DDr. Krusche.';
+const descriptionRu = 'Менопаузальная консультация в Mödling и Hochstraß: консультирование и терапия в период менопаузы, гормональная терапия и дополнительные меры у DDr. Krusche.';
+
+const intro = {
+  de: 'Die Wechseljahre sind ein natürlicher Lebensabschnitt, werden aber sehr unterschiedlich erlebt. Manche Frauen bemerken kaum Veränderungen, andere leiden unter Beschwerden, die Alltag, Schlaf und Wohlbefinden deutlich beeinträchtigen. In unserer Menopause-Sprechstunde nehmen wir uns Zeit für Ihre Fragen und besprechen gemeinsam mit Ihnen die Möglichkeiten, die zu Ihrer persönlichen Situation passen.',
+  ru: 'Менопауза — естественный этап жизни, но проходит он у всех по-разному. Одни женщины почти не замечают изменений, другие страдают от симптомов, которые заметно влияют на повседневную жизнь, сон и самочувствие. На нашей менопаузальной консультации мы уделяем время вашим вопросам и вместе с вами обсуждаем варианты, подходящие именно вам.',
+};
+
+const whenHeading = { de: 'Wann ist eine Beratung sinnvoll?', ru: 'Когда консультация может быть полезна?' };
+const whenIntro = {
+  de: 'Eine Beratung kann hilfreich sein, wenn Sie zum Beispiel Folgendes bei sich bemerken:',
+  ru: 'Консультация может помочь, если вы, например, отмечаете у себя:',
+};
+const symptoms = [
+  { de: 'Hitzewallungen und nächtliches Schwitzen', ru: 'приливы и ночную потливость' },
+  { de: 'Schlafstörungen, Erschöpfung, Stimmungsschwankungen oder Reizbarkeit', ru: 'нарушения сна, усталость, перепады настроения или раздражительность' },
+  { de: 'Zyklusveränderungen oder unregelmäßige Blutungen', ru: 'изменения цикла или нерегулярные кровотечения' },
+  { de: 'Trockenheit der Scheide, Beschwerden beim Geschlechtsverkehr oder wiederkehrende Blasenbeschwerden', ru: 'сухость влагалища, дискомфорт при половой жизни или повторяющиеся проблемы с мочевым пузырём' },
+  { de: 'Konzentrationsprobleme oder nachlassende Belastbarkeit', ru: 'проблемы с концентрацией или снижение работоспособности' },
+  { de: 'Fragen zur Knochengesundheit und zur Vorbeugung von Osteoporose', ru: 'вопросы о здоровье костей и профилактике остеопороза' },
+];
+const whenOutro = {
+  de: 'Auch wenn Sie noch keine Beschwerden haben und sich einfach informieren möchten, sind Sie herzlich willkommen.',
+  ru: 'Если у вас пока нет жалоб и вы просто хотите получить информацию, мы также рады вас видеть.',
+};
+
+const firstVisitHeading = { de: 'Das Erstgespräch', ru: 'Первичный приём' };
+const firstVisit = [
+  {
+    de: 'Am Beginn steht ein ausführliches Gespräch über Ihre Beschwerden, Ihre Krankengeschichte, Ihre familiäre Vorbelastung und Ihre Wünsche. Je nach Situation ergänzen wir es durch eine gynäkologische Untersuchung, einen Ultraschall und gegebenenfalls eine Blutabnahme. Hormonbestimmungen sind nicht immer notwendig: Die Diagnose der Wechseljahre wird in der Regel anhand von Alter und Beschwerden gestellt.',
+    ru: 'Приём начинается с подробной беседы о ваших жалобах, истории болезни, семейной предрасположенности и пожеланиях. В зависимости от ситуации мы дополняем её гинекологическим осмотром, УЗИ и при необходимости анализом крови. Определение уровня гормонов нужно не всегда: диагноз «менопауза» обычно ставится на основании возраста и симптомов.',
+  },
+  {
+    de: 'Anschließend besprechen wir die Möglichkeiten mit ihren Vor- und Nachteilen, damit Sie eine informierte Entscheidung treffen können. Es gibt nicht die eine richtige Lösung für alle.',
+    ru: 'Затем мы обсуждаем возможные варианты с их преимуществами и недостатками, чтобы вы могли принять осознанное решение. Единого правильного решения для всех не существует.',
+  },
+];
+
+const hrtHeading = { de: 'Menopausale Hormontherapie (Hormonersatztherapie)', ru: 'Менопаузальная гормональная терапия (заместительная гормональная терапия)' };
+const hrtIntro = {
+  de: 'Mit den Wechseljahren sinkt die Produktion der Hormone Östrogen und Progesteron. Bei der Hormontherapie werden diese Hormone ersetzt, um Beschwerden zu lindern. Nach aktuellen Leitlinien ist sie eine wirksame Behandlungsoption bei Hitzewallungen, Schweißausbrüchen und Beschwerden im Intimbereich und kann sich auch auf die Knochendichte auswirken.',
+  ru: 'С наступлением менопаузы снижается выработка гормонов — эстрогена и прогестерона. При гормональной терапии эти гормоны восполняются, чтобы облегчить симптомы. Согласно современным руководствам, она является эффективным вариантом лечения при приливах, повышенной потливости и неприятных ощущениях в интимной зоне, а также может влиять на плотность костей.',
+};
+const hrtAspectsIntro = { de: 'Wichtige Aspekte:', ru: 'Важные аспекты:' };
+const hrtAspects = [
+  {
+    labelDe: 'Individuelle Entscheidung:',
+    labelRu: 'Индивидуальное решение:',
+    de: 'Ob, in welcher Form und wie lange eine Hormontherapie sinnvoll ist, hängt von Ihren Beschwerden, Ihrem Alter, dem Zeitpunkt seit der letzten Regelblutung sowie von Vorerkrankungen und Risikofaktoren ab.',
+    ru: 'Нужна ли гормональная терапия, в какой форме и как долго — зависит от ваших жалоб, возраста, времени, прошедшего с последней менструации, а также от сопутствующих заболеваний и факторов риска.',
+  },
+  {
+    labelDe: 'Beschwerden im Intimbereich:',
+    labelRu: 'Симптомы в интимной зоне:',
+    de: 'Bei Scheidentrockenheit kann auch eine lokale Östrogenbehandlung sinnvoll sein, die sich vor allem örtlich auswirkt.',
+    ru: 'При сухости влагалища может быть целесообразна также местная терапия эстрогенами, действие которой в основном локальное.',
+  },
+  {
+    labelDe: 'Risiken:',
+    labelRu: 'Риски:',
+    de: 'Je nach Präparat, Dauer und persönlichem Risikoprofil können unter anderem das Risiko für Thrombosen und Brustkrebs beeinflusst werden. Wir besprechen diese Punkte offen und verständlich mit Ihnen.',
+    ru: 'В зависимости от препарата, длительности применения и вашего индивидуального профиля риска терапия может, среди прочего, влиять на риск тромбозов и рака молочной железы. Мы открыто и понятно обсуждаем эти вопросы с вами.',
+  },
+  {
+    labelDe: 'Regelmäßige Kontrolle:',
+    labelRu: 'Регулярный контроль:',
+    de: 'Eine Hormontherapie wird in regelmäßigen Abständen überprüft und bei Bedarf angepasst oder beendet.',
+    ru: 'Гормональная терапия регулярно пересматривается и при необходимости корректируется или завершается.',
+  },
+];
+
+const bioHeading = { de: 'Bioidentische Hormontherapie', ru: 'Биоидентичная гормональная терапия' };
+const bio = [
+  {
+    de: 'Der Begriff „bioidentisch” bedeutet, dass die Hormone in ihrer chemischen Struktur den körpereigenen Hormonen entsprechen. Auch in der zugelassenen Hormontherapie werden bioidentische Hormone eingesetzt, etwa Estradiol und mikronisiertes Progesteron.',
+    ru: 'Термин «биоидентичный» означает, что по химической структуре гормоны соответствуют гормонам, вырабатываемым в организме. Биоидентичные гормоны используются и в зарегистрированной гормональной терапии, например эстрадиол и микронизированный прогестерон.',
+  },
+  {
+    de: 'Davon zu unterscheiden sind individuell angefertigte Mischungen aus der Apotheke („Rezepturen”) und Hormonbestimmungen im Speichel. Für deren Wirksamkeit, Dosierungsgenauigkeit und Sicherheit liegen bisher keine verlässlichen Daten vor, weshalb medizinische Fachgesellschaften sie in der Regel nicht empfehlen. Wir informieren Sie gerne ausführlich zu diesem Thema.',
+    ru: 'Следует отличать от них индивидуально изготовленные в аптеке смеси («рецептуры») и определение гормонов в слюне. Надёжных данных об их эффективности, точности дозирования и безопасности пока нет, поэтому медицинские профессиональные сообщества, как правило, не рекомендуют их. Мы охотно подробно проконсультируем вас по этой теме.',
+  },
+];
+
+const extraHeading = { de: 'Ergänzende Maßnahmen', ru: 'Дополнительные меры' };
+const extraIntro = {
+  de: 'Unabhängig von der gewählten Therapie können folgende Maßnahmen das Wohlbefinden unterstützen:',
+  ru: 'Независимо от выбранной терапии самочувствие могут поддерживать следующие меры:',
+};
+const extras = [
+  { de: 'regelmäßige Bewegung und Krafttraining', ru: 'регулярная физическая активность и силовые тренировки' },
+  { de: 'ausgewogene Ernährung mit ausreichend Calcium und Vitamin D', ru: 'сбалансированное питание с достаточным количеством кальция и витамина D' },
+  { de: 'Verzicht auf Nikotin und mäßiger Alkoholkonsum', ru: 'отказ от никотина и умеренное потребление алкоголя' },
+  { de: 'Strategien zur Stressbewältigung und Schlafhygiene', ru: 'методы управления стрессом и гигиена сна' },
+];
+
+const terminHeading = { de: 'Termin vereinbaren', ru: 'Записаться на приём' };
+const terminText = {
+  de: 'Wenn Sie sich eine persönliche Beratung wünschen, vereinbaren Sie gerne einen Termin:',
+  ru: 'Если вы хотите получить индивидуальную консультацию, запишитесь на приём:',
+};
+const terminButton = { de: 'Online-Terminbuchung', ru: 'Онлайн-запись' };
+const disclaimer = {
+  de: 'Dieser Text dient der allgemeinen Information und ersetzt keine ärztliche Beratung, Diagnose oder Behandlung. Die Auswahl der geeigneten Therapie erfolgt immer individuell im persönlichen Gespräch.',
+  ru: 'Этот текст носит общий информационный характер и не заменяет врачебную консультацию, диагностику или лечение. Выбор подходящей терапии всегда осуществляется индивидуально в ходе личной беседы.',
+};
 ---
 
 <Layout
-  title="Wechseljahre & Menopause — DDr. Anastasiya Krusche | Gynäkologin"
-  description="Beratung und Behandlung bei Wechseljahren. Hormonersatztherapie und pflanzliche Mittel bei Wechseljahrsbeschwerden. DDr. Krusche in Mödling und Hochstraß."
+  title={title}
+  titleRu={titleRu}
+  description={description}
+  descriptionRu={descriptionRu}
+  ogImage="/images/unsplash-wechseljahre.jpg"
 >
   <Navbar slot="navbar" />
 
-  <PageHero image="/images/unsplash-wechseljahre.jpg" alt="Wechseljahre" title="Wechseljahre" />
+  <PageHero
+    image="/images/unsplash-wechseljahre.jpg"
+    alt="Menopause-Sprechstunde: Beratung in den Wechseljahren"
+    title="Menopause-Sprechstunde: Beratung und Therapie in den Wechseljahren"
+    titleRu="Менопаузальная консультация: консультирование и терапия в период менопаузы"
+  />
 
-  <section class="content-section" aria-labelledby="wechsel-heading">
+  <section class="content-section" aria-label="Menopause-Sprechstunde">
     <div class="container">
       <div class="content-narrow">
-        <h1 class="sr-only" id="wechsel-heading">Wechseljahre</h1>
-        <p data-lang-de="Die Themagruppe Menopause gilt oft als schwierig. Selbstverständlich kommen also Fragen auf: wann beginnen die Wechseljahre, und wann hören sie auf? Welche Probleme können sie verursachen?" data-lang-ru="Тема менопаузы является не такой простой как кажется на первый взгляд. Естественно, возникают вопросы: когда начинается менопауза? Какие проблемы она может вызвать?">Die Themagruppe Menopause gilt oft als schwierig. Selbstverständlich kommen also Fragen auf: wann beginnen die Wechseljahre, und wann hören sie auf? Welche Probleme können sie verursachen?</p>
-        <p data-lang-de="Beratung zu diesen und weiteren Fragen, sowie Behandlung der Symptome der Wechseljahre, finden Sie in meiner Praxis. In einigen Fällen ist die Hormonersatztherapie die Therapie der Wahl bei Wechseljahrsbeschwerden; außerdem gibt es dazu eine breite Auswahl an pflanzlichen Mitteln zur Behandlung." data-lang-ru="Консультации по этим и другим вопросам, а также лечение симптомов менопаузы можно получить в моей ординации. Заместительная гормональная терапия является в некоторых случаях терапией выбора при климактерических симптомах. Существует так же большой выбор растительных препаратов для лечения климактерических симптомов.">Beratung zu diesen und weiteren Fragen, sowie Behandlung der Symptome der Wechseljahre, finden Sie in meiner Praxis. In einigen Fällen ist die Hormonersatztherapie die Therapie der Wahl bei Wechseljahrsbeschwerden; außerdem gibt es dazu eine breite Auswahl an pflanzlichen Mitteln zur Behandlung.</p>
+        <p data-lang-de={intro.de} data-lang-ru={intro.ru}>{intro.de}</p>
 
-        <div class="content-cta">
-          <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
-          <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакт">Kontakt aufnehmen</a>
+        <h2 data-lang-de={whenHeading.de} data-lang-ru={whenHeading.ru}>{whenHeading.de}</h2>
+        <p data-lang-de={whenIntro.de} data-lang-ru={whenIntro.ru}>{whenIntro.de}</p>
+        <ul>
+          {symptoms.map((item) => (
+            <li data-lang-de={item.de} data-lang-ru={item.ru}>{item.de}</li>
+          ))}
+        </ul>
+        <p data-lang-de={whenOutro.de} data-lang-ru={whenOutro.ru}>{whenOutro.de}</p>
+
+        <h2 data-lang-de={firstVisitHeading.de} data-lang-ru={firstVisitHeading.ru}>{firstVisitHeading.de}</h2>
+        {firstVisit.map((item) => (
+          <p data-lang-de={item.de} data-lang-ru={item.ru}>{item.de}</p>
+        ))}
+
+        <h2 data-lang-de={hrtHeading.de} data-lang-ru={hrtHeading.ru}>{hrtHeading.de}</h2>
+        <p data-lang-de={hrtIntro.de} data-lang-ru={hrtIntro.ru}>{hrtIntro.de}</p>
+        <p data-lang-de={hrtAspectsIntro.de} data-lang-ru={hrtAspectsIntro.ru}>{hrtAspectsIntro.de}</p>
+        <ul>
+          {hrtAspects.map((item) => (
+            <li>
+              <strong data-lang-de={item.labelDe} data-lang-ru={item.labelRu}>{item.labelDe}</strong>{' '}
+              <span data-lang-de={item.de} data-lang-ru={item.ru}>{item.de}</span>
+            </li>
+          ))}
+        </ul>
+
+        <h2 data-lang-de={bioHeading.de} data-lang-ru={bioHeading.ru}>{bioHeading.de}</h2>
+        {bio.map((item) => (
+          <p data-lang-de={item.de} data-lang-ru={item.ru}>{item.de}</p>
+        ))}
+
+        <h2 data-lang-de={extraHeading.de} data-lang-ru={extraHeading.ru}>{extraHeading.de}</h2>
+        <p data-lang-de={extraIntro.de} data-lang-ru={extraIntro.ru}>{extraIntro.de}</p>
+        <ul>
+          {extras.map((item) => (
+            <li data-lang-de={item.de} data-lang-ru={item.ru}>{item.de}</li>
+          ))}
+        </ul>
+
+        <h2 data-lang-de={terminHeading.de} data-lang-ru={terminHeading.ru}>{terminHeading.de}</h2>
+        <div class="content-cta termin-cta">
+          <p data-lang-de={terminText.de} data-lang-ru={terminText.ru}>{terminText.de}</p>
+          <div class="termin-cta-actions">
+            <a href="/termin" class="btn btn-white" data-lang-de={terminButton.de} data-lang-ru={terminButton.ru}>{terminButton.de}</a>
+            <a href="tel:+432236392137" class="btn btn-white">Mödling: +43 2236 392137</a>
+            <a href="tel:+43277343603" class="btn btn-white">Hochstraß: +43 2773 43603</a>
+          </div>
         </div>
+
+        <p class="disclaimer" data-lang-de={disclaimer.de} data-lang-ru={disclaimer.ru}>{disclaimer.de}</p>
       </div>
     </div>
   </section>
 
   <Footer slot="footer" />
 </Layout>
+
+<style>
+  .content-narrow h2 {
+    margin-top: 48px;
+  }
+  .termin-cta {
+    margin-top: 0;
+  }
+  .termin-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .disclaimer {
+    margin-top: 32px;
+    font-size: 14px;
+    font-style: italic;
+  }
+</style>
