@@ -20,3 +20,139 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Redirects from URLs of the previous website (/de/... and /ru/...)
+[[redirects]]
+  from   = "/de/home"
+  to     = "/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/home"
+  to     = "/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/termin"
+  to     = "/termin/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/termin"
+  to     = "/termin/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/kontakt"
+  to     = "/kontakt/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/kontakt"
+  to     = "/kontakt/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/ordination"
+  to     = "/ordination/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/ordinatsiya"
+  to     = "/ordination/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/dr-krusche"
+  to     = "/ueber-mich/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/dr-krusche"
+  to     = "/ueber-mich/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/verhuetung"
+  to     = "/verhuetung/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/kontratseptsiya"
+  to     = "/verhuetung/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/impfungen"
+  to     = "/impfungen/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/privivki"
+  to     = "/impfungen/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/jugendgyn"
+  to     = "/jugendgynaekologie/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/podrostki"
+  to     = "/jugendgynaekologie/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/genetik"
+  to     = "/genetische-beratung/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/genetika"
+  to     = "/genetische-beratung/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/schwangerschaft"
+  to     = "/familienplanung/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/vorsorgeuntersuchung"
+  to     = "/vorsorgeuntersuchung/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/osmotr"
+  to     = "/vorsorgeuntersuchung/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/wechseljahre"
+  to     = "/wechseljahre/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/menopausa"
+  to     = "/wechseljahre/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/diag-und-krankheit"
+  to     = "/leistungen/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/diag-i-priodoleniye"
+  to     = "/leistungen/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/impressum"
+  to     = "/impressum/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/beremennostj"
+  to     = "/familienplanung/"
+  status = 301
