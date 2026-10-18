@@ -7,12 +7,14 @@ import Footer from '../components/Footer.astro';
 <Layout
   title="Unsere Ordinationen — DDr. Anastasiya Krusche | Mödling & Hochstraß"
   description="Gynäkologische Ordinationen von DDr. Krusche in Mödling (alle Kassen) und Hochstraß (Wahlärztin). Öffnungszeiten, Adresse und Online-Terminvereinbarung."
+  titleRu="Наши ординации — Доктор Анастасия Круше | Mödling и Hochstraß"
+  descriptionRu="Гинекологические ординации доктора Круше в Mödling (все больничные кассы) и Hochstraß (частный приём). Часы работы, адрес и онлайн-запись."
 >
   <Navbar slot="navbar" />
 
   <section class="ord-section" aria-labelledby="ord-hochstrass-h">
     <div class="container">
-      <h1 class="sr-only">Unsere Ordinationen</h1>
+      <h1 class="sr-only" data-lang-de="Unsere Ordinationen" data-lang-ru="Наши ординации">Unsere Ordinationen</h1>
       <div class="ord-grid">
         <div class="ord-image">
           <img src="/images/praxis.jpg" alt="Ordination Hochstraß" loading="lazy" width="600" height="400" />
@@ -25,7 +27,7 @@ import Footer from '../components/Footer.astro';
             <div class="ord-hours-row"><span data-lang-de="Montag" data-lang-ru="Понедельник">Montag</span><span>15:00 – 19:00</span></div>
             <div class="ord-hours-row"><span data-lang-de="Mittwoch" data-lang-ru="Среда">Mittwoch</span><span>08:00 – 12:00</span></div>
           </div>
-          <p>Tel: <a href="tel:+4327734360">+43 2773 43603</a></p>
+          <p>Tel: <a href="tel:+43277343603">+43 2773 43603</a></p>
           <a href="/termin" class="btn btn-primary" data-lang-de="Online Terminvereinbarung" data-lang-ru="Онлайн запись на приём">Online Terminvereinbarung</a>
         </div>
       </div>

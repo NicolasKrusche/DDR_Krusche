@@ -84,7 +84,6 @@ const jsonLd = {
     },
   ],
 };
-import LanguageToggle from '../components/LanguageToggle.astro';
 ---
 
 <!doctype html>
@@ -208,7 +207,7 @@ import LanguageToggle from '../components/LanguageToggle.astro';
       .mobile-menu .nav-dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; padding: 0 0 0 16px; min-width: unset; }
 
       /* Language Switcher */
-      .lang-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #4A4A6A; background: transparent; border: 1.5px solid #E8E4E0; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; line-height: 1; }
+      .lang-btn { text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #4A4A6A; background: transparent; border: 1.5px solid #E8E4E0; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; line-height: 1; }
       .lang-btn:hover { border-color: #2C3E6B; color: #2C3E6B; background-color: #F2F2F0; }
       .lang-btn-mobile { display: none; }
 
@@ -489,6 +488,5 @@ import LanguageToggle from '../components/LanguageToggle.astro';
       <slot />
     </main>
     <slot name="footer" />
-    <LanguageToggle />
   </body>
 </html>

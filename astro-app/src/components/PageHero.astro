@@ -5,8 +5,9 @@ export interface Props {
   title: string;
   titleRu?: string;
   subtitle?: string;
+  subtitleRu?: string;
 }
-const { image, alt = '', title, titleRu, subtitle } = Astro.props;
+const { image, alt = '', title, titleRu, subtitle, subtitleRu } = Astro.props;
 ---
 
 <section class="page-hero">
@@ -14,6 +15,6 @@ const { image, alt = '', title, titleRu, subtitle } = Astro.props;
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
     <h1 data-lang-de={titleRu ? title : undefined} data-lang-ru={titleRu}>{title}</h1>
-    {subtitle && <p class="page-hero-subtitle">{subtitle}</p>}
+    {subtitle && <p class="page-hero-subtitle" data-lang-de={subtitleRu ? subtitle : undefined} data-lang-ru={subtitleRu}>{subtitle}</p>}
   </div>
 </section>

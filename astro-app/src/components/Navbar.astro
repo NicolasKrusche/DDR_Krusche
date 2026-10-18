@@ -1,5 +1,6 @@
 ---
 const currentPath = Astro.url.pathname;
+const ruHref = '/ru' + (currentPath.endsWith('/') ? currentPath : currentPath + '/');
 const isActive = (path: string) => currentPath === path || currentPath === path + '/';
 const servicePages = ['/verhuetung', '/vorsorgeuntersuchung', '/familienplanung', '/genetische-beratung', '/jugendgynaekologie', '/impfungen', '/wechseljahre', '/ultraschalldiagnostik', '/beckenbodenstimulation'];
 const isServicesActive = currentPath === '/leistungen' || currentPath === '/leistungen/' || servicePages.some(p => currentPath === p || currentPath === p + '/');
@@ -32,11 +33,11 @@ const isServicesActive = currentPath === '/leistungen' || currentPath === '/leis
       </li>
       <li><a href="/ordination" class={isActive('/ordination') ? 'active' : ''} data-lang-de="Ordination" data-lang-ru="Ординация">Ordination</a></li>
       <li><a href="/kontakt" class={isActive('/kontakt') ? 'active' : ''} data-lang-de="Kontakt" data-lang-ru="Контакты">Kontakt</a></li>
-      <li><button class="lang-btn" type="button" id="lang-toggle-desktop">Русский</button></li>
+      <li><a class="lang-btn" id="lang-toggle-desktop" href={ruHref} lang="ru" hreflang="ru">Русский</a></li>
       <li><a href="/termin" class="btn btn-primary" data-lang-de="Termin vereinbaren" data-lang-ru="Записаться">Termin vereinbaren</a></li>
     </ul>
 
-    <button class="lang-btn lang-btn-mobile" type="button" id="lang-toggle-mobile">Русский</button>
+    <a class="lang-btn lang-btn-mobile" id="lang-toggle-mobile" href={ruHref} lang="ru" hreflang="ru">Русский</a>
 
     <button class="nav-hamburger" type="button" aria-label="Menü öffnen" id="hamburger-btn">
       <span></span><span></span><span></span>

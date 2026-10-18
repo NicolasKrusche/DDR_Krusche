@@ -22,6 +22,7 @@
     Cache-Control = "public, max-age=0, must-revalidate"
 
 # Redirects from URLs of the previous website (/de/... and /ru/...)
+# Old /ru/ URLs go to the matching Russian pages, old /de/ URLs to the German pages.
 [[redirects]]
   from   = "/de/home"
   to     = "/"
@@ -29,7 +30,7 @@
 
 [[redirects]]
   from   = "/ru/home"
-  to     = "/"
+  to     = "/ru/"
   status = 301
 
 [[redirects]]
@@ -38,17 +39,7 @@
   status = 301
 
 [[redirects]]
-  from   = "/ru/termin"
-  to     = "/termin/"
-  status = 301
-
-[[redirects]]
   from   = "/de/kontakt"
-  to     = "/kontakt/"
-  status = 301
-
-[[redirects]]
-  from   = "/ru/kontakt"
   to     = "/kontakt/"
   status = 301
 
@@ -59,7 +50,7 @@
 
 [[redirects]]
   from   = "/ru/ordinatsiya"
-  to     = "/ordination/"
+  to     = "/ru/ordination/"
   status = 301
 
 [[redirects]]
@@ -69,7 +60,7 @@
 
 [[redirects]]
   from   = "/ru/dr-krusche"
-  to     = "/ueber-mich/"
+  to     = "/ru/ueber-mich/"
   status = 301
 
 [[redirects]]
@@ -79,7 +70,7 @@
 
 [[redirects]]
   from   = "/ru/kontratseptsiya"
-  to     = "/verhuetung/"
+  to     = "/ru/verhuetung/"
   status = 301
 
 [[redirects]]
@@ -89,7 +80,7 @@
 
 [[redirects]]
   from   = "/ru/privivki"
-  to     = "/impfungen/"
+  to     = "/ru/impfungen/"
   status = 301
 
 [[redirects]]
@@ -99,7 +90,7 @@
 
 [[redirects]]
   from   = "/ru/podrostki"
-  to     = "/jugendgynaekologie/"
+  to     = "/ru/jugendgynaekologie/"
   status = 301
 
 [[redirects]]
@@ -109,7 +100,7 @@
 
 [[redirects]]
   from   = "/ru/genetika"
-  to     = "/genetische-beratung/"
+  to     = "/ru/genetische-beratung/"
   status = 301
 
 [[redirects]]
@@ -124,7 +115,7 @@
 
 [[redirects]]
   from   = "/ru/osmotr"
-  to     = "/vorsorgeuntersuchung/"
+  to     = "/ru/vorsorgeuntersuchung/"
   status = 301
 
 [[redirects]]
@@ -134,7 +125,7 @@
 
 [[redirects]]
   from   = "/ru/menopausa"
-  to     = "/wechseljahre/"
+  to     = "/ru/wechseljahre/"
   status = 301
 
 [[redirects]]
@@ -144,7 +135,7 @@
 
 [[redirects]]
   from   = "/ru/diag-i-priodoleniye"
-  to     = "/leistungen/"
+  to     = "/ru/leistungen/"
   status = 301
 
 [[redirects]]
@@ -154,5 +145,5 @@
 
 [[redirects]]
   from   = "/ru/beremennostj"
-  to     = "/familienplanung/"
+  to     = "/ru/familienplanung/"
   status = 301
