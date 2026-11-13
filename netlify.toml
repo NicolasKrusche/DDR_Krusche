@@ -206,6 +206,7 @@
 
 # Catch-all for any other old URL (must stay last). Existing files are not affected,
 # because Netlify only applies non-forced redirects when no file exists at the path.
+# /ru/* uses an absolute target, otherwise Netlify ignores it as a self-referencing rule.
 [[redirects]]
   from   = "/de"
   to     = "/"
@@ -218,5 +219,5 @@
 
 [[redirects]]
   from   = "/ru/*"
-  to     = "/ru/"
+  to     = "https://www.dr-krusche.at/ru/"
   status = 301
