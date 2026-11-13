@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Seite nicht gefunden — DDr. Anastasiya Krusche"
+  description="Diese Seite wurde nicht gefunden. Zur Startseite, zu den Leistungen oder zur Terminvereinbarung bei DDr. Anastasiya Krusche."
+  noindex={true}
+>
+  <Navbar slot="navbar" />
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-narrow not-found">
+        <h1>Seite nicht gefunden</h1>
+        <p>Diese Seite gibt es nicht mehr oder die Adresse ist falsch geschrieben.</p>
+        <p lang="ru">Эта страница не найдена. <a href="/ru/">Перейти на русскую версию сайта</a>.</p>
+        <div class="not-found-actions">
+          <a href="/" class="btn btn-primary">Zur Startseite</a>
+          <a href="/leistungen/" class="btn btn-outline">Leistungen</a>
+          <a href="/termin/" class="btn btn-outline">Termin vereinbaren</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>
+
+<style>
+  .not-found {
+    text-align: center;
+  }
+  .not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+</style>

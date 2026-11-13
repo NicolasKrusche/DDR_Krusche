@@ -24,63 +24,79 @@ const {
 const siteName = 'DDr. Anastasiya Krusche — Gynäkologin';
 const siteUrl = 'https://www.dr-krusche.at';
 
+// Practice data for search engines: the doctor plus one entry per ordination.
+const hours = (days: string | string[], opens: string, closes: string) => ({
+  '@type': 'OpeningHoursSpecification',
+  dayOfWeek: days,
+  opens,
+  closes,
+});
+
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
-  '@id': siteUrl,
-  name: 'DDr. Anastasiya Krusche',
-  description: 'Fachärztin für Gynäkologie und Geburtshilfe, Ärztin für Allgemeinmedizin.',
-  url: siteUrl,
-  telephone: ['+43 2236 392137', '+43 2773 43603'],
-  email: 'office@dr-krusche.at',
-  image: `${siteUrl}/images/logo_dr.png`,
-  priceRange: '$$',
-  medicalSpecialty: 'Gynecology',
-  availableLanguage: ['German', 'Russian', 'English'],
-  address: [
+  '@graph': [
     {
-      '@type': 'PostalAddress',
-      streetAddress: 'Enzersdorfer Straße 70/1',
-      addressLocality: 'Mödling',
-      postalCode: '2340',
-      addressCountry: 'AT',
+      '@type': ['Physician', 'MedicalBusiness'],
+      '@id': siteUrl,
+      name: 'DDr. Anastasiya Krusche',
+      description: 'Fachärztin für Gynäkologie und Geburtshilfe, Ärztin für Allgemeinmedizin. Frauenärztin in Mödling und Hochstraß.',
+      url: siteUrl,
+      telephone: '+43 2236 392137',
+      email: 'office@dr-krusche.at',
+      image: `${siteUrl}/images/logo_dr.png`,
+      logo: `${siteUrl}/images/logo_dr.png`,
+      medicalSpecialty: ['https://schema.org/Gynecologic', 'https://schema.org/Obstetric'],
+      availableLanguage: ['German', 'Russian', 'English'],
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Enzersdorfer Straße 70/1',
+        addressLocality: 'Mödling',
+        postalCode: '2340',
+        addressCountry: 'AT',
+      },
+      department: [{ '@id': `${siteUrl}/#moedling` }, { '@id': `${siteUrl}/#hochstrass` }],
     },
     {
-      '@type': 'PostalAddress',
-      streetAddress: 'Hochstraß 593',
-      addressLocality: 'Hochstraß',
-      postalCode: '3033',
-      addressCountry: 'AT',
-    },
-  ],
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Thursday'],
-      opens: '08:00',
-      closes: '13:00',
-      description: 'Ordination Mödling',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Wednesday',
-      opens: '13:00',
-      closes: '18:00',
-      description: 'Ordination Mödling',
+      '@type': 'MedicalClinic',
+      '@id': `${siteUrl}/#moedling`,
+      name: 'Ordination Mödling – DDr. Anastasiya Krusche',
+      description: 'Frauenärztliche Ordination, alle Krankenkassen und privat.',
+      url: `${siteUrl}/ordination/`,
+      telephone: '+43 2236 392137',
+      medicalSpecialty: 'https://schema.org/Gynecologic',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Enzersdorfer Straße 70/1',
+        addressLocality: 'Mödling',
+        postalCode: '2340',
+        addressCountry: 'AT',
+      },
+      openingHoursSpecification: [
+        hours(['Monday', 'Tuesday', 'Thursday'], '08:00', '13:00'),
+        hours('Wednesday', '13:00', '18:00'),
+      ],
+      parentOrganization: { '@id': siteUrl },
     },
     {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Monday',
-      opens: '15:00',
-      closes: '19:00',
-      description: 'Ordination Hochstraß',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Wednesday',
-      opens: '08:00',
-      closes: '12:00',
-      description: 'Ordination Hochstraß',
+      '@type': 'MedicalClinic',
+      '@id': `${siteUrl}/#hochstrass`,
+      name: 'Ordination Hochstraß – DDr. Anastasiya Krusche',
+      description: 'Frauenärztliche Wahlarztordination.',
+      url: `${siteUrl}/ordination/`,
+      telephone: '+43 2773 43603',
+      medicalSpecialty: 'https://schema.org/Gynecologic',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Hochstraß 593',
+        addressLocality: 'Hochstraß',
+        postalCode: '3033',
+        addressCountry: 'AT',
+      },
+      openingHoursSpecification: [
+        hours('Monday', '15:00', '19:00'),
+        hours('Wednesday', '08:00', '12:00'),
+      ],
+      parentOrganization: { '@id': siteUrl },
     },
   ],
 };
@@ -110,7 +126,9 @@ const jsonLd = {
     <meta property="og:locale" content="de_AT" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/logo_dr.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

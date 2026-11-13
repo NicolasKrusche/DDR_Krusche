@@ -152,9 +152,10 @@ function toRussian(html, dePath, site) {
       else if (prop === 'og:locale') setAttr(n, 'content', 'ru_RU');
     } else if (n.tagName === 'script' && getAttr(n, 'type') === 'application/ld+json') {
       // Only the practice-level data is kept; page-level data (FAQ, breadcrumbs) is German.
-      let type;
-      try { type = JSON.parse(textOf(n))['@type']; } catch { /* keep unknown blocks */ }
-      if (type && type !== 'MedicalBusiness') head.childNodes.splice(head.childNodes.indexOf(n), 1);
+      let data;
+      try { data = JSON.parse(textOf(n)); } catch { /* keep unknown blocks */ }
+      const isPractice = !data || data['@graph'] || data['@type'] === 'MedicalBusiness';
+      if (!isPractice) head.childNodes.splice(head.childNodes.indexOf(n), 1);
     }
   }
 

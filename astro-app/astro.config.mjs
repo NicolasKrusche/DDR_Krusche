@@ -13,7 +13,7 @@ const noindexPaths = ['/impressum/', '/datenschutz/'];
 // The Russian pages (/ru/...) are generated after the build, so the sitemap needs them as custom pages.
 const slugs = fs
   .readdirSync(new URL('./src/pages', import.meta.url))
-  .filter((f) => f.endsWith('.astro'))
+  .filter((f) => f.endsWith('.astro') && f !== '404.astro')
   .map((f) => f.replace(/\.astro$/, ''));
 const dePaths = slugs.map((s) => (s === 'index' ? '/' : `/${s}/`)).filter((p) => !noindexPaths.includes(p));
 const ruPages = dePaths.map((p) => `${site}/ru${p}`);
