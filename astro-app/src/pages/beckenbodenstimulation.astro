@@ -8,10 +8,10 @@ const siteUrl = 'https://www.dr-krusche.at';
 const pageUrl = new URL(Astro.url.pathname, Astro.site ?? siteUrl).href;
 const heroImage = '/images/unsplash-GEzNsJarkGU.jpg';
 
-const title = 'Beckenbodenstimulation (HIFEM) in Mödling | DDr. Anastasiya Krusche';
-const titleRu = 'Стимуляция мышц тазового дна (HIFEM) | DDr. Anastasiya Krusche';
-const description = 'Elektromagnetische Beckenbodenstimulation (HIFEM): Informationen zu Anwendung, Ablauf und Gegenanzeigen. Persönliche Beratung in Mödling und Hochstraß.';
-const descriptionRu = 'Электромагнитная стимуляция тазового дна (HIFEM): информация о применении, ходе процедуры и противопоказаниях. Личная консультация в Mödling и Hochstraß.';
+const title = 'EMSELLA Beckenbodenstimulation – Frauenärztin Mödling | DDr. Krusche';
+const titleRu = 'EMSELLA: стимуляция мышц тазового дна (HIFEM) – гинеколог в Mödling | DDr. Krusche';
+const description = 'EMSELLA-Behandlung mit dem originalen BTL-EMSELLA-Gerät bei Frauenärztin DDr. Krusche: Beckenbodenstimulation (HIFEM) bei Inkontinenz. Ablauf, Dauer, Termin in Mödling.';
+const descriptionRu = 'Процедура EMSELLA на оригинальном аппарате BTL EMSELLA у гинеколога DDr. Krusche: стимуляция тазового дна (HIFEM) при недержании. Ход процедуры, длительность, запись в Mödling.';
 
 const useCases = [
   {
@@ -46,6 +46,18 @@ const contraindications = [
 ];
 
 const faq = [
+  {
+    qDe: 'Ist das eine Behandlung mit dem originalen EMSELLA?',
+    qRu: 'Это процедура на оригинальном аппарате EMSELLA?',
+    aDe: 'Ja. Wir behandeln mit dem originalen Gerät BTL EMSELLA des Herstellers BTL. EMSELLA ist der Markenname des Behandlungsstuhls, die Technologie dahinter heißt HIFEM (hochintensive fokussierte elektromagnetische Energie).',
+    aRu: 'Да. Мы проводим процедуру на оригинальном аппарате BTL EMSELLA производителя BTL. EMSELLA — это название кресла для процедуры, а технология называется HIFEM (высокоинтенсивная сфокусированная электромагнитная энергия).',
+  },
+  {
+    qDe: 'Wo bekomme ich eine EMSELLA-Behandlung bei Ihnen?',
+    qRu: 'Где у вас можно пройти процедуру EMSELLA?',
+    aDe: 'In der Ordination von DDr. Anastasiya Krusche, Fachärztin für Gynäkologie und Geburtshilfe. Für einen Termin rufen Sie uns bitte an oder buchen Sie online. Die Kosten nennen wir Ihnen gerne vorab.',
+    aRu: 'В ординации DDr. Анастасии Круше, врача-специалиста по гинекологии и акушерству. Для записи позвоните нам или запишитесь онлайн. О стоимости мы с удовольствием сообщим заранее.',
+  },
   {
     qDe: 'Kann ich nach der Geburt behandelt werden?',
     qRu: 'Можно ли пройти процедуру после родов?',
@@ -84,17 +96,18 @@ const structuredData = [
     '@type': 'MedicalWebPage',
     '@id': `${pageUrl}#webpage`,
     url: pageUrl,
-    name: 'Elektromagnetische Beckenbodenstimulation (HIFEM)',
+    name: 'EMSELLA – Elektromagnetische Beckenbodenstimulation (HIFEM)',
     description,
     inLanguage: 'de-AT',
     isPartOf: { '@id': siteUrl },
     about: {
       '@type': 'MedicalProcedure',
-      name: 'Elektromagnetische Beckenbodenstimulation (HIFEM)',
+      name: 'EMSELLA-Behandlung (elektromagnetische Beckenbodenstimulation, HIFEM)',
+      alternateName: ['EMSELLA', 'BTL EMSELLA', 'HIFEM-Beckenbodenstimulation', 'Beckenbodenstimulation'],
       procedureType: 'https://schema.org/NoninvasiveProcedure',
       bodyLocation: 'Beckenboden',
       howPerformed:
-        'Stimulation der Beckenbodenmuskulatur mit fokussierter elektromagnetischer Energie (BTL Emsella). Die Patientin sitzt bekleidet auf einem speziellen Behandlungsstuhl. Eine Sitzung dauert etwa 28 Minuten.',
+        'Stimulation der Beckenbodenmuskulatur mit fokussierter elektromagnetischer Energie mit dem originalen Gerät BTL EMSELLA. Die Patientin sitzt bekleidet auf einem speziellen Behandlungsstuhl. Eine Sitzung dauert etwa 28 Minuten.',
       preparation: 'Keine besondere Vorbereitung erforderlich.',
     },
     provider: { '@id': siteUrl },
@@ -114,7 +127,7 @@ const structuredData = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: `${siteUrl}/` },
       { '@type': 'ListItem', position: 2, name: 'Leistungen', item: `${siteUrl}/leistungen/` },
-      { '@type': 'ListItem', position: 3, name: 'Beckenbodenstimulation (HIFEM)', item: pageUrl },
+      { '@type': 'ListItem', position: 3, name: 'Beckenbodenstimulation (EMSELLA)', item: pageUrl },
     ],
   },
 ];
@@ -133,15 +146,17 @@ const structuredData = [
   <PageHero
     image={heroImage}
     alt=""
-    title="Elektromagnetische Beckenbodenstimulation (HIFEM)"
-    titleRu="Электромагнитная стимуляция мышц тазового дна (HIFEM)"
+    title="EMSELLA – Elektromagnetische Beckenbodenstimulation (HIFEM)"
+    titleRu="EMSELLA – электромагнитная стимуляция мышц тазового дна (HIFEM)"
+    subtitle="Mit dem originalen BTL-EMSELLA-Gerät bei Ihrer Frauenärztin in Mödling"
+    subtitleRu="На оригинальном аппарате BTL EMSELLA у вашего гинеколога в Mödling"
   />
 
   <section class="content-section" aria-labelledby="was-ist-das">
     <div class="container">
       <div class="content-narrow">
         <h2 id="was-ist-das" data-lang-de="Was ist das?" data-lang-ru="Что это такое?">Was ist das?</h2>
-        <p data-lang-de="Bei dieser Methode wird die Beckenbodenmuskulatur mithilfe fokussierter elektromagnetischer Energie (HIFEM) stimuliert. Dabei werden zahlreiche Muskelkontraktionen ausgelöst, die sich durch willentliches Training allein kaum erreichen lassen. Wir setzen dafür das Gerät BTL Emsella ein. Die Behandlung ist nicht-invasiv: Sie sitzen bekleidet auf einem speziellen Behandlungsstuhl." data-lang-ru="В этом методе мышцы тазового дна стимулируются с помощью сфокусированной электромагнитной энергии (HIFEM). Она вызывает множество мышечных сокращений, которых трудно добиться одними только произвольными упражнениями. Для этого мы используем аппарат BTL Emsella. Процедура неинвазивная: вы сидите в одежде на специальном кресле.">Bei dieser Methode wird die Beckenbodenmuskulatur mithilfe fokussierter elektromagnetischer Energie (HIFEM) stimuliert. Dabei werden zahlreiche Muskelkontraktionen ausgelöst, die sich durch willentliches Training allein kaum erreichen lassen. Wir setzen dafür das Gerät BTL Emsella ein. Die Behandlung ist nicht-invasiv: Sie sitzen bekleidet auf einem speziellen Behandlungsstuhl.</p>
+        <p data-lang-de="Bei dieser Methode wird die Beckenbodenmuskulatur mithilfe fokussierter elektromagnetischer Energie (HIFEM) stimuliert. Dabei werden zahlreiche Muskelkontraktionen ausgelöst, die sich durch willentliches Training allein kaum erreichen lassen. Wir behandeln mit dem originalen Gerät BTL EMSELLA. Die Behandlung ist nicht-invasiv: Sie sitzen bekleidet auf einem speziellen Behandlungsstuhl." data-lang-ru="В этом методе мышцы тазового дна стимулируются с помощью сфокусированной электромагнитной энергии (HIFEM). Она вызывает множество мышечных сокращений, которых трудно добиться одними только произвольными упражнениями. Мы проводим процедуру на оригинальном аппарате BTL EMSELLA. Процедура неинвазивная: вы сидите в одежде на специальном кресле.">Bei dieser Methode wird die Beckenbodenmuskulatur mithilfe fokussierter elektromagnetischer Energie (HIFEM) stimuliert. Dabei werden zahlreiche Muskelkontraktionen ausgelöst, die sich durch willentliches Training allein kaum erreichen lassen. Wir behandeln mit dem originalen Gerät BTL EMSELLA. Die Behandlung ist nicht-invasiv: Sie sitzen bekleidet auf einem speziellen Behandlungsstuhl.</p>
 
         <h2 id="wann-infrage" data-lang-de="Wann kann die Behandlung infrage kommen?" data-lang-ru="Когда процедура может быть рассмотрена?">Wann kann die Behandlung infrage kommen?</h2>
         <p data-lang-de="Die Methode wird vor allem bei ungewolltem Urinverlust eingesetzt (Belastungs-, Drang- und gemischte Inkontinenz). Darüber hinaus kann sie bei einem geschwächten Beckenboden erwogen werden, zum Beispiel:" data-lang-ru="Метод применяют прежде всего при непроизвольной потере мочи (стрессовое, ургентное и смешанное недержание). Кроме того, его можно рассмотреть при ослабленном тазовом дне, например:">Die Methode wird vor allem bei ungewolltem Urinverlust eingesetzt (Belastungs-, Drang- und gemischte Inkontinenz). Darüber hinaus kann sie bei einem geschwächten Beckenboden erwogen werden, zum Beispiel:</p>
