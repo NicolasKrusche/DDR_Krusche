@@ -147,3 +147,76 @@
   from   = "/ru/beremennostj"
   to     = "/ru/familienplanung/"
   status = 301
+
+# Old /de/ URLs whose slug matches a current page
+[[redirects]]
+  from   = "/de/beckenbodenstimulation"
+  to     = "/beckenbodenstimulation/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/datenschutz"
+  to     = "/datenschutz/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/familienplanung"
+  to     = "/familienplanung/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/genetische-beratung"
+  to     = "/genetische-beratung/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/jugendgynaekologie"
+  to     = "/jugendgynaekologie/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/leistungen"
+  to     = "/leistungen/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/ueber-mich"
+  to     = "/ueber-mich/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/ultraschalldiagnostik"
+  to     = "/ultraschalldiagnostik/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/ultraschall"
+  to     = "/ultraschalldiagnostik/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/beckenboden"
+  to     = "/beckenbodenstimulation/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/menopause"
+  to     = "/wechseljahre/"
+  status = 301
+
+# Catch-all for any other old URL (must stay last). Existing files are not affected,
+# because Netlify only applies non-forced redirects when no file exists at the path.
+[[redirects]]
+  from   = "/de"
+  to     = "/"
+  status = 301
+
+[[redirects]]
+  from   = "/de/*"
+  to     = "/"
+  status = 301
+
+[[redirects]]
+  from   = "/ru/*"
+  to     = "/ru/"
+  status = 301
