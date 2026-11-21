@@ -1,0 +1,32 @@
+---
+import type { FaqItem } from '../data/faq';
+
+interface Props {
+  items: FaqItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<h2 class="faq-heading" data-lang-de="Häufige Fragen" data-lang-ru="Частые вопросы">Häufige Fragen</h2>
+<div class="faq">
+  {items.map((item) => (
+    <>
+      <h3 data-lang-de={item.qDe} data-lang-ru={item.qRu}>{item.qDe}</h3>
+      <p data-lang-de={item.aDe} data-lang-ru={item.aRu}>{item.aDe}</p>
+    </>
+  ))}
+</div>
+
+<style>
+  .faq-heading {
+    margin-top: 48px;
+  }
+  .faq h3 {
+    font-size: 20px;
+    margin: 24px 0 8px;
+  }
+  .faq h3:first-child {
+    margin-top: 0;
+  }
+</style>

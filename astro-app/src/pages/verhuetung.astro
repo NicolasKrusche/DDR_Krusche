@@ -4,9 +4,86 @@ import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
 import RelatedServices from '../components/RelatedServices.astro';
+import ContentBlocks from '../components/ContentBlocks.astro';
+import FaqList from '../components/FaqList.astro';
+import { faqSchema } from '../data/faq';
+
+// Draft content: to be reviewed by DDr. Krusche before publishing.
+const blocks = [
+  {
+    "heading": {
+      "de": "Die Methoden kurz erklärt",
+      "ru": "Коротко о методах"
+    },
+    "list": [
+      {
+        "de": "Pille, Pflaster und Vaginalring: Hormone verhindern den Eisprung. Die Pille wird täglich eingenommen, Pflaster und Ring werden in festen Abständen gewechselt.",
+        "ru": "Таблетки, пластырь и вагинальное кольцо: гормоны предотвращают овуляцию. Таблетки принимают ежедневно, пластырь и кольцо меняют через определённые промежутки времени."
+      },
+      {
+        "de": "Hormonspirale: Sie gibt eine geringe Menge Hormon direkt in der Gebärmutter ab und wirkt je nach Modell mehrere Jahre. Die Regel wird oft schwächer oder bleibt ganz aus.",
+        "ru": "Гормональная спираль: выделяет небольшое количество гормона непосредственно в матке и действует, в зависимости от модели, несколько лет. Менструации часто становятся слабее или прекращаются."
+      },
+      {
+        "de": "Kupferspirale: Sie verhütet ohne Hormone und wirkt ebenfalls mehrere Jahre. Die Regel kann etwas stärker werden.",
+        "ru": "Медная спираль: защищает без гормонов и также действует несколько лет. Менструации могут стать немного обильнее."
+      },
+      {
+        "de": "Implanon (Hormonstäbchen): Ein kleines Stäbchen wird unter die Haut am Oberarm gesetzt und wirkt bis zu drei Jahre.",
+        "ru": "Импланон (гормональный имплантат): небольшую палочку вводят под кожу плеча, она действует до трёх лет."
+      },
+      {
+        "de": "3-Monats-Spritze: eine Hormonspritze alle drei Monate.",
+        "ru": "Трёхмесячная инъекция: гормональный укол раз в три месяца."
+      },
+      {
+        "de": "Tubenligatur (Sterilisation): eine dauerhafte Methode für Frauen, deren Familienplanung abgeschlossen ist. Der Eingriff erfolgt im Krankenhaus, wir beraten Sie vorab.",
+        "ru": "Перевязка маточных труб (стерилизация): постоянный метод для женщин, которые больше не планируют детей. Операцию проводят в больнице, мы консультируем вас заранее."
+      },
+      {
+        "de": "Notfallverhütung: Die „Pille danach“ bekommen Sie in Österreich rezeptfrei in der Apotheke. Sie sollte so früh wie möglich eingenommen werden.",
+        "ru": "Экстренная контрацепция: «таблетку после» в Австрии можно купить в аптеке без рецепта. Её нужно принять как можно раньше."
+      }
+    ]
+  },
+  {
+    "heading": {
+      "de": "Einsetzen einer Spirale",
+      "ru": "Установка спирали"
+    },
+    "paragraphs": [
+      {
+        "de": "Das Einsetzen dauert nur wenige Minuten und kann sich kurz ähnlich wie Regelschmerzen anfühlen. Danach kontrollieren wir den Sitz der Spirale mit Ultraschall. Regelmäßige Kontrollen besprechen wir mit Ihnen.",
+        "ru": "Установка занимает всего несколько минут, ощущения могут ненадолго напоминать менструальную боль. После этого мы проверяем положение спирали с помощью УЗИ. О регулярных контрольных осмотрах мы договоримся с вами."
+      }
+    ]
+  }
+];
+
+const faq = [
+  {
+    "qDe": "Welche Verhütungsmethode ist die sicherste?",
+    "qRu": "Какой метод контрацепции самый надёжный?",
+    "aDe": "Spiralen, das Hormonstäbchen und die Sterilisation gehören zu den sichersten Methoden, weil man sie nicht vergessen kann. Bei der Pille hängt die Sicherheit stark von der regelmäßigen Einnahme ab.",
+    "aRu": "Спирали, гормональный имплантат и стерилизация относятся к самым надёжным методам, потому что о них нельзя забыть. Надёжность таблеток сильно зависит от регулярного приёма."
+  },
+  {
+    "qDe": "Ist es gefährlich, wenn die Regel durch die Hormonspirale ausbleibt?",
+    "qRu": "Опасно ли, если из-за гормональной спирали нет менструаций?",
+    "aDe": "Nein. Durch das Hormon baut sich die Gebärmutterschleimhaut weniger stark auf, deshalb wird die Blutung schwächer oder bleibt aus. Das ist unbedenklich, und nach dem Entfernen der Spirale kehrt der normale Zyklus zurück.",
+    "aRu": "Нет. Под действием гормона слизистая оболочка матки нарастает меньше, поэтому кровотечение становится слабее или прекращается. Это безопасно, и после удаления спирали обычный цикл восстанавливается."
+  },
+  {
+    "qDe": "Kann ich nach dem Absetzen der Pille sofort schwanger werden?",
+    "qRu": "Можно ли забеременеть сразу после отмены таблеток?",
+    "aDe": "Ja, die Fruchtbarkeit kehrt nach dem Absetzen in der Regel rasch zurück. Nach der 3-Monats-Spritze kann es einige Monate länger dauern.",
+    "aRu": "Да, после отмены фертильность обычно быстро восстанавливается. После трёхмесячной инъекции это может занять на несколько месяцев больше."
+  }
+];
 ---
 
 <Layout
+  structuredData={[faqSchema(faq)]}
   title="Verhütungsberatung in Mödling (Spirale, Pille) — DDr. Krusche"
   description="Verhütungsberatung bei DDr. Krusche: Pille, Spirale, Implanon, 3-Monats-Spritze und mehr. Individuelle Beratung zu hormonellen und nicht-hormonellen Methoden."
   titleRu="Консультация по контрацепции — Доктор Анастасия Круше | Гинеколог"
@@ -34,6 +111,10 @@ import RelatedServices from '../components/RelatedServices.astro';
 
         <p data-lang-de="So wie es eine Vielzahl unterschiedlicher Verhütungsmethoden gibt, gibt es natürlich auch eine Vielzahl an Fragen, die Sie sich stellen können. Wie sicher ist welche Methode wirklich? Ist es gefährlich, keine Regel durch z.B. Hormonspiralen zu haben? Wie steht es mit Schmerzen?" data-lang-ru="Так же как существует множество различных методов контрацепции, есть, конечно, и множество вопросов, которые Вы можете себе задать. Насколько эффективен тот или иной метод? Опасно ли не иметь месячных, например, с помощью гормональных внутриматочных контрацептивов? Как насчет боли?">So wie es eine Vielzahl unterschiedlicher Verhütungsmethoden gibt, gibt es natürlich auch eine Vielzahl an Fragen, die Sie sich stellen können. Wie sicher ist welche Methode wirklich? Ist es gefährlich, keine Regel durch z.B. Hormonspiralen zu haben? Wie steht es mit Schmerzen?</p>
         <p data-lang-de="In all diesen Fragen und mehr kann ich Sie beraten, und Ihnen dabei beistehen, das richtige Mittel für Sie zu finden." data-lang-ru="Я могу проконсультировать Вас по всем этим и другим вопросам, и помочь Вам найти подходящее для Вас средство.">In all diesen Fragen und mehr kann ich Sie beraten, und Ihnen dabei beistehen, das richtige Mittel für Sie zu finden.</p>
+
+        <ContentBlocks blocks={blocks} />
+
+        <FaqList items={faq} />
 
         <div class="content-cta">
           <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>

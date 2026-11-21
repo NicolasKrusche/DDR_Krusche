@@ -4,9 +4,90 @@ import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
 import RelatedServices from '../components/RelatedServices.astro';
+import ContentBlocks from '../components/ContentBlocks.astro';
+import FaqList from '../components/FaqList.astro';
+import { faqSchema } from '../data/faq';
+
+// Draft content: to be reviewed by DDr. Krusche before publishing.
+const blocks = [
+  {
+    "heading": {
+      "de": "Wann ist ein gynäkologischer Ultraschall sinnvoll?",
+      "ru": "Когда полезно гинекологическое УЗИ?"
+    },
+    "paragraphs": [
+      {
+        "de": "Der Ultraschall gehört zur jährlichen Vorsorgeuntersuchung. Darüber hinaus setzen wir ihn zum Beispiel ein:",
+        "ru": "УЗИ входит в ежегодный профилактический осмотр. Кроме того, мы проводим его, например:"
+      }
+    ],
+    "list": [
+      {
+        "de": "bei Unterbauchschmerzen oder starken Regelschmerzen",
+        "ru": "при болях внизу живота или сильных менструальных болях"
+      },
+      {
+        "de": "bei unregelmäßigen, sehr starken oder ungewöhnlichen Blutungen",
+        "ru": "при нерегулярных, очень обильных или необычных кровотечениях"
+      },
+      {
+        "de": "zur Kontrolle von Zysten an den Eierstöcken oder von Myomen",
+        "ru": "для контроля кист яичников или миом"
+      },
+      {
+        "de": "zur Lagekontrolle einer Spirale",
+        "ru": "для контроля положения спирали"
+      },
+      {
+        "de": "in der Frühschwangerschaft",
+        "ru": "на раннем сроке беременности"
+      }
+    ]
+  },
+  {
+    "heading": {
+      "de": "Wie läuft die Untersuchung ab?",
+      "ru": "Как проходит обследование?"
+    },
+    "paragraphs": [
+      {
+        "de": "Sie liegen wie bei der gynäkologischen Untersuchung auf dem Untersuchungsstuhl. Der schmale Schallkopf wird mit einer Schutzhülle und etwas Gel versehen und vorsichtig in die Scheide eingeführt. Auf Wunsch sehen Sie die Bilder am Bildschirm mit, und wir erklären Ihnen direkt, was wir sehen. Die Untersuchung dauert meist nur wenige Minuten.",
+        "ru": "Вы лежите на гинекологическом кресле, как при обычном осмотре. На тонкий датчик надевают защитный чехол, наносят немного геля и осторожно вводят его во влагалище. По желанию вы можете смотреть изображение на экране, а мы сразу объясняем, что видим. Обследование обычно занимает всего несколько минут."
+      }
+    ]
+  }
+];
+
+const faq = [
+  {
+    "qDe": "Tut ein vaginaler Ultraschall weh?",
+    "qRu": "Больно ли делать вагинальное УЗИ?",
+    "aDe": "Nein, die Untersuchung ist in der Regel schmerzfrei. Manche Frauen spüren einen leichten Druck. Sagen Sie uns bitte sofort, wenn Ihnen etwas unangenehm ist.",
+    "aRu": "Нет, обычно обследование безболезненно. Некоторые женщины ощущают лёгкое давление. Пожалуйста, сразу скажите нам, если вам неприятно."
+  },
+  {
+    "qDe": "Muss ich mich vorbereiten?",
+    "qRu": "Нужна ли подготовка?",
+    "aDe": "Eine besondere Vorbereitung ist nicht nötig. Bitte entleeren Sie kurz vor der Untersuchung die Blase, dann sind die Bilder besser.",
+    "aRu": "Специальная подготовка не нужна. Пожалуйста, опорожните мочевой пузырь незадолго до обследования, так изображение получается лучше."
+  },
+  {
+    "qDe": "Ist ein Ultraschall während der Regel möglich?",
+    "qRu": "Можно ли делать УЗИ во время менструации?",
+    "aDe": "Ja, das ist in der Regel möglich. Für manche Fragestellungen ist ein bestimmter Zeitpunkt im Zyklus besser. Das besprechen wir mit Ihnen.",
+    "aRu": "Да, обычно это возможно. Для некоторых вопросов лучше подходит определённый день цикла. Это мы обсудим с вами."
+  },
+  {
+    "qDe": "Ist Ultraschall schädlich?",
+    "qRu": "Вредно ли УЗИ?",
+    "aDe": "Nein. Ultraschall arbeitet mit Schallwellen, nicht mit Röntgenstrahlen. Es gibt keine Strahlenbelastung, deshalb ist die Untersuchung auch in der Schwangerschaft möglich und kann bei Bedarf wiederholt werden.",
+    "aRu": "Нет. УЗИ работает со звуковыми волнами, а не с рентгеновским излучением. Лучевой нагрузки нет, поэтому обследование возможно и во время беременности и при необходимости его можно повторять."
+  }
+];
 ---
 
 <Layout
+  structuredData={[faqSchema(faq)]}
   title="Gynäkologischer Ultraschall in Mödling — DDr. Anastasiya Krusche"
   description="Vaginale Ultraschalldiagnostik bei DDr. Krusche: Schmerzfreie Untersuchung von Eierstöcken, Gebärmutter und Harnblase ohne Strahlenbelastung."
   titleRu="УЗИ диагностика — Доктор Анастасия Круше | Гинеколог"
@@ -21,6 +102,10 @@ import RelatedServices from '../components/RelatedServices.astro';
       <div class="content-narrow">
         <h2 class="sr-only" id="ultraschall-heading" data-lang-de="Ultraschalldiagnostik" data-lang-ru="УЗИ диагностика">Ultraschalldiagnostik</h2>
         <p data-lang-de="Ein vaginaler Ultraschall (auch vaginale Sonographie genannt) ist eine schmerzfreie Untersuchungsmethode in der gynäkologischen Praxis. Hier wird mit einem stabförmigen Schallkopf das „kleine Becken" — d.h. die Harnblase, Eierstöcke, Eileiter und Gebärmutter — visualisiert. Dadurch, dass die Untersuchung mit Schall passiert, liegt keine Strahlungsbelastung vor." data-lang-ru="Вагинальное УЗИ (также называемое вагинальной сонографией) — это безболезненный метод обследования в гинекологической практике. Здесь используется стержнеобразный датчик для визуализации «малого таза», т.е. мочевого пузыря, яичников, фаллопиевых труб и матки. Поскольку обследование проводится с помощью ультразвука, облучение отсутствует.">Ein vaginaler Ultraschall (auch vaginale Sonographie genannt) ist eine schmerzfreie Untersuchungsmethode in der gynäkologischen Praxis. Hier wird mit einem stabförmigen Schallkopf das „kleine Becken" — d.h. die Harnblase, Eierstöcke, Eileiter und Gebärmutter — visualisiert. Dadurch, dass die Untersuchung mit Schall passiert, liegt keine Strahlungsbelastung vor.</p>
+
+        <ContentBlocks blocks={blocks} />
+
+        <FaqList items={faq} />
 
         <div class="content-cta">
           <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>

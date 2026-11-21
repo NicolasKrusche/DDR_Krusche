@@ -1,0 +1,39 @@
+---
+// Text sections defined as data (German + Russian), rendered inside the page content column.
+export interface Text {
+  de: string;
+  ru: string;
+}
+
+export interface Block {
+  heading: Text;
+  paragraphs?: Text[];
+  list?: Text[];
+  after?: Text[];
+}
+
+interface Props {
+  blocks: Block[];
+}
+
+const { blocks } = Astro.props;
+---
+
+{blocks.map((block) => (
+  <>
+    <h2 class="block-heading" data-lang-de={block.heading.de} data-lang-ru={block.heading.ru}>{block.heading.de}</h2>
+    {block.paragraphs?.map((p) => <p data-lang-de={p.de} data-lang-ru={p.ru}>{p.de}</p>)}
+    {block.list && (
+      <ul>
+        {block.list.map((item) => <li data-lang-de={item.de} data-lang-ru={item.ru}>{item.de}</li>)}
+      </ul>
+    )}
+    {block.after?.map((p) => <p data-lang-de={p.de} data-lang-ru={p.ru}>{p.de}</p>)}
+  </>
+))}
+
+<style>
+  .block-heading {
+    margin-top: 40px;
+  }
+</style>

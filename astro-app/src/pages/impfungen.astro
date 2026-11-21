@@ -4,9 +4,68 @@ import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
 import RelatedServices from '../components/RelatedServices.astro';
+import ContentBlocks from '../components/ContentBlocks.astro';
+import FaqList from '../components/FaqList.astro';
+import { faqSchema } from '../data/faq';
+
+// Draft content: to be reviewed by DDr. Krusche before publishing.
+const blocks = [
+  {
+    "heading": {
+      "de": "Wann ist die HPV-Impfung sinnvoll?",
+      "ru": "Когда имеет смысл вакцинация от ВПЧ?"
+    },
+    "paragraphs": [
+      {
+        "de": "Am besten wirkt die Impfung, wenn sie vor dem ersten sexuellen Kontakt erfolgt. Aber auch danach kann sie sinnvoll sein, weil sie vor HPV-Typen schützt, mit denen Sie sich noch nicht angesteckt haben. Ob die Impfung für Sie in Frage kommt, besprechen wir gerne gemeinsam.",
+        "ru": "Лучше всего вакцина действует, если сделать её до начала половой жизни. Но и после этого она может быть полезна, так как защищает от тех типов ВПЧ, которыми вы ещё не заразились. Подходит ли вам вакцинация, мы с удовольствием обсудим вместе."
+      }
+    ]
+  },
+  {
+    "heading": {
+      "de": "Wie läuft die Impfung ab?",
+      "ru": "Как проходит вакцинация?"
+    },
+    "paragraphs": [
+      {
+        "de": "Die Impfung wird in den Oberarm gegeben. Wie viele Teilimpfungen nötig sind, hängt vom Alter beim Impfbeginn ab. Den genauen Impfplan erklären wir Ihnen beim Termin. Bitte bringen Sie Ihre e-card und, falls vorhanden, Ihren Impfpass mit.",
+        "ru": "Прививку делают в плечо. Сколько доз нужно, зависит от возраста на момент начала вакцинации. Точную схему мы объясним вам на приёме. Пожалуйста, возьмите с собой e-card и, если есть, прививочный паспорт."
+      }
+    ]
+  }
+];
+
+const faq = [
+  {
+    "qDe": "Ersetzt die HPV-Impfung die Vorsorgeuntersuchung?",
+    "qRu": "Заменяет ли вакцинация от ВПЧ профилактический осмотр?",
+    "aDe": "Nein. Die Impfung schützt vor den häufigsten krebsauslösenden HPV-Typen, aber nicht vor allen. Die regelmäßige Vorsorge mit PAP-Abstrich bleibt deshalb auch nach der Impfung wichtig.",
+    "aRu": "Нет. Вакцина защищает от самых частых онкогенных типов ВПЧ, но не от всех. Поэтому регулярный профилактический осмотр с ПАП-мазком остаётся важным и после вакцинации."
+  },
+  {
+    "qDe": "Kann ich mich impfen lassen, wenn ich schon sexuell aktiv bin?",
+    "qRu": "Можно ли сделать прививку, если я уже живу половой жизнью?",
+    "aDe": "Ja, die Impfung kann auch dann noch sinnvoll sein. Wir beraten Sie gerne, ob sie in Ihrem Fall empfehlenswert ist.",
+    "aRu": "Да, вакцинация может быть полезна и в этом случае. Мы с удовольствием проконсультируем вас, рекомендуется ли она именно вам."
+  },
+  {
+    "qDe": "Welche Nebenwirkungen kann die Impfung haben?",
+    "qRu": "Какие побочные эффекты возможны?",
+    "aDe": "Häufig sind Rötung, Schwellung oder Schmerzen an der Einstichstelle, manchmal auch Kopfschmerzen oder leichtes Fieber. Diese Beschwerden klingen meist innerhalb weniger Tage ab. Schwere Nebenwirkungen sind sehr selten.",
+    "aRu": "Часто бывают покраснение, отёк или боль в месте укола, иногда головная боль или небольшая температура. Обычно эти жалобы проходят в течение нескольких дней. Серьёзные побочные эффекты очень редки."
+  },
+  {
+    "qDe": "Wer übernimmt die Kosten?",
+    "qRu": "Кто оплачивает вакцинацию?",
+    "aDe": "Vom vollendeten 9. bis zum vollendeten 21. Lebensjahr ist die Impfung kostenfrei. Für andere Altersgruppen informieren wir Sie gerne über die Kosten.",
+    "aRu": "С 9 полных лет до 21 полного года вакцинация бесплатна. О стоимости для других возрастных групп мы с удовольствием вам расскажем."
+  }
+];
 ---
 
 <Layout
+  structuredData={[faqSchema(faq)]}
   title="HPV-Impfung in Mödling — DDr. Anastasiya Krusche, Frauenärztin"
   description="HPV-Impfung bei DDr. Krusche: Schutz vor Gebärmutterhalskrebs und Genitalwarzen. Kostenfreie Impfung vom 9. bis 21. Lebensjahr. Beratung in Mödling und Hochstraß."
   titleRu="Вакцинация от ВПЧ — Доктор Анастасия Круше | Гинеколог"
@@ -28,6 +87,10 @@ import RelatedServices from '../components/RelatedServices.astro';
         <div class="content-info-box">
           <p data-lang-de="Derzeit biete ich leider keine anderen Impfungen an." data-lang-ru="К сожалению, в настоящее время я не предлагаю никаких других прививок.">Derzeit biete ich leider keine anderen Impfungen an.</p>
         </div>
+
+        <ContentBlocks blocks={blocks} />
+
+        <FaqList items={faq} />
 
         <div class="content-cta">
           <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>

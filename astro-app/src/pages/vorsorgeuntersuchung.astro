@@ -4,9 +4,92 @@ import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
 import RelatedServices from '../components/RelatedServices.astro';
+import ContentBlocks from '../components/ContentBlocks.astro';
+import FaqList from '../components/FaqList.astro';
+import { faqSchema } from '../data/faq';
+
+// Draft content: to be reviewed by DDr. Krusche before publishing.
+const blocks = [
+  {
+    "heading": {
+      "de": "Warum ist die Vorsorge so wichtig?",
+      "ru": "Почему профилактика так важна?"
+    },
+    "paragraphs": [
+      {
+        "de": "Viele Erkrankungen machen am Anfang keine Beschwerden. Zellveränderungen am Gebärmutterhals entwickeln sich zum Beispiel meist über Jahre. Werden sie früh erkannt, lassen sie sich gut kontrollieren und behandeln. Deshalb empfehlen wir die Vorsorgeuntersuchung einmal im Jahr, auch wenn Sie sich gesund fühlen.",
+        "ru": "Многие заболевания на ранней стадии не вызывают жалоб. Например, изменения клеток шейки матки обычно развиваются годами. Если их обнаружить рано, их можно хорошо контролировать и лечить. Поэтому мы рекомендуем проходить профилактический осмотр раз в год, даже если вы чувствуете себя здоровой."
+      }
+    ]
+  },
+  {
+    "heading": {
+      "de": "Was ist ein PAP-Abstrich?",
+      "ru": "Что такое ПАП-мазок?"
+    },
+    "paragraphs": [
+      {
+        "de": "Beim PAP-Abstrich entnehmen wir mit einem kleinen Bürstchen Zellen vom Gebärmutterhals. Im Labor wird untersucht, ob die Zellen verändert sind. Der Abstrich dauert nur wenige Sekunden. Er kann sich kurz unangenehm anfühlen, tut aber in der Regel nicht weh.",
+        "ru": "При ПАП-мазке мы с помощью маленькой щёточки берём клетки с шейки матки. В лаборатории проверяют, есть ли в клетках изменения. Взятие мазка длится всего несколько секунд. Это может быть немного неприятно, но обычно не больно."
+      }
+    ]
+  },
+  {
+    "heading": {
+      "de": "Wie bereite ich mich vor?",
+      "ru": "Как подготовиться?"
+    },
+    "list": [
+      {
+        "de": "Vereinbaren Sie den Termin möglichst nicht während Ihrer Regelblutung.",
+        "ru": "По возможности не назначайте приём на дни менструации."
+      },
+      {
+        "de": "Verwenden Sie in den zwei Tagen davor keine Vaginalzäpfchen, Cremes oder Scheidenspülungen.",
+        "ru": "За два дня до приёма не используйте вагинальные свечи, кремы и спринцевания."
+      },
+      {
+        "de": "Bringen Sie Ihre e-card und, falls vorhanden, frühere Befunde mit.",
+        "ru": "Возьмите с собой e-card и, если есть, прежние результаты обследований."
+      },
+      {
+        "de": "Notieren Sie sich das Datum Ihrer letzten Regel.",
+        "ru": "Запишите дату последней менструации."
+      }
+    ]
+  }
+];
+
+const faq = [
+  {
+    "qDe": "Wie oft sollte ich zur Vorsorge gehen?",
+    "qRu": "Как часто нужно проходить профилактический осмотр?",
+    "aDe": "Wir empfehlen die Vorsorge einmal im Jahr. Wenn Sie dazwischen Beschwerden haben, kommen Sie bitte nicht erst zum nächsten Vorsorgetermin.",
+    "aRu": "Мы рекомендуем проходить осмотр раз в год. Если в промежутке появились жалобы, пожалуйста, не ждите следующего планового осмотра."
+  },
+  {
+    "qDe": "Was bedeutet ein auffälliger PAP-Befund?",
+    "qRu": "Что означает отклонение в ПАП-мазке?",
+    "aDe": "Ein auffälliger Befund heißt nicht, dass Sie Krebs haben. Meist handelt es sich um Zellveränderungen, die von selbst wieder verschwinden oder kontrolliert werden. Wir besprechen mit Ihnen, ob ein Kontrollabstrich oder eine weitere Abklärung sinnvoll ist.",
+    "aRu": "Отклонение в мазке не означает, что у вас рак. Чаще всего речь идёт об изменениях клеток, которые проходят сами или требуют наблюдения. Мы обсудим с вами, нужен ли контрольный мазок или дальнейшее обследование."
+  },
+  {
+    "qDe": "Gehört die Brustuntersuchung dazu?",
+    "qRu": "Входит ли в осмотр обследование груди?",
+    "aDe": "Ja. Wir tasten die Brust ab und zeigen Ihnen, wie Sie Ihre Brust selbst untersuchen können. Ab einem bestimmten Alter wird zusätzlich eine Mammografie empfohlen. Dazu beraten wir Sie gerne.",
+    "aRu": "Да. Мы проводим пальпацию груди и показываем, как самостоятельно её обследовать. С определённого возраста дополнительно рекомендуется маммография. По этому вопросу мы с удовольствием вас проконсультируем."
+  },
+  {
+    "qDe": "Ist die Untersuchung schmerzhaft?",
+    "qRu": "Больно ли проходить осмотр?",
+    "aDe": "Nein, in der Regel nicht. Wenn Sie unsicher oder nervös sind, sagen Sie es uns. Wir nehmen uns Zeit.",
+    "aRu": "Нет, обычно не больно. Если вы волнуетесь или чувствуете неуверенность, скажите нам. Мы не торопимся."
+  }
+];
 ---
 
 <Layout
+  structuredData={[faqSchema(faq)]}
   title="Gynäkologische Vorsorgeuntersuchung in Mödling — DDr. Krusche"
   description="Jährliche gynäkologische Vorsorgeuntersuchung bei DDr. Krusche: PAP-Abstrich, Vaginalultraschall, Brustuntersuchung und Sekretabstrich. Termine in Mödling und Hochstraß."
   titleRu="Гинекологический профилактический осмотр — Доктор Анастасия Круше"
@@ -27,6 +110,10 @@ import RelatedServices from '../components/RelatedServices.astro';
           <li data-lang-de="Untersuchung des Vaginalsekrets mittels Sekretabstrich" data-lang-ru="исследование влагалищного секрета">Untersuchung des Vaginalsekrets mittels Sekretabstrich</li>
           <li data-lang-de="eine Tastuntersuchung der Brust — außerdem Empfehlungen für Brustuntersuchungen zu Hause" data-lang-ru="пальпаторное обследование молочных желёз, а так же рекомендации по обследованию молочных желёз в домашних условиях.">eine Tastuntersuchung der Brust — außerdem Empfehlungen für Brustuntersuchungen zu Hause</li>
         </ul>
+        <ContentBlocks blocks={blocks} />
+
+        <FaqList items={faq} />
+
         <div class="content-cta">
           <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
           <a href="/kontakt" class="btn btn-white" data-lang-de="Kontakt aufnehmen" data-lang-ru="Контакт">Kontakt aufnehmen</a>

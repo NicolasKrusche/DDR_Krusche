@@ -4,9 +4,76 @@ import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
 import RelatedServices from '../components/RelatedServices.astro';
+import ContentBlocks from '../components/ContentBlocks.astro';
+import FaqList from '../components/FaqList.astro';
+import { faqSchema } from '../data/faq';
+
+// Draft content: to be reviewed by DDr. Krusche before publishing.
+const blocks = [
+  {
+    "heading": {
+      "de": "Was soll ich mitbringen?",
+      "ru": "Что взять с собой?"
+    },
+    "list": [
+      {
+        "de": "Ihre e-card",
+        "ru": "вашу e-card"
+      },
+      {
+        "de": "das Datum Ihrer letzten Regel, zum Beispiel aus einer Zyklus-App",
+        "ru": "дату последней менструации, например из приложения для отслеживания цикла"
+      },
+      {
+        "de": "Ihre Fragen, am besten vorher aufgeschrieben",
+        "ru": "ваши вопросы, лучше заранее записанные"
+      }
+    ]
+  },
+  {
+    "heading": {
+      "de": "Vertraulich und in Ihrem Tempo",
+      "ru": "Конфиденциально и в вашем темпе"
+    },
+    "paragraphs": [
+      {
+        "de": "Was Sie uns erzählen, bleibt unter uns, denn wir unterliegen der ärztlichen Schweigepflicht. Sie können gerne eine Vertrauensperson mitbringen, zum Beispiel Ihre Mutter oder eine Freundin, oder allein kommen. Eine Untersuchung machen wir nur, wenn sie nötig ist und Sie einverstanden sind.",
+        "ru": "Всё, что вы нам расскажете, останется между нами, так как мы соблюдаем врачебную тайну. Вы можете прийти с близким человеком, например с мамой или подругой, или одна. Осмотр мы проводим только если он нужен и вы согласны."
+      }
+    ]
+  }
+];
+
+const faq = [
+  {
+    "qDe": "Muss ich beim ersten Termin untersucht werden?",
+    "qRu": "Обязательно ли проходить осмотр при первом визите?",
+    "aDe": "Nein, nicht unbedingt. Oft reicht beim ersten Besuch ein Gespräch. Eine Untersuchung machen wir nur, wenn sie nötig ist, und nur mit Ihrem Einverständnis.",
+    "aRu": "Нет, не обязательно. Часто при первом визите достаточно беседы. Осмотр мы проводим только если он нужен и только с вашего согласия."
+  },
+  {
+    "qDe": "Ab welchem Alter sollte ich zur Frauenärztin gehen?",
+    "qRu": "С какого возраста нужно ходить к гинекологу?",
+    "aDe": "Ein festes Alter gibt es nicht. Viele kommen das erste Mal, wenn Fragen zur Regel oder zur Verhütung auftauchen oder wenn sie Beschwerden haben.",
+    "aRu": "Определённого возраста нет. Многие приходят впервые, когда появляются вопросы о менструации или контрацепции или когда что-то беспокоит."
+  },
+  {
+    "qDe": "Darf ich ohne meine Eltern kommen?",
+    "qRu": "Можно ли прийти без родителей?",
+    "aDe": "Ja. Ab 14 Jahren können Sie in der Regel selbst in eine Untersuchung oder Behandlung einwilligen, wenn Sie verstehen, worum es geht.",
+    "aRu": "Да. С 14 лет вы, как правило, можете сами дать согласие на осмотр или лечение, если понимаете, о чём идёт речь."
+  },
+  {
+    "qDe": "Kann ich auch während meiner Regel kommen?",
+    "qRu": "Можно ли прийти во время менструации?",
+    "aDe": "Für ein Gespräch ist das kein Problem. Wenn eine Untersuchung nötig ist, besprechen wir, ob ein anderer Zeitpunkt besser ist.",
+    "aRu": "Для беседы это не проблема. Если нужен осмотр, мы обсудим, не лучше ли выбрать другое время."
+  }
+];
 ---
 
 <Layout
+  structuredData={[faqSchema(faq)]}
   title="Jugendgynäkologie in Mödling — DDr. Anastasiya Krusche"
   description="Erster Besuch beim Frauenarzt: Stressfreie Jugendgynäkologie bei DDr. Krusche. Beratung zu Menstruation, Verhütung und gynäkologischer Gesundheit für junge Mädchen."
   titleRu="Подростковая гинекология — Доктор Анастасия Круше | Гинеколог"
@@ -33,6 +100,10 @@ import RelatedServices from '../components/RelatedServices.astro';
           <li data-lang-de="Schmerzen während der Regel" data-lang-ru="боль во время месячных">Schmerzen während der Regel</li>
         </ul>
         <p data-lang-de="Aber auch wenn Verhütung ein Thema wird, oder Sie einfach das Gefühl haben es stimmt etwas nicht, können Sie gerne einen Termin ausmachen." data-lang-ru="Если Вас интересует вопрос контрацепции или у Вас просто есть ощущение, что что-то не так, Вы можете записаться на прием.">Aber auch wenn Verhütung ein Thema wird, oder Sie einfach das Gefühl haben es stimmt etwas nicht, können Sie gerne einen Termin ausmachen.</p>
+
+        <ContentBlocks blocks={blocks} />
+
+        <FaqList items={faq} />
 
         <div class="content-cta">
           <h3 data-lang-de="Möchten Sie einen Termin vereinbaren?" data-lang-ru="Хотите записаться на прием?">Möchten Sie einen Termin vereinbaren?</h3>
