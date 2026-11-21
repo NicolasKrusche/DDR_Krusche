@@ -80,6 +80,11 @@ const jsonLd = {
       name: 'Ordination Mödling – DDr. Anastasiya Krusche',
       description: 'Frauenärztliche Ordination nahe Maria Enzersdorf, alle Krankenkassen und privat.',
       areaServed: ['Mödling', 'Maria Enzersdorf'],
+      availableService: {
+        '@type': 'MedicalTherapy',
+        name: 'EMSELLA Beckenbodenstimulation (HIFEM)',
+        url: `${siteUrl}/beckenbodenstimulation/`,
+      },
       url: `${siteUrl}/ordination/`,
       telephone: '+43 2236 392137',
       medicalSpecialty: 'https://schema.org/Gynecologic',
