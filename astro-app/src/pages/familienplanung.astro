@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
+import RelatedServices from '../components/RelatedServices.astro';
 ---
 
 <Layout
@@ -18,7 +19,7 @@ import Footer from '../components/Footer.astro';
   <section class="content-section" aria-labelledby="familien-heading">
     <div class="container">
       <div class="content-narrow">
-        <h1 class="sr-only" id="familien-heading" data-lang-de="Familienplanung" data-lang-ru="Планирование семьи">Familienplanung</h1>
+        <h2 class="sr-only" id="familien-heading" data-lang-de="Familienplanung" data-lang-ru="Планирование семьи">Familienplanung</h2>
 
         <h2 data-lang-de="Kinderwunsch" data-lang-ru="Желание иметь детей">Kinderwunsch</h2>
         <p data-lang-de="Wenn bei Kinderwunsch ein regelmäßiges Sexualleben ein Jahr lang keine Ergebnisse bringt, sollten Sie eine Sterilitätsabklärung in Erwägung ziehen. Dabei kann z.B. festgestellt werden, ob es überhaupt zum Eisprung kommt; ob eine Infektion vorliegt." data-lang-ru="Если Вы хотите иметь детей, а регулярная половая жизнь в течение года не приносит результата, Вам следует пройти обследование на бесплодие. Это позволяет определить, например, происходит ли овуляция вообще; есть ли инфекция.">Wenn bei Kinderwunsch ein regelmäßiges Sexualleben ein Jahr lang keine Ergebnisse bringt, sollten Sie eine Sterilitätsabklärung in Erwägung ziehen. Dabei kann z.B. festgestellt werden, ob es überhaupt zum Eisprung kommt; ob eine Infektion vorliegt.</p>
@@ -46,6 +47,8 @@ import Footer from '../components/Footer.astro';
       </div>
     </div>
   </section>
+
+  <RelatedServices />
 
   <Footer slot="footer" />
 </Layout>

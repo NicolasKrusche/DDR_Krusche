@@ -1,4 +1,6 @@
 ---
+import { services } from '../data/services';
+
 export interface Props {
   title: string;
   description: string;
@@ -16,13 +18,29 @@ const {
   titleRu,
   descriptionRu,
   canonical = Astro.url.href,
-  ogImage = '/images/logo_dr.png',
+  ogImage: ogImageProp,
   noindex = false,
   structuredData = [],
 } = Astro.props;
 
 const siteName = 'DDr. Anastasiya Krusche — Gynäkologin';
 const siteUrl = 'https://www.dr-krusche.at';
+
+// Service pages get their hero image as share image and a breadcrumb trail for search engines.
+const service = services.find((s) => s.route === Astro.url.pathname.replace(/\/$/, ''));
+const ogImage = ogImageProp ?? service?.image ?? '/images/logo_dr.png';
+const hasBreadcrumb = structuredData.some((d) => d['@type'] === 'BreadcrumbList');
+const breadcrumb = service && !hasBreadcrumb
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Startseite', item: `${siteUrl}/` },
+        { '@type': 'ListItem', position: 2, name: 'Leistungen', item: `${siteUrl}/leistungen/` },
+        { '@type': 'ListItem', position: 3, name: service.title, item: `${siteUrl}${service.route}/` },
+      ],
+    }
+  : undefined;
 
 // Practice data for search engines: the doctor plus one entry per ordination.
 const hours = (days: string | string[], opens: string, closes: string) => ({
@@ -140,6 +158,7 @@ const jsonLd = {
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {breadcrumb && <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />}
     {structuredData.map((data) => (
       <script type="application/ld+json" set:html={JSON.stringify(data)} />
     ))}

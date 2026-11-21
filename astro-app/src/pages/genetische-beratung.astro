@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
+import RelatedServices from '../components/RelatedServices.astro';
 ---
 
 <Layout
@@ -18,7 +19,7 @@ import Footer from '../components/Footer.astro';
   <section class="content-section" aria-labelledby="genetische-heading">
     <div class="container">
       <div class="content-narrow">
-        <h1 class="sr-only" id="genetische-heading" data-lang-de="Genetische Beratung" data-lang-ru="Генетическое консультирование">Genetische Beratung</h1>
+        <h2 class="sr-only" id="genetische-heading" data-lang-de="Genetische Beratung" data-lang-ru="Генетическое консультирование">Genetische Beratung</h2>
 
         <h2 data-lang-de="Was ist „Genetische Beratung"?" data-lang-ru="Что такое «генетическое консультирование»?">Was ist „Genetische Beratung"?</h2>
         <p data-lang-de="Bei einer Genetischen Beratung werden Sie informiert, welche Risiken für Krankheiten und Fehlbildungen Sie (und/oder nahe Verwandte) im Erbgut tragen. Dazu kann zum Beispiel Brustkrebs oder Eierstockkrebs zählen, da gewisse Gene besonders wichtig dafür sind, defekte Zellen zu reparieren. Sind diese Gene verändert, kann diese Reparatur ausfallen, und die abnormen Zellen können zu Krebs werden." data-lang-ru="Во время генетического консультирования Вас проинформируют о рисках заболеваний, которые Вы (и/или близкие родственники) несете в своем генетическом наборе. Это может быть, например, рак молочной железы или рак яичников, поскольку определенные гены особенно важны для восстановления дефектных клеток. Если эти гены изменены, восстановление может не дать результата и аномальные клетки могут стать раковыми.">Bei einer Genetischen Beratung werden Sie informiert, welche Risiken für Krankheiten und Fehlbildungen Sie (und/oder nahe Verwandte) im Erbgut tragen. Dazu kann zum Beispiel Brustkrebs oder Eierstockkrebs zählen, da gewisse Gene besonders wichtig dafür sind, defekte Zellen zu reparieren. Sind diese Gene verändert, kann diese Reparatur ausfallen, und die abnormen Zellen können zu Krebs werden.</p>
@@ -46,6 +47,8 @@ import Footer from '../components/Footer.astro';
       </div>
     </div>
   </section>
+
+  <RelatedServices />
 
   <Footer slot="footer" />
 </Layout>

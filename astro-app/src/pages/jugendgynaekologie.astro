@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
+import RelatedServices from '../components/RelatedServices.astro';
 ---
 
 <Layout
@@ -18,7 +19,7 @@ import Footer from '../components/Footer.astro';
   <section class="content-section" aria-labelledby="jugend-heading">
     <div class="container">
       <div class="content-narrow">
-        <h1 class="sr-only" id="jugend-heading" data-lang-de="Jugendgynäkologie" data-lang-ru="Подростковая гинекология">Jugendgynäkologie</h1>
+        <h2 class="sr-only" id="jugend-heading" data-lang-de="Jugendgynäkologie" data-lang-ru="Подростковая гинекология">Jugendgynäkologie</h2>
         <p data-lang-de="Der erste Besuch beim Frauenarzt oder bei der Frauenärztin ist vielen jungen Mädchen unangenehm und wird im Vorfeld oft von Angst und Unsicherheit begleitet. Das ist nichts Ungewöhnliches. Deswegen versucht das gesamte Team den ersten Termin so angenehm und stressfrei wie möglich zu gestalten. Sie können gerne schon bei der Terminvereinbarung die Assistentin informieren, dass es der erste Besuch ist." data-lang-ru="Первый визит к гинекологу неприятен для многих девушек и часто сопровождается страхом и неуверенностью перед ним. Поэтому вся команда ординации старается сделать первый прием как можно более приятным и свободным от стресса. При записи на прием Вы можете сообщить ассистенту, что это Ваш первый визит.">Der erste Besuch beim Frauenarzt oder bei der Frauenärztin ist vielen jungen Mädchen unangenehm und wird im Vorfeld oft von Angst und Unsicherheit begleitet. Das ist nichts Ungewöhnliches. Deswegen versucht das gesamte Team den ersten Termin so angenehm und stressfrei wie möglich zu gestalten. Sie können gerne schon bei der Terminvereinbarung die Assistentin informieren, dass es der erste Besuch ist.</p>
 
         <h2 style="margin-top: 32px;" data-lang-de="Wie läuft so ein erster Besuch ab?" data-lang-ru="Как проходит первое посещение?">Wie läuft so ein erster Besuch ab?</h2>
@@ -40,6 +41,8 @@ import Footer from '../components/Footer.astro';
       </div>
     </div>
   </section>
+
+  <RelatedServices />
 
   <Footer slot="footer" />
 </Layout>

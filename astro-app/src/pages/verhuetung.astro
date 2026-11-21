@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
+import RelatedServices from '../components/RelatedServices.astro';
 ---
 
 <Layout
@@ -18,7 +19,7 @@ import Footer from '../components/Footer.astro';
   <section class="content-section" aria-labelledby="verhuetung-heading">
     <div class="container">
       <div class="content-narrow">
-        <h1 class="sr-only" id="verhuetung-heading" data-lang-de="Verhütungsberatung" data-lang-ru="Консультация по контрацепции">Verhütungsberatung</h1>
+        <h2 class="sr-only" id="verhuetung-heading" data-lang-de="Verhütungsberatung" data-lang-ru="Консультация по контрацепции">Verhütungsberatung</h2>
         <p data-lang-de="Wir leben zu einer Zeit, in der es dutzende Methoden gibt, ungewollte Schwangerschaften vorzubeugen. Das ist einerseits ein Segen, andererseits kann es oft schwerfallen, die richtige Art der Verhütung auszuwählen. Von hormonellen Unterschieden, über finanzielle Fragen, bis hin zur Persönlichkeit der jeweiligen Frau kann vieles eine Auswirkung auf die „richtige" Methode haben." data-lang-ru="Мы живем в такое время, когда существуют десятки методов предотвращения нежелательной беременности. С одной стороны, это благо, но с другой стороны, часто бывает трудно выбрать &quot;правильный&quot; тип контрацепции. От гормональных различий, финансовых вопросов, до личности самой женщины — многие вещи могут повлиять на выбор &quot;правильного&quot; метода.">Wir leben zu einer Zeit, in der es dutzende Methoden gibt, ungewollte Schwangerschaften vorzubeugen. Das ist einerseits ein Segen, andererseits kann es oft schwerfallen, die richtige Art der Verhütung auszuwählen. Von hormonellen Unterschieden, über finanzielle Fragen, bis hin zur Persönlichkeit der jeweiligen Frau kann vieles eine Auswirkung auf die „richtige" Methode haben.</p>
 
         <h2 style="margin: 32px 0 16px;" data-lang-de="Einige der häufigsten Mittel zur Verhütung" data-lang-ru="Некоторые из наиболее распространенных средств контрацепции">Einige der häufigsten Mittel zur Verhütung</h2>
@@ -41,6 +42,8 @@ import Footer from '../components/Footer.astro';
       </div>
     </div>
   </section>
+
+  <RelatedServices />
 
   <Footer slot="footer" />
 </Layout>
